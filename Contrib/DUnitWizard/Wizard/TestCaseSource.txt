@@ -1,0 +1,32 @@
+unit %0:s;
+
+interface
+
+uses
+  TestFrameWork;
+
+type
+
+  T%0:s = class(TTestCase)
+  private
+
+  protected
+
+//   procedure SetUp; override;
+//   procedure TearDown; override;
+
+  published
+
+// Add test methods here...
+
+  end;
+
+implementation
+
+initialization
+
+  TestFramework.RegisterTest('%0:s Suite',
+    T%0:s.Suite);
+ 
+end.
+

@@ -1,0 +1,4555 @@
+2003-05-08 01:00  juanco
+
+	* want.xml, src/versioninfo.inc, src/versioninfo.rc,
+	src/versioninfo.res, Contrib/XPGen/want.xml, src/versioninfo.inc:
+	ready for new release
+
+2003-03-20 13:57  juanco
+
+	* src/: GUITestRunner.dfm, GUITestRunner.pas, QGUITestRunner.pas,
+	QGUITestRunner.xfm, TestFramework.pas, TextTestRunner.pas,
+	versioninfo.inc: Moved new ITestListener methods to ITestListenerX
+	to try not to break existing tools. Should merge before a release.
+	
+	Still can't get WANT to run DUnit test dlls.
+
+2003-03-20 05:03  juanco
+
+	* src/versioninfo.inc: routine
+
+2003-03-19 22:23  juanco
+
+	* doc/API.zip: removed outdated API docs
+
+2003-03-19 13:51  chrismo
+
+	* src/GUITestRunner.pas: Made [Start/End][Test/Suite] virtual
+	methods in the GUIRunner
+
+2003-03-18 20:35  jonbsfnet
+
+	* src/GUITesting.pas: Fixed EnterKey code to eliminate dup
+	keypresses.  This solution uses PostMessage so keypresses go
+	directly to the app being tested.
+
+2003-03-18 20:33  jonbsfnet
+
+	* tests/: UnitTests.dpr, UnitTestGUITesting.pas,
+	UnitTestGUITesting.dfm: Created unit tests for TGUITestCase.  Test
+	EnterKeyInto and Tab.
+
+2003-03-16 21:04  neuromancer
+
+	* src/GUITesting.pas: shift keys fixed in CLX
+
+2003-03-13 21:04  chrismo
+
+	* src/: GUITestRunner.pas, TestFramework.pas, TextTestRunner.pas:
+	Added StartSuite and EndSuite to listener interface and implemented
+	these methods where necessary. GUITestListener and TextTestListener
+	do not do anything with these, but they are there for subclass
+	support.
+
+2003-03-10 01:08  juanco
+
+	* want.xml: added XML tag
+
+2003-03-09 18:38  juanco
+
+	* src/TestFramework.pas, src/versioninfo.inc, src/versioninfo.rc,
+	src/versioninfo.res, tests/UnitTestFramework.pas: incorporated bin
+	and hex comparisons by Kristofer Skaug. All tests pass.
+
+2003-03-01 02:04  juanco
+
+	* ChangeLog, want.xml, src/versioninfo.inc: changed version number
+	to see if email notifications work
+
+2003-03-01 00:32  juanco
+
+	* admin/loginfo: mistyped the mailing list name
+
+2003-03-01 00:25  juanco
+
+	* admin/syncmail: local copy of syncmail no longer needed
+
+2003-03-01 00:24  juanco
+
+	* admin/loginfo: log cvs activity to the developers mailing list
+
+2003-02-15 04:25  juanco
+
+	* doc/: cvs_access.html, images/wincvs_setup_1.jpg,
+	images/wincvs_setup_2.jpg: CVS write access howto
+
+2003-01-27 12:48  pvspain
+
+	* Contrib/DUnitWizard/: README.txt, Common/EPCOTAUtils50.cfg,
+	Common/EPCOTAUtils50.dof, Common/EPCOTAUtils50.dpk,
+	Common/EPCOTAUtils60.cfg, Common/EPCOTAUtils60.dof,
+	Common/EPCOTAUtils60.dpk, Common/EPCOTAUtils70.cfg,
+	Common/EPCOTAUtils70.dof, Common/EPCOTAUtils70.dpk,
+	Common/XP_OTACreators.pas, Common/XP_OTAFileNamer.dfm,
+	Common/XP_OTAFileNamer.pas, Common/XP_OTAUtils.pas,
+	Common/XP_OTAWizards.pas, Wizard/DUnitWizardProjectGroup50.bpg,
+	Wizard/DUnitWizardProjectGroup60.bpg,
+	Wizard/DUnitWizardProjectGroup70.bpg, Wizard/EPCDUnitWizard50.cfg,
+	Wizard/EPCDUnitWizard50.dof, Wizard/EPCDUnitWizard50.dpk,
+	Wizard/EPCDUnitWizard60.cfg, Wizard/EPCDUnitWizard60.dof,
+	Wizard/EPCDUnitWizard60.dpk, Wizard/EPCDUnitWizard70.cfg,
+	Wizard/EPCDUnitWizard70.dof, Wizard/EPCDUnitWizard70.dpk,
+	Wizard/ProjectSource.txt, Wizard/TestCaseSource.txt,
+	Wizard/XPDUnitConstants.pas, Wizard/XPDUnitMenuWizard.pas,
+	Wizard/XPDUnitProjectWizard.pas, Wizard/XPDUnitProjectWizard.rc,
+	Wizard/XPDUnitTestCaseWizard.pas, Wizard/XPDUnitTestCaseWizard.rc,
+	Wizard/XPDUnitWizard.pas, Wizard/dunit_project.bmp,
+	Wizard/dunit_project16.ico, Wizard/dunit_project256.ico,
+	Wizard/dunit_testcase.bmp, Wizard/dunit_testcase16.ico,
+	Wizard/dunit_testcase256.ico: DUnitWizard IDE plug-in v1.0 imported
+
+2003-01-08 14:33  juanco
+
+	* want.xml, doc/README.html, doc/README_CHT.html,
+	src/DUnitMainForm.pas, src/DunitAbout.pas, src/GUITestRunner.pas,
+	src/GUITesting.pas, src/QGUITestRunner.pas, src/TestExtensions.pas,
+	src/TestFramework.pas, src/TestModules.pas, src/TextTestRunner.pas,
+	src/dunit.dpr, src/versioninfo.inc, tests/DUnitTestLib.dpr,
+	tests/UnitTestExtensions.pas, tests/UnitTestFramework.pas,
+	tests/UnitTestGUITestRunner.pas, tests/UnitTestGUITesting.pas,
+	tests/UnitTests.dpr: updated copyrights
+
+2002-12-06 17:22  uberto
+
+	* src/TestFramework.pas: Removed CheckEqual with Currency params
+	Changed Double params in CheckEqual in extended
+
+2002-12-03 16:50  juanco
+
+	* doc/images/: environment_options.jpg, project_options.jpg,
+	screenshot.png, screenshot_running.png, tw.jpg, usa.gif,
+	xtao128.png, xtao128_new.png, xtao16-16.png, xtao16-256.png,
+	xtao16.png, xtao256.png, xtao32-256.png, xtao32.png, xtao64.png:
+	checked in images again to try to resolve problems with reported by
+	Kris
+
+2002-12-02 18:39  neuromancer
+
+	* src/QGUITestRunner.pas: Kylix 3 compatybility
+
+2002-12-01 12:19  neuromancer
+
+	* src/TestFramework.pas: compatybility with D4 and D5
+
+2002-11-29 22:30  neuromancer
+
+	* readme-kylix.txt: notes
+
+2002-11-06 17:42  juanco
+
+	* Contrib/XPGen/frmXPGenOpts.dfm, Contrib/XPGen/testXpgen.res,
+	Contrib/XPGen/testunit.dfm, Contrib/XPGen/xpgen.res,
+	src/DUnitMainForm.dfm, src/DunitAbout.dfm, src/GUITestRunner.dfm,
+	src/GUITesting.pas, src/versioninfo.inc: updates necessary for a
+	build on a different machine
+
+2002-11-06 14:26  juanco
+
+	* Contrib/XPGen/frmXPGenOpts.dfm, Contrib/XPGen/testXpgen.res,
+	Contrib/XPGen/testunit.dfm, Contrib/XPGen/xpgen.res,
+	Contrib/momus/orig tests/TestsByNumber.zip, doc/API.zip,
+	doc/images/environment_options.jpg, doc/images/project_options.jpg,
+	doc/images/screenshot.png, doc/images/screenshot_running.png,
+	doc/images/tw.jpg, doc/images/usa.gif, doc/images/xtao128.png,
+	doc/images/xtao128_new.png, doc/images/xtao16-16.png,
+	doc/images/xtao16-256.png, doc/images/xtao16.png,
+	doc/images/xtao256.png, doc/images/xtao32-256.png,
+	doc/images/xtao32.png, doc/images/xtao64.png,
+	examples/structure/diffunit/UnitStructure.png,
+	src/DUnitMainForm.dfm, src/DunitAbout.dfm, src/GUITestRunner.dfm,
+	src/images/logo.bmp: routine
+
+2002-10-30 16:23  neuromancer
+
+	* examples/structure/: diffunit/Project1Test.dpr,
+	sameunit/Project1Test.dpr, sameunit/Project1Test.kof: Kylix code
+	cleaned up
+
+2002-10-16 03:52  juanco
+
+	* src/: KylixGUITestRunner.dfm, KylixGUITestRunner.pas,
+	KylixGUITestRunner.txt, KylixGUITestRunner.xfm: removed deprecated
+	KylixGUITestRunner
+
+2002-10-13 16:26  neuromancer
+
+	* src/: QGUITestRunner.pas, QGUITestRunner.xfm: all test pass for
+	Delphi CLX
+
+2002-10-11 20:24  neuromancer
+
+	* examples/testexception/Project1Test.dpr: uniform way of calling
+	GUITestRunner
+
+2002-10-11 20:19  neuromancer
+
+	* src/GUITestRunner.pas: class function RunTest
+
+2002-10-11 17:15  juanco
+
+	* src/versioninfo.inc: all tests pass
+
+2002-10-11 16:34  juanco
+
+	* want.xml, src/versioninfo.inc: added CLX GUI test to want script
+
+2002-10-11 16:26  juanco
+
+	* want.xml, Contrib/XPGen/want.xml, src/GUITestRunner.dfm,
+	src/GUITestRunner.pas, src/GUITesting.pas, src/QGUITestRunner.pas,
+	src/TestExtensions.pas, src/TestFramework.pas, src/TestModules.pas,
+	src/TextTestRunner.pas, src/dunit.bpg, src/versioninfo.inc,
+	tests/DUnitTestLib.dpr: made sure that all modules can use long
+	strings safely
+
+2002-10-11 15:09  juanco
+
+	* src/dunit.dpr: added missing license boilerplate
+
+2002-10-11 05:50  neuromancer
+
+	* src/QGUITestRunner.pas: status changes on mouse click
+
+2002-10-10 17:01  juanco
+
+	* src/TestExtensions.pas: BUG: TRepeatedTest.CountEnabledTestCases
+	called the wrong inherited method
+
+2002-10-10 16:34  juanco
+
+	* src/: TestExtensions.pas, dunit.dpr: BUG: TTestSetup did not use
+	name given on the constructor
+
+2002-10-10 16:21  juanco
+
+	* src/: TestFramework.pas, versioninfo.inc, TestFramework.pas: use
+	long strings unless DUNIT_DLL is defined
+
+2002-10-10 15:47  juanco
+
+	* doc/: README.html, dunit.css: removed reference to framework
+	directory which is no longer bundled on dunit distributions
+
+2002-10-10 15:34  juanco
+
+	* ChangeLog, src/GUITestRunner.pas, src/versioninfo.inc: fixed
+	protocol for calling the GUI  modally, and added new routines for
+	calling it modelessly
+
+2002-10-07 08:49  neuromancer
+
+	* src/TextTestRunner.pas: RunRegisteredTests as a class method
+
+2002-10-07 08:43  neuromancer
+
+	* src/GUITesting.pas: EnterTextInto imlemented in CLX
+
+2002-10-06 10:12  neuromancer
+
+	* examples/: collection/TestDUnitGUI.dpr, registration/UnitReg.dpr:
+	better way to call RunRegisteredTests
+
+2002-10-06 10:07  neuromancer
+
+	* src/GUITesting.pas: some cleanup
+
+2002-10-05 13:56  juanco
+
+	* src/: TextTestRunner.pas, versioninfo.inc: removed RunTest(C
+	:TTestClass;...) because it was wrong, and the intended
+	funcionality was redundant
+
+2002-10-02 23:56  neuromancer
+
+	* src/QGUITestRunner.pas: some fixes
+
+2002-10-02 23:49  neuromancer
+
+	* tests/UnitTests.dpr, examples/TListTest/ListTest.dpr: class
+	method RunRegisteredTests used
+
+2002-09-12 03:46  juanco
+
+	* src/versioninfo.inc: routine
+
+2002-09-12 03:23  juanco
+
+	* src/GUITestRunner.pas, src/versioninfo.inc, tests/UnitTests.dpr:
+	Added uniformity to the way the Kylix and Windows versions invoke
+	the framework
+
+2002-09-12 03:13  juanco
+
+	* src/: TestFramework.pas, versioninfo.inc: BUG: CheckEquals
+	doesn't distinguish between Double and Currency when only two
+	parameters are used
+
+2002-09-12 02:56  juanco
+
+	* src/: GUITestRunner.dfm, GUITestRunner.pas: BUG: TestTree local,
+	right-click popup not alwasy applied commands to the currently
+	selected node
+
+2002-09-12 02:41  juanco
+
+	* src/TestFramework.pas: BUG: An exception during check for
+	IsBadPointer should mean that the pointer is bad
+
+2002-08-12 16:50  juanco
+
+	* Contrib/XPGen/testXpgenLib.dpr (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1, build_3_2_6_2,
+	build_3_3_6_1, build_3_3_6_0, cd, build_3_2_5_1, build_3_2_5_0,
+	build_3_2_4_4, build_3_2_4_2, build_3_2_4_1): added DLL to test
+	XPGen from within WANT
+
+2002-08-12 16:48  juanco
+
+	* ChangeLog, want.xml, src/versioninfo.inc, src/versioninfo.rc,
+	src/versioninfo.res: getting ready for next release
+
+2002-07-15 19:29  juanco
+
+	* doc/: README.html, images/tw.jpg: fixed flag for CHT version of
+	README
+
+2002-07-09 18:15  pkozelka
+
+	* src/: GUITestRunner.pas, QGUITestRunner.pas: fixed comparison of
+	COM objects; implemented missing ShouldRunTest method in
+	QGUITestRunner
+
+2002-06-27 13:25  juanco
+
+	* want.xml, src/GUITestRunner.dfm, src/TestFramework.pas,
+	src/versioninfo.inc, tests/UnitTestFramework.pas: compatibility
+	with D7 FT2
+
+2002-06-23 14:11  juanco
+
+	* src/versioninfo.inc, src/versioninfo.rc, src/versioninfo.res,
+	tests/UnitTestGUITesting.pas: fixed reference bug in test of
+	TSetupTestCase
+
+2002-06-20 18:30  juanco
+
+	* doc/tutorial_files/: image001.wmz, image002.gif, image003.png,
+	image004.jpg, image005.wmz, image006.gif, image007.png,
+	image008.jpg: added image files needed for tutorial
+
+2002-06-20 18:06  juanco
+
+	* want.xml, Contrib/XPGen/testXpgen.dpr,
+	Contrib/XPGen/test_xpLex.pas, Contrib/XPGen/test_xpParse.pas,
+	Contrib/XPGen/want.xml, doc/tutorial.doc, doc/tutorial.html,
+	src/versioninfo.inc, ChangeLog, src/versioninfo.inc: ready for D7
+	release
+
+2002-06-20 04:59  juanco
+
+	* examples/testexception/Unit1Test.pas: fixed deprecated use of API
+
+2002-06-20 04:05  juanco
+
+	* src/: GUITestRunner.dfm, GUITestRunner.pas, TestExtensions.pas,
+	TestFramework.pas, versioninfo.inc: made use of ShortStrings
+	explicit in the framework
+
+2002-06-20 03:58  juanco
+
+	* tests/UnitTestGUITesting.pas: fixed two failed decorator tests to
+	make them work under windows
+
+2002-06-13 17:56  juanco
+
+	* ChangeLog: update binaries
+
+2002-02-22 12:38  juanco
+
+	* Contrib/XPGen/test_xpLex.pas: modernization of test harness by
+	majohnson
+
+2002-02-22 06:52  majohnson
+
+	* Contrib/XPGen/test_xpParse.pas: fixed some conventions with
+	try/finally in the test and moderinized the test registration
+
+2002-02-22 05:36  majohnson
+
+	* Contrib/XPGen/testXpgen.dpr: updated the test driver to be
+	compliant with recent dunit versions 4.x and 5.x
+
+2002-02-22 05:03  majohnson
+
+	* Contrib/XPGen/suite_xpgen.pas: deprecated test suite made
+	obsolete by autoregistering test cases
+
+2002-02-21 22:14  juanco
+
+	* src/DUnitMainForm.dfm, src/GUITestRunner.dfm,
+	src/GUITestRunner.pas, src/TestExtensions.pas,
+	src/TestFramework.pas, src/TextTestRunner.pas, src/versioninfo.inc,
+	src/images/actions_images.bmp, tests/UnitTestExtensions.pas,
+	tests/UnitTestFramework.pas, tests/UnitTestGUITesting.pas: Added
+	ITestListener.ShouldRunTest(ITest) to let listeners decide if a
+	test should run or not.
+	
+	Renamed ITest.RunBare to ITest.RunWithFixture to better reflect the
+	methods purpose.
+	
+	Refactored code between ITest.RunXXX methods to allow for simpler
+	implementation of decorators. Refactored decorators accordingly.
+	Now decorators have their Setup and TearDown methods run.
+	
+	Moved CheckXXX methods from TTestCase to TAbstractTest so all
+	descendants can use them.
+	
+	Reimplemented TMemoryTest to make it simpler.
+	
+	Fixed the implementation of the F8:Run-selected-test feature.
+	
+	All test cases pass.
+
+2002-02-14 18:12  juanco
+
+	* want.xml (tags: pre_abstract_test_refactoring): add want task for
+	retreiving cvs tarball with wget
+
+2002-02-13 22:15  juanco
+
+	* src/GUITesting.pas (tags: pre_abstract_test_refactoring): BUG:
+	Format call at line 465 was missing a parameter
+
+2002-02-13 19:22  kennethsem
+
+	* src/GUITestRunner.pas, src/TestExtensions.pas,
+	tests/UnitTestGUITesting.pas (utags:
+	pre_abstract_test_refactoring): Run current test with TestSetup
+	debugged
+
+2002-02-13 13:23  kennethsem
+
+	* src/GUITestRunner.pas, src/TestExtensions.pas,
+	tests/UnitTestGUITesting.pas: Run current test debugged
+
+2002-02-11 18:46  kennethsem
+
+	* src/GUITestRunner.pas, src/TestExtensions.pas,
+	src/TestFramework.pas (tags: pre_abstract_test_refactoring),
+	tests/UnitTestGUITesting.pas: Run current test runs now with
+	decorators
+
+2002-02-05 12:11  kennethsem
+
+	* Makefile (tags: pre_abstract_test_refactoring): *.xfm included in
+	makefile
+
+2002-02-05 01:36  juanco
+
+	* ChangeLog (tags: pre_abstract_test_refactoring),
+	src/versioninfo.inc, src/versioninfo.inc (tags:
+	pre_abstract_test_refactoring): sync binary files again
+
+2002-02-05 01:14  juanco
+
+	* admin/cvsignore: ignore more output files
+
+2002-02-04 21:55  kennethsem
+
+	* src/: GUITestRunner.dfm (tags: pre_abstract_test_refactoring),
+	GUITestRunner.pas: Run selected test implemented in GUITestRunner
+
+2002-02-04 21:24  kennethsem
+
+	* src/: GUITestRunner.dfm, GUITestRunner.pas, TestExtensions.pas,
+	TestFramework.pas: Copy test method name to clipboard implemented
+
+2002-02-04 19:42  juanco
+
+	* src/: DUnitMainForm.dfm (tags: pre_abstract_test_refactoring),
+	DUnitMainForm.pas (tags: pre_abstract_test_refactoring),
+	versioninfo.inc, versioninfo.rc (tags:
+	pre_abstract_test_refactoring), versioninfo.res (tags:
+	pre_abstract_test_refactoring) (utags: build_5_0_2): BUG: Main form
+	got out of synch with parent
+
+2002-02-03 14:38  juanco
+
+	* ChangeLog (tags: build_5_0_2), Rules.mak, want.xml (tags:
+	build_5_0_2): ready for 5.0.2 release
+
+2002-01-22 22:08  neuromancer
+
+	* readme-kylix.txt, readme-kylix.txt (tags:
+	pre_abstract_test_refactoring, build_5_0_2),
+	tests/UnitTestGUITesting.pas (tags: build_5_0_2),
+	tests/UnitTestGUITestRunner.pas (tags:
+	pre_abstract_test_refactoring, build_5_0_2), tests/UnitTests.dpr
+	(tags: pre_abstract_test_refactoring, build_5_0_2): CLX support
+
+2002-01-17 12:49  kennethsem
+
+	* src/GUITestRunner.dfm (tags: build_5_0_2): Context sensitive
+	(de)select of branch in GuiRunner
+
+2002-01-17 12:40  kennethsem
+
+	* src/GUITestRunner.pas (tags: build_5_0_2), src/TestExtensions.pas
+	(tags: build_5_0_2), src/TestFramework.pas (tags: build_5_0_2),
+	tests/UnitTestFramework.pas (tags: pre_abstract_test_refactoring,
+	build_5_0_2), tests/UnitTestGUITesting.pas: Status message test
+	added and debugged, Storage of extentions revisited
+
+2002-01-15 23:03  juanco
+
+	* ChangeLog, src/GUITesting.pas (tags: build_5_0_2),
+	src/KylixGUITestRunner.pas (tags: pre_abstract_test_refactoring,
+	build_5_0_2), src/QGUITestRunner.pas (tags:
+	pre_abstract_test_refactoring, build_5_0_2), src/versioninfo.inc,
+	src/versioninfo.rc, src/versioninfo.res: removed extra carriage
+	returns at lineends
+
+2002-01-15 00:18  neuromancer
+
+	* src/GUITesting.pas: CLX
+
+2002-01-14 19:05  neuromancer
+
+	* src/: KylixGUITestRunner.pas, QGUITestRunner.pas,
+	QGUITestRunner.xfm (tags: pre_abstract_test_refactoring,
+	build_5_0_2), GUITesting.pas, GUITesting.pas, GUITesting.pas: CLX
+	support
+
+2002-01-14 11:23  kennethsem
+
+	* src/TestExtensions.pas, tests/UnitTestExtensions.pas (tags:
+	pre_abstract_test_refactoring, build_5_0_2): Some code beautifying
+
+2002-01-13 17:04  kennethsem
+
+	* src/TestExtensions.pas, tests/UnitTestExtensions.pas: Decorator
+	stores enabled, TTestsetup setup and teardown exceptions handled
+
+2002-01-13 14:37  kennethsem
+
+	* want.xml: Want.xml updated to include *.xfm files
+
+2002-01-06 18:07  kennethsem
+
+	* src/KylixGUITestRunner.pas, src/TestExtensions.pas,
+	tests/UnitTestExtensions.pas: Kylix memory test implemented,
+	getEnabled in extentions enabled
+
+2001-12-19 15:21  juanco
+
+	* want.xml (tags: build_5_0_1): ready for new release
+
+2001-12-19 15:14  juanco
+
+	* want.xml: .inc files were not being included in .zip file
+
+2001-12-19 14:31  juanco
+
+	* ChangeLog (tags: build_5_0_1): updated changelog
+
+2001-12-19 14:14  juanco
+
+	* admin/loginfo: The dunit-cvs list is live. Activated logging of
+	CVS activity.
+
+2001-12-19 13:48  juanco
+
+	* admin/syncmail: made syncmail executable
+
+2001-12-19 13:45  juanco
+
+	* admin/: checkoutlist, loginfo, syncmail: Added syncmail to log
+	CVS activity to the dunit-cvs list. Waiting for list to become
+	active. Uncomment entries in loginfo then.
+
+2001-12-17 04:40  juanco
+
+	* Contrib/XPGen/test_xpLex.pas (tags:
+	pre_abstract_test_refactoring, build_5_0_2),
+	Contrib/XPGen/test_xpParse.pas (tags:
+	pre_abstract_test_refactoring, build_5_0_2),
+	examples/TListTest/TListTestCase.pas (tags:
+	pre_abstract_test_refactoring, build_5_0_2),
+	examples/cmdline/Unit1Test.pas (tags:
+	pre_abstract_test_refactoring, build_5_0_2),
+	examples/cmdline/Unit2Test.pas (tags:
+	pre_abstract_test_refactoring, build_5_0_2),
+	examples/collection/CollectionsTests.pas (tags:
+	pre_abstract_test_refactoring, build_5_0_2),
+	examples/registration/TestUnit1.pas (tags:
+	pre_abstract_test_refactoring, build_5_0_2),
+	examples/registration/TestUnit2.pas (tags:
+	pre_abstract_test_refactoring, build_5_0_2),
+	examples/structure/diffunit/Unit1Test.pas (tags:
+	pre_abstract_test_refactoring, build_5_0_2),
+	examples/structure/diffunit/Unit2Test.pas (tags:
+	pre_abstract_test_refactoring, build_5_0_2),
+	examples/structure/sameunit/Unit1.pas (tags:
+	pre_abstract_test_refactoring, build_5_0_2),
+	examples/structure/sameunit/Unit2.pas (tags:
+	pre_abstract_test_refactoring, build_5_0_2),
+	examples/testexception/Unit1Test.pas (tags:
+	pre_abstract_test_refactoring, build_5_0_2), src/versioninfo.inc
+	(utags: build_5_0_1): fixed examples to compile with latest changes
+
+2001-12-17 04:11  juanco
+
+	* src/TestFramework.pas (tags: build_5_0_1), src/TestModules.pas
+	(tags: pre_abstract_test_refactoring, build_5_0_2, build_5_0_1),
+	src/versioninfo.inc, tests/UnitTestExtensions.pas (tags:
+	build_5_0_1), tests/UnitTestFramework.pas (tags: build_5_0_1),
+	tests/UnitTestGUITestRunner.pas (tags: build_5_0_1),
+	tests/UnitTestGUITesting.pas (tags: build_5_0_1): Removed inline
+	doc-comments from TestFramework.pas, rearranged the code, and
+	removed redundant routines.
+
+2001-12-15 01:57  juanco
+
+	* src/.cvsignore (tags: pre_abstract_test_refactoring, build_5_0_2,
+	build_5_0_1): ignore delphi 6 ddp files
+
+2001-12-15 01:57  juanco
+
+	* src/: GUITestRunner.pas (tags: build_5_0_1), versioninfo.inc:
+	BUG: not resetting font of Error box
+
+2001-12-15 01:56  juanco
+
+	* want.xml: build dunit with JCL if JCL property defined
+
+2001-12-15 00:00  juanco
+
+	* src/: GUITesting.pas (tags: build_5_0_1), TestExtensions.pas
+	(tags: build_5_0_1), TestFramework.pas, TestModules.pas,
+	versioninfo.inc: removed dependency of TestModules.pas on JCL
+
+2001-12-14 23:33  juanco
+
+	* src/GUITestRunner.pas, src/TestFramework.pas,
+	src/TextTestRunner.pas (tags: pre_abstract_test_refactoring,
+	build_5_0_2, build_5_0_1), tests/UnitTestExtensions.pas: go back to
+	using short strings in the framework. Using ShareMem is too much
+	trouble
+
+2001-12-14 23:15  juanco
+
+	* src/: GUITestRunner.dfm (tags: build_5_0_1), GUITestRunner.pas,
+	GUITesting.pas, TestExtensions.pas, TestFramework.pas,
+	TextTestRunner.pas: added the capability of loging status messages
+	using TTestCase.Status(Msg:string)
+
+2001-12-14 23:12  juanco
+
+	* tests/UnitTestFramework.pas: removed superfluous Check(false)
+
+2001-12-14 17:29  juanco
+
+	* doc/README.html (tags: pre_abstract_test_refactoring,
+	build_5_0_2, build_5_0_1): fixed buglet in README's sample code
+
+2001-12-14 16:57  juanco
+
+	* src/GUITestRunner.pas, src/TestFramework.pas,
+	src/versioninfo.inc, tests/UnitTestFramework.pas: added failure
+	stack trace to framework and GUI
+
+2001-12-11 13:27  juanco
+
+	* src/versioninfo.inc: routine
+
+2001-12-06 23:26  juanco
+
+	* doc/: README.html, README_CHT.html (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1),
+	index.html (tags: pre_abstract_test_refactoring, build_5_0_2,
+	build_5_0_1), images/china.gif (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1),
+	images/usa.gif (tags: pre_abstract_test_refactoring, build_5_0_2,
+	build_5_0_1): added cross references between english and chinese
+	versions of manual
+
+2001-12-06 16:13  juanco
+
+	* ChangeLog: ready for release
+
+2001-12-06 16:10  juanco
+
+	* examples/structure/want.xml (tags: pre_abstract_test_refactoring,
+	build_5_0_2, build_5_0_1, build_5_0_0): compile sameunit example
+	files with both TESTING defined and not
+
+2001-12-06 15:59  juanco
+
+	* src/TestFramework.pas (tags: build_5_0_0): Moved new ITest
+	methods to the end to try and have some compatibility with previous
+	versions.
+
+2001-12-06 15:57  juanco
+
+	* want.xml (tags: build_5_0_0), src/TestFramework.pas,
+	src/versioninfo.inc (tags: build_5_0_0), src/versioninfo.rc (tags:
+	build_5_0_1, build_5_0_0), src/versioninfo.res (tags: build_5_0_1,
+	build_5_0_0): minor changes to remove warnings in examples
+
+2001-12-06 15:30  juanco
+
+	* want.xml: bumped up the version number
+
+2001-12-06 15:29  juanco
+
+	* readme-kylix.txt (tags: build_5_0_1, build_5_0_0): Added Kilix
+	specific readme file.
+
+2001-12-06 15:26  juanco
+
+	* src/GUITestRunner.pas (tags: build_5_0_0), src/GUITesting.pas
+	(tags: build_5_0_0), src/TestExtensions.pas (tags: build_5_0_0),
+	src/TestFramework.pas, src/versioninfo.inc, src/versioninfo.rc,
+	tests/UnitTestExtensions.pas (tags: build_5_0_0),
+	tests/UnitTestGUITesting.pas (tags: build_5_0_0): Enhanced ITest
+	and made TTestResult talk only to ITests so DUnit and WANT work wih
+	test dlls compiled with differet versions of Delphi.
+
+2001-12-06 13:30  juanco
+
+	* src/: GUITestRunner.dfm (tags: build_5_0_0), GUITestRunner.pas:
+	BUG: restoring of list column widths did not check for minimum
+	range vaue
+
+2001-11-30 21:42  juanco
+
+	* doc/: README.html, README_CHT.html (utags: build_5_0_0): fixed
+	mispellings of Will Watts' name
+
+2001-11-30 21:36  juanco
+
+	* doc/README.html, doc/index.html (tags: build_5_0_0),
+	examples/TListTest/ListTest.dpr (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0), examples/cmdline/Project1.dpr (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0), examples/cmdline/Project1Test.dpr (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0), examples/collection/TestDUNIT.dpr (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0), examples/collection/TestDUnitGUI.dpr (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0), examples/structure/diffunit/Project1.dpr (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0), examples/structure/diffunit/Project1Test.dpr (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0), examples/structure/sameunit/Project1.dpr (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0), examples/testexception/Project1.dpr (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0), examples/testexception/Project1Test.dpr (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0), src/KylixGUITestRunner.pas (tags: build_5_0_1,
+	build_5_0_0), src/versioninfo.inc, tests/UnitTestExtensions.pas,
+	tests/UnitTestGUITesting.pas, tests/UnitTests.dpr (tags:
+	build_5_0_1, build_5_0_0): latest improvements to Kylix version by
+	Kris Golko
+
+2001-11-28 05:36  juanco
+
+	* doc/: README.html, README_CHT.html: Added Traditional Chinise
+	translation of README by Michael Tsai
+
+2001-11-27 23:39  juanco
+
+	* want.xml: updated to latest version of WANT; don't include
+	dunit.exe in .zip
+
+2001-11-18 14:10  neuromancer
+
+	* examples/testexception/Project1.dpr,
+	examples/testexception/Project1Test.dpr, src/KylixGUITestRunner.dfm
+	(tags: pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0), src/KylixGUITestRunner.pas,
+	src/KylixGUITestRunner.xfm (tags: pre_abstract_test_refactoring,
+	build_5_0_2, build_5_0_1, build_5_0_0): dfm changed to xfm
+
+2001-11-17 04:36  juanco
+
+	* doc/: dunit.css (tags: pre_abstract_test_refactoring,
+	build_5_0_2, build_5_0_1, build_5_0_0), index.html: tidy up of
+	index page
+
+2001-11-15 16:05  juanco
+
+	* src/: DUnitMainForm.pas (tags: build_5_0_1), TestModules.pas,
+	dunit.dpr (tags: pre_abstract_test_refactoring, build_5_0_2,
+	build_5_0_1) (utags: build_5_0_0): Added /nologo command-line
+	switch to inhibit display of splash screen.  Manage gracefully test
+	libraries that return a nil test.
+
+2001-11-08 21:32  juanco
+
+	* doc/images/xtao.cdr (tags: pre_abstract_test_refactoring,
+	build_5_0_2, build_5_0_1, build_5_0_0): added original of logo in
+	corel draw format
+
+2001-11-08 21:17  juanco
+
+	* private/juanco/todo.html (tags: pre_abstract_test_refactoring,
+	build_5_0_2, build_5_0_1, build_5_0_0): added todo list for juanco
+
+2001-11-08 21:15  juanco
+
+	* examples/collection/TestKUnitGUI.dpr (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0): Kylix gui for collections example
+
+2001-11-08 21:11  juanco
+
+	* src/versioninfo.inc: synchronized binary files
+
+2001-11-07 21:21  neuromancer
+
+	* tests/UnitTests.dpr, examples/collection/TestDUNIT.dpr,
+	examples/collection/TestDUnitGUI.dpr,
+	examples/TListTest/ListTest.dpr, examples/cmdline/Project1.dpr,
+	examples/cmdline/Project1Test.dpr, tests/UnitTestExtensions.pas,
+	tests/UnitTestGUITesting.pas: kylix refinements
+
+2001-11-01 16:45  juanco
+
+	* src/: versioninfo.inc, versioninfo.rc: images got out of synch
+	with CVS again
+
+2001-10-26 18:35  juanco
+
+	* src/TestFramework.pas: report failure's file and line only if
+	available. else report module only
+
+2001-10-23 05:00  juanco
+
+	* ChangeLog (tags: build_5_0_0, build_4_1_3): routine
+
+2001-10-23 02:34  juanco
+
+	* src/GUITesting.pas, src/KylixGUITestRunner.dfm,
+	src/KylixGUITestRunner.pas, src/TestFramework.pas, src/dunit.dpr,
+	src/versioninfo.inc, examples/TListTest/ListTest.dpr,
+	examples/collection/Collections.pas (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0), examples/collection/TestDUNIT.dpr,
+	examples/collection/TestDUnitGUI.dpr, examples/collection/want.xml
+	(tags: pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0), examples/registration/TestUnit1.pas (tags:
+	build_5_0_0), examples/registration/TestUnit2.pas (tags:
+	build_5_0_0), examples/registration/UnitReg.dpr (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0), examples/structure/sameunit/Project1Test.dpr (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0), src/KylixGUITestRunner.xfm,
+	tests/UnitTestExtensions.pas, tests/UnitTestFramework.pas (tags:
+	build_5_0_0), tests/UnitTestGUITestRunner.pas (tags: build_5_0_0),
+	tests/UnitTestGUITesting.pas, tests/UnitTests.dpr (utags:
+	build_4_1_3): changes for Kylix 2 compatibility
+
+2001-10-19 00:55  juanco
+
+	* src/GUITesting.pas, src/KylixGUITestRunner.dfm,
+	src/KylixGUITestRunner.pas, src/TestFramework.pas,
+	src/versioninfo.inc, tests/UnitTestExtensions.pas,
+	tests/UnitTestFramework.pas, tests/UnitTestGUITestRunner.pas,
+	tests/UnitTestGUITesting.pas, tests/UnitTests.dpr: latest changes
+	from kylix porters. all tests pass
+
+2001-10-19 00:46  juanco
+
+	* want.xml (tags: build_4_1_3): patched want.xml to not include
+	private or tools dir. there is probably a bug in want
+
+2001-10-08 20:37  juanco
+
+	* admin/: cvsignore, cvsignore: Ignore .~* files
+
+2001-10-08 13:21  juanco
+
+	* examples/TListTest/ListTest.dpr,
+	examples/collection/Collections.pas,
+	examples/collection/TestDUNIT.dpr, src/versioninfo.inc: Changes for
+	consistency in examples by Golko
+
+2001-10-07 20:40  juanco
+
+	* examples/cmdline/Project1.dpr (tags: build_4_1_3),
+	examples/cmdline/Project1Test.dpr (tags: build_4_1_3),
+	examples/registration/TestUnit1.pas,
+	examples/registration/TestUnit2.pas,
+	examples/registration/UnitReg.dpr,
+	examples/structure/diffunit/Project1.dpr (tags: build_4_1_3),
+	examples/structure/diffunit/Project1Test.dpr (tags: build_4_1_3),
+	examples/structure/sameunit/Project1.dpr (tags: build_4_1_3),
+	examples/structure/sameunit/Project1Test.dpr,
+	examples/structure/sameunit/Unit1.pas (tags: build_5_0_0,
+	build_4_1_3), examples/structure/sameunit/Unit2.pas (tags:
+	build_5_0_0, build_4_1_3), examples/testexception/Project1Test.dpr
+	(tags: build_4_1_3), examples/testexception/Unit2.pas (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3), src/KylixGUITestRunner.dfm,
+	src/KylixGUITestRunner.pas, src/versioninfo.inc,
+	tests/UnitTestExtensions.pas, tests/UnitTestFramework.pas,
+	tests/UnitTestGUITestRunner.pas, tests/UnitTestGUITesting.pas,
+	tests/UnitTests.dpr: Latest changes for Linux compatibility by Kris
+	Golko
+
+2001-09-26 04:10  juanco
+
+	* src/KylixGUITestRunner.dfm: Latest changes to KylixGUITestRunner
+	from Kris Golko
+
+2001-09-25 17:02  juanco
+
+	* src/KylixGUITestRunner.pas: Updates by Kris Golko to
+	KylixGUITestRunner.
+
+2001-09-23 00:04  juanco
+
+	* src/TestFramework.pas: Added Ben Walding's fix to
+	TTestCase.StopExpectingException
+
+2001-09-22 23:58  juanco
+
+	* src/GUITestRunner.pas (tags: build_4_1_3): Save window placement
+	only if not maximized
+
+2001-09-22 23:37  juanco
+
+	* ChangeLog, want.xml, src/versioninfo.inc, src/versioninfo.rc
+	(tags: build_4_1_3), src/versioninfo.res (tags: build_4_1_3):
+	Incremented version number to 4.1.3
+
+2001-09-22 23:34  juanco
+
+	* src/: GUITestRunner.dfm (tags: build_4_1_3), GUITestRunner.pas,
+	versioninfo.inc: Added an OnChange handler so the GUI gets updated
+	when the test tree is navigated using the keyboard.
+
+2001-09-21 23:22  juanco
+
+	* src/versioninfo.inc, src/versioninfo.rc, src/versioninfo.res,
+	tests/UnitTestGUITesting.pas: Added modifications to let framework
+	work under Kylix
+
+2001-09-13 00:36  juanco
+
+	* want.xml, src/TestFramework.pas, src/versioninfo.inc,
+	tests/UnitTestExtensions.pas: Added patches by Kris Golko to make
+	latest TestFramework work under Kylix
+
+2001-09-12 20:43  kennethsem
+
+	* src/TestExtensions.pas (tags: build_4_1_3),
+	src/TestFramework.pas, tests/UnitTestExtensions.pas: TMemoryTest
+	decorator added
+
+2001-08-05 10:59  brettshearer
+
+	* src/TestFramework.pas: Fixed bug [ #440919 ] virtual methods in
+	TTestCase subclasses - Now allows TTestCase subclasses to show all
+	tests
+
+2001-08-05 10:25  brettshearer
+
+	* src/TestFramework.pas: Added CheckEquals for currency amounts
+
+2001-08-03 16:59  juanco
+
+	* src/TestFramework.pas, src/dunit.bpg (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3), tests/DUnitTestLib.dpr (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3), tests/UnitTestFramework.pas: BUG:
+	TTestCase.ChecIs had test condition reversed
+
+2001-07-16 22:08  juanco
+
+	* ChangeLog, src/dunit.dpr, src/versioninfo.inc,
+	src/versioninfo.rc, src/versioninfo.res: routine
+
+2001-07-10 04:48  brettshearer
+
+	* src/TestFramework.pas: Moved CreateRegistry call out of
+	initialization section so code would not get incorporated into
+	final product releases
+
+2001-07-05 21:13  juanco
+
+	* doc/index.html (tags: build_4_1_3): Added links to translations
+	of JUnit articles done by Andrew Smith
+
+2001-06-28 20:02  juanco
+
+	* ChangeLog, want.xml (utags: build_4_1_1): Ready for release
+
+2001-06-28 19:46  juanco
+
+	* ChangeLog, src/TestFramework.pas (tags: build_4_1_1): Added
+	feature #434715: StopExpectingException string message
+
+2001-06-28 19:38  juanco
+
+	* ChangeLog, src/DUnitMainForm.pas (tags: build_4_1_3,
+	build_4_1_1), src/versioninfo.inc (tags: build_4_1_1): BUG#436684:
+	EAccessViolation closing dunit.exe. Fixed.
+
+2001-06-21 14:27  juanco
+
+	* doc/README.html (tags: build_4_1_3, build_4_1_1): Fixed broken
+	link to junit.org Test Infected paper.
+
+2001-06-13 18:15  majohnson
+
+	* Contrib/XPGen/XPGEN.DPK (tags: pre_abstract_test_refactoring,
+	build_5_0_2, build_5_0_1, build_5_0_0, build_4_1_3, build_4_1_1):
+	adds new xp gen code options wizard
+
+2001-06-13 18:13  majohnson
+
+	* Contrib/XPGen/wizardXpGenOptions.pas (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1): code to add the xp gen code
+	gen options to the IDE help menu
+
+2001-06-13 18:12  majohnson
+
+	* Contrib/XPGen/: frmXPGenOpts.pas, frmXPGenOpts.dfm (utags:
+	build_5_0_0, build_4_1_1, build_4_1_3, build_5_0_2,
+	pre_abstract_test_refactoring, build_5_0_1): initial cut of the xp
+	gen code generation options
+
+2001-06-13 03:12  brettshearer
+
+	* tests/UnitTestFramework.pas (tags: build_4_1_1),
+	src/TestFramework.pas: Changed BoolToStr to use BooleanIdents from
+	TypInfo.  Resultant text now starts with an uppercase character.
+
+2001-06-12 01:56  brettshearer
+
+	* src/GUITestRunner.pas (tags: build_4_1_1): no message
+
+2001-06-11 17:18  juanco
+
+	* ChangeLog, want.xml, etc/versioninfo.template.inc (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1), src/versioninfo.inc,
+	src/versioninfo.rc (tags: build_4_1_1), src/versioninfo.res (tags:
+	build_4_1_1) (utags: build_4_1_0): Ready for new release
+
+2001-06-11 17:16  juanco
+
+	* examples/structure/sameunit/Unit2.pas (tags: build_4_1_1,
+	build_4_1_0): Fixed dclaration/implementation discrepancy ignored
+	by Delphi 4
+
+2001-06-11 12:33  chrismo
+
+	* src/GUITestRunner.pas (tags: build_4_1_0): Fixed bug in SetSuite.
+	Now only calls InitTree if FSuite is not nil.
+
+2001-06-11 12:24  chrismo
+
+	* src/TestFramework.pas (tags: build_4_1_0): Changed from
+	deprecated JclDebug.__MAP_OF_ADDR__ to JclDebug.MapOfAddr
+
+2001-05-29 21:52  juanco
+
+	* want.xml, src/versioninfo.inc: Files were being left out of the
+	distribution
+
+2001-05-24 04:32  juanco
+
+	* ChangeLog, change.log (tags: pre_abstract_test_refactoring,
+	build_5_0_2, build_5_0_1, build_5_0_0, build_4_1_3, build_4_1_1,
+	build_4_1_0): Updated change.log to reflect new versioning scheme.
+
+2001-05-24 04:17  juanco
+
+	* change.log, want.xml, etc/versioninfo.template.inc,
+	etc/versioninfo.template.rc (tags: pre_abstract_test_refactoring,
+	build_5_0_2, build_5_0_1, build_5_0_0, build_4_1_3, build_4_1_1,
+	build_4_1_0), src/DunitAbout.dfm (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0),
+	src/DunitAbout.pas (tags: pre_abstract_test_refactoring,
+	build_5_0_2, build_5_0_1, build_5_0_0, build_4_1_3, build_4_1_1,
+	build_4_1_0), src/GUITestRunner.pas, src/dunit.dpr (tags:
+	build_4_1_1, build_4_1_0), src/versioninfo.inc, src/versioninfo.rc,
+	src/versioninfo.res (utags: standalone): Added versioninfo stuff to
+	standalone runner. About box displays it.
+	
+	Added change.log, for user friendly change logs.
+
+2001-05-24 03:13  juanco
+
+	* src/: DUnit.dpk, DunitAbout.dfm, DunitAbout.pas, TestModules.pas
+	(tags: build_4_1_3, build_4_1_1, build_4_1_0, standalone),
+	images/logo.bmp (tags: pre_abstract_test_refactoring, build_5_0_2,
+	build_5_0_1, build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0,
+	standalone): Addedi missing modules for standalone dunit.exe:
+	DunitAbout.pas and TestModules.pas; removed old DUnit.dpk
+
+2001-05-20 19:16  juanco
+
+	* build.xml, want.xml, Contrib/XPGen/build.xml,
+	Contrib/XPGen/want.xml (tags: post_check_instead_of_assert,
+	pre_check_instead_of_assert, post_check_instead_of_assert,
+	pre_check_instead_of_assert, pre_abstract_test_refactoring,
+	build_5_0_2, build_5_0_1, build_5_0_0, build_4_1_3, build_4_1_1,
+	build_4_1_0, standalone, build_3_2_8_1, build_3_2_8_0,
+	build_3_2_7_1, build_3_2_6_2, build_3_3_6_1, build_3_3_6_0, cd,
+	build_3_2_5_1, build_3_2_5_0, build_3_2_4_4, build_3_2_4_2,
+	build_3_2_4_1, post_check_instead_of_assert,
+	pre_check_instead_of_assert, post_check_instead_of_assert,
+	pre_check_instead_of_assert, pre_abstract_test_refactoring,
+	build_5_0_2, build_5_0_1, build_5_0_0, build_4_1_3, build_4_1_1,
+	build_4_1_0, standalone), examples/TListTest/build.xml,
+	examples/TListTest/want.xml (tags: pre_abstract_test_refactoring,
+	build_5_0_2, build_5_0_1, build_5_0_0, build_4_1_3, build_4_1_1,
+	build_4_1_0, standalone), examples/cmdline/build.xml,
+	examples/cmdline/want.xml (tags: pre_abstract_test_refactoring,
+	build_5_0_2, build_5_0_1, build_5_0_0, build_4_1_3, build_4_1_1,
+	build_4_1_0, standalone), examples/collection/build.xml,
+	examples/collection/want.xml (tags: build_4_1_1, build_4_1_0,
+	standalone), examples/registration/build.xml,
+	examples/registration/want.xml (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone),
+	examples/registry/build.xml, examples/registry/want.xml (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone),
+	examples/structure/build.xml, examples/structure/want.xml (tags:
+	build_4_1_3, build_4_1_1, build_4_1_0, standalone),
+	examples/testexception/want.xml (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone):
+	Now DUnit distributions are built using WANT.
+
+2001-05-20 18:54  juanco
+
+	* ChangeLog (tags: standalone), doc/README.html (tags: build_4_1_0,
+	standalone), src/DUnitMainForm.dfm (tags: build_5_0_1, build_5_0_0,
+	build_4_1_3, build_4_1_1, build_4_1_0, standalone),
+	src/DUnitMainForm.pas (tags: build_4_1_0, standalone),
+	src/GUITestRunner.dfm (tags: build_4_1_1, build_4_1_0, standalone),
+	src/GUITestRunner.pas, src/TestFramework.pas (tags: standalone),
+	src/TextTestRunner.pas (tags: build_5_0_0, build_4_1_3,
+	build_4_1_1, build_4_1_0, standalone), src/dunit.dpr: Cleaned up
+	HTML of README.html.
+	
+	Added about box to standalone runner.
+	
+	Factored module loading logic into its own TestModules.pas unit.
+	
+	Now the standalone runner will run in console mode if it sees the
+	-c commandline option.
+
+2001-05-07 22:02  juanco
+
+	* src/: GUITestRunner.pas, TestFramework.pas: Made
+	TestFramework.PointerToXXXInfo() routines public, and made
+	GUITestRunner use them.
+	
+	Now the standalone GUI will report an error line if a .map file for
+	the DLL is present, even if the DLL was not compiled with JEDI JCL.
+
+2001-05-07 21:57  juanco
+
+	* examples/testexception/: Project1.res, Project1Test.res (utags:
+	build_4_1_1, build_4_1_0, build_5_0_2, build_5_0_1, build_5_0_0,
+	build_4_1_3, pre_abstract_test_refactoring, standalone): Added
+	missing .res files to testexception example
+
+2001-05-07 21:43  juanco
+
+	* tests/UnitTestDUnit.pas: Removed obsolete files.
+
+2001-05-07 21:34  juanco
+
+	* tests/: DUnitTestLib.dpr, DUnitTestLib.res (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3), UnitTestExtensions.pas (utags:
+	build_4_1_1, build_4_1_0, standalone): Added DLL version of DUnit
+	test cases.
+
+2001-05-07 21:27  juanco
+
+	* src/TestFramework.pas: Now the framework always constructs the
+	test registry.
+	
+	Now the top level suite of the test registry is named after the
+	module, using GetModuleFileName.
+
+2001-05-07 20:50  juanco
+
+	* src/: DUnitMainForm.dfm, DUnitMainForm.pas, DUnitMainForm.txt
+	(tags: pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone),
+	dunit.bpg (tags: build_4_1_1, build_4_1_0, standalone), dunit.dpr:
+	Added first attempt at a standalone dunit.exe that loads tests from
+	DLLs.
+
+2001-05-07 20:42  juanco
+
+	* src/DUnit.pas: Removed obsolete DUnit.pas.
+
+2001-05-07 20:40  juanco
+
+	* src/: DUnit.res (tags: pre_abstract_test_refactoring,
+	build_5_0_2, build_5_0_1, build_5_0_0, build_4_1_3, build_4_1_1,
+	build_4_1_0, standalone), GUITestRunner.dfm, GUITestRunner.pas,
+	GUITesting.pas (tags: build_4_1_1, build_4_1_0, standalone),
+	TestExtensions.pas (tags: build_4_1_1, build_4_1_0, standalone),
+	TestFramework.pas: Added {$LONGSTRINGS OFF} to core modules to
+	force strings to be ShortStrings and so enable the export ITests
+	from a DLL without requiring the Borland memory management DLL
+	(BORLDNDMM.DLL).
+
+2001-05-07 20:38  juanco
+
+	* tests/UnitTestGUITesting.pas (tags: build_4_1_1, build_4_1_0,
+	standalone): Updated GUI testing tests to use new GUI shortcuts
+
+2001-05-04 19:19  juanco
+
+	* src/TestFramework.pas: Added ExpectedException property to
+	TTestCase
+
+2001-05-04 19:09  juanco
+
+	* src/TestFramework.pas, tests/UnitTestFramework.pas (tags:
+	build_4_1_0, standalone): BUG: CheckException did not fail if no
+	exception was raised. Fixed.
+	
+	BUG: Failure to raise an exception was being trapped by the
+	exception checking logic. Fixed.
+
+2001-05-04 17:26  juanco
+
+	* src/TestFramework.pas, tests/UnitTestFramework.pas: Made
+	exception checking code skip exceptions thrown by the test
+	framework itself.
+	
+	Added CheckException(TMethod, TClass) to TTestCase.  Added methods
+	for checking class types to TTestCase.
+	
+	Added thorough tests for exception checking.
+
+2001-05-03 20:28  juanco
+
+	* ChangeLog, src/GUITestRunner.dfm, src/GUITestRunner.pas,
+	tests/UnitTestGUITesting.pas: Removed bottom button (it was hidden)
+	bar and unnecessary $IFDEFS from GUITestRunner.
+
+2001-05-01 21:36  juanco
+
+	* src/DUnit.pas, src/GUITestRunner.pas, src/GUITesting.pas,
+	src/TestExtensions.pas, src/TestFramework.pas,
+	src/TextTestRunner.pas, tests/UnitTestDUnit.pas,
+	tests/UnitTestExtensions.pas, tests/UnitTestFramework.pas,
+	tests/UnitTestGUITestRunner.pas (tags: build_4_1_1, build_4_1_0,
+	standalone), tests/UnitTestGUITesting.pas, tests/UnitTests.dpr
+	(tags: build_4_1_1, build_4_1_0, standalone): Split
+	TTestFailure.LocationInfo into LocationInfo and AddressInfo.
+	
+	Updated copyright year to 2001.
+
+2001-04-28 05:29  juanco
+
+	* build.xml: build.xml
+
+2001-04-28 02:49  juanco
+
+	* src/: GUITestRunner.dfm, GUITestRunner.pas: Swapped shortcuts
+	among the menu and secondary actions so the menu shows the prefered
+	shortcut, but the old shortcut still works.
+
+2001-04-28 02:42  juanco
+
+	* src/: GUITestRunner.dfm, GUITestRunner.pas: Added action aliases
+	for Run and Stop that are invoked by the F9 and Ctrl+F2 keys
+	respectively.
+
+2001-04-27 21:59  juanco
+
+	* build.xml: added some descriptions to tasks
+
+2001-04-25 21:42  juanco
+
+	* ChangeLog, build.xml, Contrib/XPGen/build.xml, doc/index.html
+	(tags: build_4_1_1, build_4_1_0, standalone),
+	src/GUITestRunner.dfm: Added Dante build.xml to contrib/xpgen and
+	added the subproject to the list of examples.
+
+2001-04-25 21:35  juanco
+
+	* Contrib/XPGen/xpmain.dfm (tags: pre_abstract_test_refactoring,
+	build_5_0_2, build_5_0_1, build_5_0_0, build_4_1_3, build_4_1_1,
+	build_4_1_0, standalone): Converted xpmain.dfm to binary to be able
+	to use it Under Delphi4.
+
+2001-04-25 02:41  juanco
+
+	* ChangeLog: Ready for 3.2.8.1 release
+
+2001-04-25 01:47  juanco
+
+	* ChangeLog, build.xml, src/GUITestRunner.dfm,
+	src/GUITestRunner.pas (utags: build_3_2_8_1): Removed actions that
+	captured the space bar because they interfered with the normal
+	behavior of some controls.
+
+2001-04-25 01:28  juanco
+
+	* doc/index.html (tags: build_3_2_8_1): Fixed link to SF's list of
+	releases.
+
+2001-04-24 03:32  juanco
+
+	* build.xml (tags: build_3_2_8_0): Ready for 3.2.8.0 release.
+
+2001-04-24 03:31  juanco
+
+	* build.xml: BUG: .ZIP file did not include any images because they
+	were not listed in the "docs" patternset.
+	
+	Define USE_JEDI_JCL in test suite compilation.
+
+2001-04-24 03:20  juanco
+
+	* tests/UnitTestFramework.pas (tags: build_3_2_8_1, build_3_2_8_0):
+	Check for empty Test methods works only on optimized code. Fixed
+	test case.
+
+2001-04-24 02:14  juanco
+
+	* tests/: UnitTestExtensions.pas (tags: build_3_2_8_1,
+	build_3_2_8_0), UnitTestFramework.pas: Increased tolerance of the
+	elapsed time test because it was failing on my machine.
+
+2001-04-23 20:09  juanco
+
+	* src/TestFramework.pas (tags: build_3_2_8_1, build_3_2_8_0): Made
+	failures caused by empty tests fail at the test's address
+
+2001-04-23 05:51  brettshearer
+
+	* build.xml: Fixed Typo in Project Name
+
+2001-04-22 12:16  brettshearer
+
+	* tests/: UnitTestFramework.pas, UnitTestGUITesting.pas (tags:
+	build_3_2_8_1, build_3_2_8_0): Added new test for Empty Test
+	scenario.  Changed existing tests so none were empty.
+
+2001-04-22 12:13  brettshearer
+
+	* src/TestFramework.pas: DUnit now detects empty tests and fails
+	them
+
+2001-04-22 10:56  brettshearer
+
+	* src/TestFramework.pas: Fixed a couple of typos in the comments
+
+2001-04-20 17:10  juanco
+
+	* src/GUITestRunner.pas (tags: build_3_2_8_0): Added Expand/Hide
+	nodes actions to the list of actions in EnableUI.
+
+2001-04-20 17:05  juanco
+
+	* src/: GUITestRunner.dfm (tags: build_3_2_8_0), GUITestRunner.pas:
+	Added Space as yer another shortcut for Run and Stop actions.
+
+2001-04-20 17:01  juanco
+
+	* src/TestFramework.pas: Make test framework Run() tolerate a nil
+	Suite so TextRunner doesn't crash
+
+2001-04-19 01:46  juanco
+
+	* doc/README.html (tags: build_3_2_8_1, build_3_2_8_0): More minor
+	fixes to README.html
+
+2001-04-19 01:43  juanco
+
+	* doc/README.html: Fixed README.html code samples that had gotten
+	garbles somehow
+
+2001-04-18 21:25  juanco
+
+	* doc/index.html (tags: build_3_2_8_0): Updated outdated links in
+	website.
+
+2001-04-18 21:22  juanco
+
+	* doc/index.html, doc/images/screenshot.png (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0), doc/images/xtao128_new.png (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0), src/GUITestRunner.dfm,
+	src/images/dunit16_new.ico (tags: pre_abstract_test_refactoring,
+	build_5_0_2, build_5_0_1, build_5_0_0, build_4_1_3, build_4_1_1,
+	build_4_1_0, standalone, build_3_2_8_1, build_3_2_8_0),
+	src/images/dunit_new.ico (tags: pre_abstract_test_refactoring,
+	build_5_0_2, build_5_0_1, build_5_0_0, build_4_1_3, build_4_1_1,
+	build_4_1_0, standalone, build_3_2_8_1, build_3_2_8_0),
+	tests/UnitTests.res (tags: pre_abstract_test_refactoring,
+	build_5_0_2, build_5_0_1, build_5_0_0, build_4_1_3, build_4_1_1,
+	build_4_1_0, standalone, build_3_2_8_1, build_3_2_8_0): Updated web
+	site's screenshot.
+	
+	Replaced the red in DUnit's logo by magenta.
+
+2001-04-18 20:48  juanco
+
+	* doc/images/: screenshot.png, screenshot_running.png (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0): Updated screenshots
+
+2001-04-18 20:37  juanco
+
+	* ChangeLog (tags: build_3_2_8_0), src/GUITestRunner.dfm,
+	src/GUITestRunner.pas, src/images/actions_images.bmp (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0), tests/UnitTestGUITesting.pas:
+	Changed run and stop icons to classic tape player triangle and
+	square.
+	
+	Made both Run and Stop actions respond to Enter key. Run also
+	responds to Alt+R. Stop to Alt+S.
+	
+	Separated Close action from Stop action.
+
+2001-04-18 17:43  juanco
+
+	* src/images/actions_images.bmp: Updated action images with icon
+	for run action.
+
+2001-04-18 17:04  juanco
+
+	* ChangeLog, src/GUITestRunner.dfm, src/GUITestRunner.pas,
+	tests/UnitTestGUITesting.pas: Removed bottom button bar from GUI
+	and replaced functionality with toolbuttons, actions, and menu
+	items
+
+2001-04-18 11:50  brettshearer
+
+	* src/GUITestRunner.pas: Reordered LoadConfiguration so
+	LoadRegistryAction occurred prior to LoadFormPlacement and
+	LoadSuiteConfiguration
+
+2001-04-17 22:07  uberto
+
+	* src/images/: nodesall.ico, nodescur.ico, nodesfail.ico,
+	nodesnone.ico, nodesrev.ico: Replaced with actions_images
+
+2001-04-17 22:05  uberto
+
+	* src/images/actions_images.bmp: New actions_images
+
+2001-04-17 22:00  uberto
+
+	* src/GUITestRunner.pas: Bugfix: GetFirstNode instead of TopItem
+
+2001-04-17 21:59  uberto
+
+	* tests/UnitTestGUITesting.pas: Update tests for new toolbar
+
+2001-04-17 21:52  uberto
+
+	* tests/: UnitTests.dpr, UnitTestGUITestRunner.pas (utags:
+	build_3_2_8_0, build_3_2_8_1): Added credits
+
+2001-04-17 21:51  uberto
+
+	* src/GUITestRunner.dfm: Replaced buttons for selection with a
+	toolbar.  Added toolbar, buttons and actions for Select/Deselect
+	all nodes.  Added new Imagelist for actions.  Changed shortcut for
+	CopyMessages to Ctrl+Shift+C for not interfering with normal copy.
+
+2001-04-17 21:49  uberto
+
+	* src/GUITestRunner.pas: Replaced buttons for selection with a
+	toolbar.  Added buttons and actions for Select/Deselect all nodes. 
+	Improved ScoreBar drawing.
+
+2001-04-11 18:17  juanco
+
+	* src/TestFramework.pas: Added uberto to the list of contributors
+	in TestFramework.pas
+
+2001-04-11 15:09  chrismo
+
+	* src/images/: nodesall.ico, nodescur.ico, nodesfail.ico,
+	nodesrev.ico, nodesnone.ico: Added nodes*.ico files ... rough shots
+	for speed buttons on GUITestRunner for node selection.
+
+2001-04-10 23:21  juanco
+
+	* ChangeLog, build.xml: Renamed build.xml <perlre> element to new
+	name <regexp>
+
+2001-04-10 18:04  uberto
+
+	* tests/dunit.ini: Removed dunit.ini It'll be created if not found
+	with default values.
+
+2001-04-10 18:02  uberto
+
+	* tests/UnitTestGUITesting.pas: Updated testViewResult for running
+	with PostMessage instead of keyb_event Updated all tests for
+	lbProgress reset to blank intead of "0%"
+
+2001-04-10 17:59  uberto
+
+	* src/GUITestRunner.pas: Added ResetProgress private method to
+	reset progress bars and label.
+
+2001-04-10 17:44  uberto
+
+	* src/GUITesting.pas (tags: build_3_2_8_1, build_3_2_8_0): Removed
+	keyb_event to let I GUI tests passing even if there are forms on
+	top of the tested form.
+
+2001-04-07 22:41  juanco
+
+	* src/GUITestRunner.pas: Now the Run button of the GUI runner will
+	be enabled only if there's a test suite, and the number of enabled
+	tests is greater than zero
+
+2001-04-07 00:16  juanco
+
+	* ChangeLog, build.xml (utags: build_3_2_7_1): Fixed build.xml to
+	include files in the root directory
+
+2001-04-06 23:57  juanco
+
+	* Contrib/XPGen/ChangeLog, doc/ChangeLog, doc/images/ChangeLog,
+	etc/ChangeLog, examples/ChangeLog, examples/TListTest/ChangeLog,
+	examples/collection/ChangeLog, examples/embeddable/ChangeLog,
+	examples/registration/ChangeLog, examples/registry/ChangeLog,
+	examples/structure/diffunit/ChangeLog,
+	examples/structure/sameunit/ChangeLog, helpsrc/ChangeLog,
+	private/chrismo/examples/odbcdsn/ChangeLog,
+	private/chrismo/examples/particle/ChangeLog,
+	private/chrismo/examples/particle/Step1/ChangeLog,
+	private/chrismo/examples/particle/Step2/ChangeLog,
+	private/chrismo/examples/particle/Step3/ChangeLog,
+	private/chrismo/examples/particle/Step4/ChangeLog,
+	private/chrismo/examples/particle/Step5/ChangeLog, src/ChangeLog,
+	tests/ChangeLog, tools/ChangeLog: Removed per-directory ChangeLogs.
+	Now there's a single ChangeLog on the project's root dir
+
+2001-04-06 23:51  juanco
+
+	* build.xml: Add ChangeLog to distribution
+
+2001-04-06 23:20  juanco
+
+	* build.xml, ChangeLog, build.xml: routine
+
+2001-04-06 00:44  juanco
+
+	* src/GUITestRunner.pas (tags: build_3_2_7_1): For symetry, added a
+	SaveFormPlacement method.
+	
+	Cleaned up superfluous comments.
+
+2001-04-06 00:37  juanco
+
+	* src/: GUITestRunner.dfm (tags: build_3_2_7_1), GUITestRunner.pas:
+	Bound popup to RTF control, and did a SelectAll before the copy so
+	Copy Error Message To Clipboard works correctly
+
+2001-04-06 00:32  juanco
+
+	* src/: GUITestRunner.dfm, GUITestRunner.pas: Fixed RTF's border
+
+2001-04-06 00:20  juanco
+
+	* src/GUITestRunner.pas: Fixed bug in window placement
+
+2001-04-06 00:11  juanco
+
+	* src/GUITestRunner.pas: Fixed use of color in RTF control (was
+	always red)
+
+2001-04-06 00:05  juanco
+
+	* src/GUITestRunner.pas, tests/UnitTestGUITesting.pas (tags:
+	build_3_2_7_1), tests/UnitTests.dpr (tags: build_3_2_7_1): Moved
+	the call to LoadWindowPlacement to LoadConfiguration, where it
+	should be.  Removed the call to Windows.SetWindowPlacement as it
+	interfered with testing of the GUI and would launch the GUI in
+	disabled mode.
+
+2001-04-05 23:54  juanco
+
+	* ChangeLog, build.xml, src/GUITestRunner.dfm,
+	tests/UnitTestGUITesting.pas: Made GUI RTF control ReadOnly instead
+	of Disabled so the text can be selected
+
+2001-04-05 19:18  uberto
+
+	* src/GUITestRunner.pas: Replaced FormatDateTime with
+	FormatElapsedTime
+
+2001-04-05 01:06  juanco
+
+	* build.xml, doc/README.html (tags: build_3_2_7_1): pakcage all of
+	the examples dirs now that unfinished ones are in another directory
+
+2001-04-04 23:27  uberto
+
+	* tests/: UnitTestFramework.pas (tags: build_3_2_7_1),
+	UnitTestGUITesting.pas: Improved ElapsedTime tests due
+	QueryPerformanceCounter precision.
+
+2001-04-04 23:25  uberto
+
+	* src/GUITestRunner.pas: Used ElapsedTime in TestResult from
+	TTestCase instead of store it in TGuiTestRunner
+
+2001-04-04 23:21  uberto
+
+	* src/TestFramework.pas (tags: build_3_2_7_1): Used
+	QueryPerformanceCounter for increased precision in ElapsedTime
+
+2001-04-04 21:00  uberto
+
+	* src/: GUITestRunner.dfm, GUITestRunner.pas: Replaced message
+	labels with RTF control
+
+2001-04-04 01:16  chrismo
+
+	* private/chrismo/examples/: odbcdsn/ChangeLog, odbcdsn/DO NOT
+	DISTRIBUTE YET.txt (tags: pre_abstract_test_refactoring,
+	build_5_0_2, build_5_0_1, build_5_0_0, build_4_1_3, build_4_1_1,
+	build_4_1_0, standalone, build_3_2_8_1, build_3_2_8_0,
+	build_3_2_7_1), odbcdsn/OdbcAdminTest.dpr (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1),
+	odbcdsn/OdbcAdminUnit.pas (tags: pre_abstract_test_refactoring,
+	build_5_0_2, build_5_0_1, build_5_0_0, build_4_1_3, build_4_1_1,
+	build_4_1_0, standalone, build_3_2_8_1, build_3_2_8_0,
+	build_3_2_7_1), odbcdsn/OdbcAdminUnitTest.pas (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1), odbcdsn/readme.txt
+	(tags: pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1), particle/ChangeLog,
+	particle/DO NOT DISTRIBUTE YET.txt (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1), particle/Particle.bpg
+	(tags: pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1), particle/Particle.dpr
+	(tags: pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1),
+	particle/ParticleFrm.dfm (tags: pre_abstract_test_refactoring,
+	build_5_0_2, build_5_0_1, build_5_0_0, build_4_1_3, build_4_1_1,
+	build_4_1_0, standalone, build_3_2_8_1, build_3_2_8_0,
+	build_3_2_7_1), particle/ParticleFrm.pas (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1),
+	particle/ParticleTest.dpr (tags: pre_abstract_test_refactoring,
+	build_5_0_2, build_5_0_1, build_5_0_0, build_4_1_3, build_4_1_1,
+	build_4_1_0, standalone, build_3_2_8_1, build_3_2_8_0,
+	build_3_2_7_1), particle/ParticleUnit.pas (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1),
+	particle/ParticleUnitTest.pas (tags: pre_abstract_test_refactoring,
+	build_5_0_2, build_5_0_1, build_5_0_0, build_4_1_3, build_4_1_1,
+	build_4_1_0, standalone, build_3_2_8_1, build_3_2_8_0,
+	build_3_2_7_1), particle/Step1/ChangeLog,
+	particle/Step1/Particle.bpg (tags: pre_abstract_test_refactoring,
+	build_5_0_2, build_5_0_1, build_5_0_0, build_4_1_3, build_4_1_1,
+	build_4_1_0, standalone, build_3_2_8_1, build_3_2_8_0,
+	build_3_2_7_1), particle/Step1/Particle.dpr (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1),
+	particle/Step1/ParticleFrm.dfm (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1),
+	particle/Step1/ParticleFrm.pas (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1),
+	particle/Step1/ParticleTest.dpr (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1),
+	particle/Step1/ParticleUnit.pas (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1),
+	particle/Step1/ParticleUnitTest.pas (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1),
+	particle/Step2/ChangeLog, particle/Step2/Particle.bpg (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1),
+	particle/Step2/Particle.dpr (tags: pre_abstract_test_refactoring,
+	build_5_0_2, build_5_0_1, build_5_0_0, build_4_1_3, build_4_1_1,
+	build_4_1_0, standalone, build_3_2_8_1, build_3_2_8_0,
+	build_3_2_7_1), particle/Step2/ParticleFrm.dfm (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1),
+	particle/Step2/ParticleFrm.pas (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1),
+	particle/Step2/ParticleTest.dpr (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1),
+	particle/Step2/ParticleUnit.pas (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1),
+	particle/Step2/ParticleUnitTest.pas (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1),
+	particle/Step3/ChangeLog, particle/Step3/Particle.bpg (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1),
+	particle/Step3/Particle.dpr (tags: pre_abstract_test_refactoring,
+	build_5_0_2, build_5_0_1, build_5_0_0, build_4_1_3, build_4_1_1,
+	build_4_1_0, standalone, build_3_2_8_1, build_3_2_8_0,
+	build_3_2_7_1), particle/Step3/ParticleFrm.dfm (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1),
+	particle/Step3/ParticleFrm.pas (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1),
+	particle/Step3/ParticleTest.dpr (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1),
+	particle/Step3/ParticleUnit.pas (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1),
+	particle/Step3/ParticleUnitTest.pas (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1),
+	particle/Step4/ChangeLog, particle/Step4/Particle.bpg (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1),
+	particle/Step4/Particle.dpr (tags: pre_abstract_test_refactoring,
+	build_5_0_2, build_5_0_1, build_5_0_0, build_4_1_3, build_4_1_1,
+	build_4_1_0, standalone, build_3_2_8_1, build_3_2_8_0,
+	build_3_2_7_1), particle/Step4/ParticleFrm.dfm (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1),
+	particle/Step4/ParticleFrm.pas (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1),
+	particle/Step4/ParticleTest.dpr (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1),
+	particle/Step4/ParticleUnit.pas (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1),
+	particle/Step4/ParticleUnitTest.pas (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1),
+	particle/Step5/ChangeLog, particle/Step5/Particle.bpg (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1),
+	particle/Step5/Particle.dpr (tags: pre_abstract_test_refactoring,
+	build_5_0_2, build_5_0_1, build_5_0_0, build_4_1_3, build_4_1_1,
+	build_4_1_0, standalone, build_3_2_8_1, build_3_2_8_0,
+	build_3_2_7_1), particle/Step5/ParticleFrm.dfm (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1),
+	particle/Step5/ParticleFrm.pas (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1),
+	particle/Step5/ParticleTest.dpr (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1),
+	particle/Step5/ParticleUnit.pas (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1),
+	particle/Step5/ParticleUnitTest.pas (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1): Removed incomplete
+	examples (now in private/chrismo/examples)
+
+2001-04-02 23:52  juanco
+
+	* build.xml, examples/TListTest/build.xml (tags: build_3_2_8_1,
+	build_3_2_8_0, build_3_2_7_1), examples/cmdline/build.xml (tags:
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1),
+	examples/collection/build.xml (tags: build_3_2_8_1, build_3_2_8_0,
+	build_3_2_7_1), examples/registration/build.xml (tags:
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1),
+	examples/registry/build.xml (tags: build_3_2_8_1, build_3_2_8_0,
+	build_3_2_7_1), examples/structure/build.xml (tags: build_3_2_8_1,
+	build_3_2_8_0, build_3_2_7_1): Updated copyrights to 2001
+
+2001-04-02 22:33  juanco
+
+	* build.xml, examples/TListTest/build.xml,
+	examples/cmdline/build.xml, examples/collection/build.xml,
+	examples/registration/build.xml, examples/registry/build.xml,
+	examples/structure/build.xml: Added build.xml scripts to build
+	DUnit with Dante
+
+2001-04-01 21:59  uberto
+
+	* tests/UnitTestFramework.pas: Added tests for Expected Exception
+
+2001-04-01 21:58  uberto
+
+	* src/TestFramework.pas: Added StartExpectingException and
+	StopExpectingException
+
+2001-03-30 07:59  juanco
+
+	* src/: GUITestRunner.txt, KylixGUITestRunner.txt (utags:
+	build_4_1_1, build_3_2_8_0, build_3_2_7_1, build_4_1_0,
+	build_5_0_2, build_5_0_1, build_5_0_0, build_4_1_3,
+	pre_abstract_test_refactoring, standalone, build_3_2_8_1): Updated
+	ASCII versions of the DMFs
+
+2001-03-30 04:06  brettshearer
+
+	* examples/structure/diffunit/Unit2.pas (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1): Declaration differed
+	from implementation.
+
+2001-03-29 23:51  brettshearer
+
+	* src/: GUITestRunner.dfm, GUITestRunner.pas, TestFramework.pas,
+	TextTestRunner.pas (tags: build_3_2_8_1, build_3_2_8_0,
+	build_3_2_7_1): Show currently running test in blue (imgRunning). 
+	Added AddSuccess method to ITestListener interface
+
+2001-03-29 08:17  brettshearer
+
+	* src/: GUITestRunner.dfm, GUITestRunner.pas: Stop run button being
+	available when no tests are selected.
+
+2001-03-29 08:10  brettshearer
+
+	* src/TestFramework.pas: Stop progress and scrore window
+	prematurely displaying 100% complete.
+
+2001-03-27 04:12  brettshearer
+
+	* src/: GUITestRunner.dfm, GUITestRunner.pas, TestExtensions.pas
+	(tags: build_3_2_8_1, build_3_2_8_0, build_3_2_7_1),
+	TestFramework.pas: Added support for storing configuration to
+	registry.  Now stores window size/maximized information when
+	saving.
+
+2001-03-26 21:04  chrismo
+
+	* src/GUITestRunner.pas: Fixed memory leak in FormCreate.
+	FTestResult was being created then set to nil (via the TestResult
+	property) a few lines later. D'oh!
+
+2001-03-23 02:45  juanco
+
+	* doc/README.html: Fixed minor bugs in the web site/docs
+
+2001-03-22 08:01  majohnson
+
+	* tests/UnitTests.dpr: the console app directive was left out,
+	causing the unit test driver to crash if the user specified
+	/text-mode on the command line to cuase the unit test to execute in
+	text mode
+
+2001-03-21 17:35  juanco
+
+	* src/GUITestRunner.pas: BUG#410300: Elapsed time shows zzz with
+	Delphi4. Fixed.
+
+2001-03-16 16:34  juanco
+
+	* Makefile (tags: build_5_0_2), Rules.mak, src/Makefile (tags:
+	pre_abstract_test_refactoring, build_5_0_2) (utags: build_4_1_1,
+	build_3_2_8_0, build_3_2_7_1, build_4_1_0, build_5_0_1,
+	build_5_0_0, build_4_1_3, standalone, build_3_2_8_1): BUG#409158:
+	make clean does not work. Fixed.  BUG#409162: make framework does
+	not. Fixed.
+
+2001-03-15 23:22  juanco
+
+	* src/: KylixGUITestRunner.dfm, KylixGUITestRunner.pas (utags:
+	build_4_1_1, build_3_2_8_0, build_3_2_7_1, build_4_1_0, standalone,
+	build_3_2_8_1): Added Kylix version of GUI Test Runner
+
+2001-03-15 21:29  uberto
+
+	* src/: GUITestRunner.dfm, GUITestRunner.pas: Add progress label
+	and some minor update fixes
+
+2001-03-15 21:27  uberto
+
+	* tests/UnitTestGUITesting.pas: Add test for progress label
+
+2001-03-08 21:24  uberto
+
+	* tests/UnitTestGUITesting.pas: added 2 tests: TestElapsedTime
+	TestViewResult
+
+2001-03-08 21:16  uberto
+
+	* src/GUITestRunner.pas: bugfix: when click on a test first time
+	show milliseconds in elapsed time
+
+2001-03-08 21:08  uberto
+
+	* src/GUITesting.pas (tags: build_3_2_7_1): replaced WM_KEYDOWN/UP
+	with keyb_event
+
+2001-02-24 05:35  chrismo
+
+	* tests/UnitTestFramework.pas: Added tests for CheckEquals and
+	CheckNotEquals for boolean values.
+
+2001-02-24 05:35  chrismo
+
+	* src/TestFramework.pas: Added CheckEquals and CheckNotEquals for
+	boolean values.
+
+2001-02-22 18:55  juanco
+
+	* src/: GUITestRunner.dfm, GUITestRunner.pas: Can copy failure
+	message to clipboard with menu, local menu, and shortcut (by Steve
+	Tendon)
+
+2001-02-20 21:44  juanco
+
+	* doc/index.html (tags: build_3_2_7_1): Added link to Chris
+	Morris's article about XP
+
+2001-02-20 20:57  juanco
+
+	* doc/index.html: Added links section, and link to Will Watts
+	article
+
+2001-02-20 00:49  juanco
+
+	* src/GUITesting.pas: Added methods to check for control visibility
+
+2001-02-20 00:48  juanco
+
+	* src/TestFramework.pas: Now also accepts \ and / as registry path
+	separators.
+
+2001-02-16 00:59  juanco
+
+	* ChangeLog, Contrib/XPGen/ChangeLog, doc/ChangeLog,
+	doc/images/ChangeLog, etc/ChangeLog, examples/ChangeLog,
+	examples/TListTest/ChangeLog, examples/collection/ChangeLog,
+	examples/embeddable/ChangeLog, examples/registration/ChangeLog,
+	examples/registry/ChangeLog, examples/registry/Step1/ChangeLog
+	(tags: pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1),
+	examples/registry/Step2/ChangeLog (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1),
+	examples/registry/Step3/ChangeLog (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1),
+	examples/structure/ChangeLog (tags: pre_abstract_test_refactoring,
+	build_5_0_2, build_5_0_1, build_5_0_0, build_4_1_3, build_4_1_1,
+	build_4_1_0, standalone, build_3_2_8_1, build_3_2_8_0,
+	build_3_2_7_1), examples/structure/diffunit/ChangeLog,
+	examples/structure/sameunit/ChangeLog,
+	examples/testexception/ChangeLog (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1), helpsrc/ChangeLog,
+	src/ChangeLog, tests/ChangeLog, tools/ChangeLog (utags:
+	build_3_2_6_2): Updated ChangeLogs
+
+2001-02-16 00:56  juanco
+
+	* Makefile, Rules.mak, Contrib/XPGen/Makefile (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1),
+	examples/TListTest/Makefile (tags: pre_abstract_test_refactoring,
+	build_5_0_2, build_5_0_1, build_5_0_0, build_4_1_3, build_4_1_1,
+	build_4_1_0, standalone, build_3_2_8_1, build_3_2_8_0,
+	build_3_2_7_1), examples/cmdline/Makefile (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1),
+	examples/collection/Collections.pas (tags: build_4_1_1,
+	build_4_1_0, standalone, build_3_2_8_1, build_3_2_8_0,
+	build_3_2_7_1), examples/collection/Makefile (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1),
+	examples/registration/Makefile (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1),
+	examples/registry/Makefile (tags: pre_abstract_test_refactoring,
+	build_5_0_2, build_5_0_1, build_5_0_0, build_4_1_3, build_4_1_1,
+	build_4_1_0, standalone, build_3_2_8_1, build_3_2_8_0,
+	build_3_2_7_1), examples/registry/Step1/RegistryTest.dpr (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1),
+	examples/registry/Step2/RegistryTest.dpr (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1),
+	examples/registry/Step3/RegistryTest.dpr (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1),
+	examples/structure/Makefile (tags: pre_abstract_test_refactoring,
+	build_5_0_2, build_5_0_1, build_5_0_0, build_4_1_3, build_4_1_1,
+	build_4_1_0, standalone, build_3_2_8_1, build_3_2_8_0,
+	build_3_2_7_1), tests/Makefile (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1) (utags:
+	build_3_2_6_2): Changed Makefiles to work with the Cygwin version
+	of GNU Make as to get rid of the many inconsistencies in Borland
+	Make.
+
+2001-02-13 14:12  juanco
+
+	* ChangeLog, Makefile, Contrib/XPGen/ChangeLog, doc/ChangeLog,
+	doc/TODO.html (tags: pre_abstract_test_refactoring, build_5_0_2,
+	build_5_0_1, build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0,
+	standalone, build_3_2_8_1, build_3_2_8_0, build_3_2_7_1,
+	build_3_2_6_2), doc/images/ChangeLog, etc/ChangeLog,
+	examples/ChangeLog, examples/TListTest/ChangeLog,
+	examples/collection/ChangeLog, examples/embeddable/ChangeLog,
+	examples/registration/ChangeLog, examples/registry/ChangeLog,
+	examples/registry/Step1/ChangeLog,
+	examples/registry/Step2/ChangeLog,
+	examples/registry/Step3/ChangeLog, examples/structure/ChangeLog,
+	examples/structure/diffunit/ChangeLog,
+	examples/structure/sameunit/ChangeLog,
+	examples/testexception/ChangeLog, helpsrc/ChangeLog, src/ChangeLog,
+	src/GUITestRunner.dfm (tags: build_3_2_6_2), src/GUITestRunner.pas
+	(tags: build_3_2_6_2), src/images/run_images.bmp (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1, build_3_2_6_2),
+	tests/ChangeLog, tools/ChangeLog (utags: build_3_3_6_1): BUG:
+	Makefile was leaving doc directory out of the distribution.
+
+2001-02-11 23:50  juanco
+
+	* Makefile (tags: build_3_3_6_0): Do not report file names in
+	FullChangeLog
+
+2001-02-11 23:17  juanco
+
+	* Makefile: Ready for 3.2.6 release
+
+2001-02-11 20:13  juanco
+
+	* admin/cvsignore: Added .drc to the list of extensions ignored by
+	default by CVS
+
+2001-02-11 19:57  juanco
+
+	* doc/README.html (tags: build_3_2_6_2, build_3_3_6_1,
+	build_3_3_6_0, cd): Applied W3C HTML tidy to README.html
+
+2001-02-11 19:45  juanco
+
+	* doc/README.html: Added ALT tag to DUnit logo img
+
+2001-02-11 19:44  juanco
+
+	* doc/: README.html, index.html (tags: build_3_2_6_2,
+	build_3_3_6_1, build_3_3_6_0, cd), images/screenshot.gif,
+	images/screenshot.png (tags: build_3_2_7_1, build_3_2_6_2,
+	build_3_3_6_1, build_3_3_6_0, cd), images/xtao128.bmp,
+	images/xtao128.gif, images/xtao128.png (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1, build_3_2_6_2,
+	build_3_3_6_1, build_3_3_6_0, cd), images/xtao16-16.bmp,
+	images/xtao16-16.png (tags: pre_abstract_test_refactoring,
+	build_5_0_2, build_5_0_1, build_5_0_0, build_4_1_3, build_4_1_1,
+	build_4_1_0, standalone, build_3_2_8_1, build_3_2_8_0,
+	build_3_2_7_1, build_3_2_6_2, build_3_3_6_1, build_3_3_6_0, cd),
+	images/xtao16-256.bmp, images/xtao16-256.png (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1, build_3_2_6_2,
+	build_3_3_6_1, build_3_3_6_0, cd), images/xtao16.bmp,
+	images/xtao16.png (tags: pre_abstract_test_refactoring,
+	build_5_0_2, build_5_0_1, build_5_0_0, build_4_1_3, build_4_1_1,
+	build_4_1_0, standalone, build_3_2_8_1, build_3_2_8_0,
+	build_3_2_7_1, build_3_2_6_2, build_3_3_6_1, build_3_3_6_0, cd),
+	images/xtao256.bmp, images/xtao256.png (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1, build_3_2_6_2,
+	build_3_3_6_1, build_3_3_6_0, cd), images/xtao32-256.bmp,
+	images/xtao32-256.png (tags: pre_abstract_test_refactoring,
+	build_5_0_2, build_5_0_1, build_5_0_0, build_4_1_3, build_4_1_1,
+	build_4_1_0, standalone, build_3_2_8_1, build_3_2_8_0,
+	build_3_2_7_1, build_3_2_6_2, build_3_3_6_1, build_3_3_6_0, cd),
+	images/xtao32.bmp, images/xtao32.png (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1, build_3_2_6_2,
+	build_3_3_6_1, build_3_3_6_0, cd), images/xtao64.bmp,
+	images/xtao64.png (tags: pre_abstract_test_refactoring,
+	build_5_0_2, build_5_0_1, build_5_0_0, build_4_1_3, build_4_1_1,
+	build_4_1_0, standalone, build_3_2_8_1, build_3_2_8_0,
+	build_3_2_7_1, build_3_2_6_2, build_3_3_6_1, build_3_3_6_0, cd):
+	Replaced .GIFs and .BMPs by .PNGs
+
+2001-02-11 19:12  juanco
+
+	* admin/cvswrappers: Added .png to the list of extensions CVS
+	considers binary
+
+2001-02-11 19:11  juanco
+
+	* Contrib/XPGen/testXpgen.dpr (tags: pre_abstract_test_refactoring,
+	build_5_0_2, build_5_0_1, build_5_0_0, build_4_1_3, build_4_1_1,
+	build_4_1_0, standalone, build_3_2_8_1, build_3_2_8_0,
+	build_3_2_7_1, build_3_2_6_2, build_3_3_6_1, build_3_3_6_0, cd):
+	BUG: Checked in debugging version of testXpgen.dpr
+
+2001-02-10 02:36  juanco
+
+	* src/GUITestRunner.txt (tags: build_3_2_6_2, build_3_3_6_1,
+	build_3_3_6_0, cd): Refresh text version go GUIRunner's form
+
+2001-02-10 02:35  juanco
+
+	* doc/README.html, doc/index.html, doc/images/xtao128.bmp,
+	doc/images/xtao128.gif, doc/images/xtao16-16.bmp,
+	doc/images/xtao16-256.bmp, doc/images/xtao16.bmp,
+	doc/images/xtao256.bmp, doc/images/xtao32-256.bmp,
+	doc/images/xtao32.bmp, doc/images/xtao64.bmp, src/GUITestRunner.dfm
+	(tags: build_3_3_6_0, cd), src/images/dunit.ico (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1, build_3_2_6_2,
+	build_3_3_6_1, build_3_3_6_0, cd), src/images/dunit16.ico (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1, build_3_2_6_2,
+	build_3_3_6_1, build_3_3_6_0, cd), tests/UnitTests.res (tags:
+	build_3_2_7_1, build_3_2_6_2, build_3_3_6_1, build_3_3_6_0, cd):
+	Added XTao logo to docs, and an icon to the GUIRunner
+
+2001-02-10 00:21  juanco
+
+	* admin/cvsignore: Ignore ChangeLog files by default.
+
+2001-02-09 21:09  chrismo
+
+	* Contrib/momus/orig tests/TestsByNumber.zip (tags:
+	post_check_instead_of_assert, pre_check_instead_of_assert,
+	post_check_instead_of_assert, pre_check_instead_of_assert,
+	post_check_instead_of_assert, pre_check_instead_of_assert,
+	post_check_instead_of_assert, pre_check_instead_of_assert,
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1, build_3_2_6_2,
+	build_3_3_6_1, build_3_3_6_0, cd, build_3_2_5_1, build_3_2_5_0,
+	build_3_2_4_4, build_3_2_4_2, build_3_2_4_1,
+	post_check_instead_of_assert, pre_check_instead_of_assert,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1, build_3_2_6_2,
+	build_3_3_6_1, build_3_3_6_0, cd, build_3_2_5_1, build_3_2_5_0,
+	build_3_2_4_4, build_3_2_4_2, build_3_2_4_1,
+	post_check_instead_of_assert, pre_check_instead_of_assert,
+	post_check_instead_of_assert, pre_check_instead_of_assert,
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1, build_3_2_6_2,
+	build_3_3_6_1, build_3_3_6_0, cd): Added original momus tests by
+	Reinier in .zip file
+
+2001-02-09 19:39  juanco
+
+	* admin/users: added sirannon to users map
+
+2001-02-09 19:37  juanco
+
+	* admin/users: Users to mail address map.
+
+2001-02-09 19:25  juanco
+
+	* Makefile (tags: cd), Rules.mak (tags: build_3_3_6_1,
+	build_3_3_6_0, cd), src/GUITestRunner.dfm, src/GUITestRunner.pas
+	(tags: build_3_3_6_0, cd), src/TestFramework.pas (tags:
+	build_3_2_6_2, build_3_3_6_1, build_3_3_6_0, cd),
+	src/TextTestRunner.pas (tags: build_3_2_6_2, build_3_3_6_1,
+	build_3_3_6_0, cd): Optionally use JEDI's JclDebug to provide
+	detailed location info for failures
+
+2001-02-09 19:22  juanco
+
+	* Contrib/XPGen/: testXpgen.cfg (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1, build_3_2_6_2,
+	build_3_3_6_1, build_3_3_6_0, cd), testXpgen.dof (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1, build_3_2_6_2,
+	build_3_3_6_1, build_3_3_6_0, cd), testXpgen.dpr, xpLex.pas (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1, build_3_2_6_2,
+	build_3_3_6_1, build_3_3_6_0, cd): BUG: Added zero termination to
+	lexer's buffer to avoid overruns.
+
+2001-02-09 17:49  juanco
+
+	* tests/: UnitTestGUITestRunner.pas (tags: build_3_2_7_1),
+	UnitTestGUITesting.pas (utags: cd, build_3_2_6_2, build_3_3_6_0,
+	build_3_3_6_1): Make sure that tests GUIRunners _do_not_ break on
+	exceptions
+
+2001-02-09 17:48  juanco
+
+	* src/TextTestRunner.pas: Applied extract-method refactoring to
+	common code in TextRunner
+
+2001-02-09 17:48  juanco
+
+	* src/TestFramework.pas: Cleaned up failure message strings
+
+2001-02-09 17:45  juanco
+
+	* Contrib/XPGen/test_xpParse.pas (tags: build_5_0_0, build_4_1_3,
+	build_4_1_1, build_4_1_0, standalone, build_3_2_8_1, build_3_2_8_0,
+	build_3_2_7_1, build_3_2_6_2, build_3_3_6_1, build_3_3_6_0, cd):
+	Used CheckEquals on some checks to provide more failure
+	information.
+
+2001-02-09 17:44  juanco
+
+	* Contrib/XPGen/Makefile (tags: build_3_3_6_1, build_3_3_6_0, cd):
+	Added target for testing in GUI mode.
+
+2001-02-09 02:37  juanco
+
+	* examples/cmdline/Makefile (tags: build_3_3_6_1, build_3_3_6_0,
+	cd), examples/cmdline/Project1.res (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1, build_3_2_6_2,
+	build_3_3_6_1, build_3_3_6_0, cd),
+	examples/cmdline/Project1Test.res (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1, build_3_2_6_2,
+	build_3_3_6_1, build_3_3_6_0, cd), Contrib/XPGen/testXpgen.cfg,
+	Contrib/XPGen/testXpgen.dof, Contrib/XPGen/.cvsignore (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1, build_3_2_6_2,
+	build_3_3_6_1, build_3_3_6_0, cd), .cvsignore (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1, build_3_2_6_2,
+	build_3_3_6_1, build_3_3_6_0, cd), src/.cvsignore (tags:
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1, build_3_2_6_2,
+	build_3_3_6_1, build_3_3_6_0, cd), tests/.cvsignore (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1, build_3_2_6_2,
+	build_3_3_6_1, build_3_3_6_0, cd): routine
+
+2001-02-09 01:35  juanco
+
+	* Makefile: Added a 'clean' as a make target
+
+2001-02-09 01:23  juanco
+
+	* src/: GUITestRunner.dfm, GUITestRunner.pas: Refactored
+	complicated routines in GUITestRunner.	Show failure address in
+	GUITestRunner.	Changed the heavyweight RTF to a group of lables in
+	GUITestRunner.
+
+2001-02-09 01:12  juanco
+
+	* src/GUITesting.pas (tags: build_3_2_6_2, build_3_3_6_1,
+	build_3_3_6_0, cd): cosmetic
+
+2001-02-09 01:05  juanco
+
+	* src/TestFramework.pas: BUG: TTestCase.FStopTime was not being
+	reset when the test was restarted.  Factored BreakOnFailures into
+	TTestResult.  Not it works on a per TTestResult basis.	Provided
+	own implementation of IsBadPointer.
+
+2001-02-08 23:30  juanco
+
+	* tests/: Makefile (tags: build_3_3_6_1, build_3_3_6_0, cd),
+	UnitTestFramework.pas (tags: build_3_2_6_2, build_3_3_6_1,
+	build_3_3_6_0, cd), UnitTestGUITestRunner.pas,
+	UnitTestGUITesting.pas: Removed references to unused units
+
+2001-02-08 23:29  juanco
+
+	* tests/UnitTests.dpr (tags: build_3_2_6_2, build_3_3_6_1,
+	build_3_3_6_0, cd): DUnit tests: Activate text mode through a
+	command-line switch instead of by using IsConsole.
+
+2001-02-08 22:18  juanco
+
+	* src/images/: list_images.bmp (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1, build_3_2_6_2,
+	build_3_3_6_1), run_images.bmp, state_images.bmp (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1, build_3_2_6_2,
+	build_3_3_6_1) (utags: cd, build_3_3_6_0): Added stand-alone .bmp
+	files for the images used by the GUI
+
+2001-02-01 17:26  juanco
+
+	* src/GUITestRunner.pas, src/TestFramework.pas,
+	tests/UnitTestFramework.pas: BUG: CheckNotEquals(integer) had its
+	test reversed.	Added regresion tests for all TTestCase.CheckXXX()
+	methods.  Assert validity of index of tests in GUITestRunner.
+
+2001-01-31 06:42  majohnson
+
+	* Contrib/XPGen/test_ParseEventDef.txt (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1, build_3_2_6_2,
+	build_3_3_6_1, build_3_3_6_0, cd): test case to demonstrate the
+	proper way to paser delphi event defs like event = procedure(sender
+	: tobject) of object
+
+2001-01-31 06:38  majohnson
+
+	* Contrib/XPGen/xpParse.pas (tags: pre_abstract_test_refactoring,
+	build_5_0_2, build_5_0_1, build_5_0_0, build_4_1_3, build_4_1_1,
+	build_4_1_0, standalone, build_3_2_8_1, build_3_2_8_0,
+	build_3_2_7_1, build_3_2_6_2, build_3_3_6_1, build_3_3_6_0, cd):
+	provides a more elaborate way to parse event type definitions so
+	that complex events can be parsed and ignored by xpgen
+
+2001-01-31 06:35  majohnson
+
+	* Contrib/XPGen/test_xpParse.pas: provides a test case to test the
+	parsing of delhi test events
+
+2001-01-29 14:09  chrismo
+
+	* Makefile, examples/cmdline/Makefile, src/UnitTests.res: Updated
+	makefiles to include new cmdline example in distribution
+
+2001-01-29 14:00  chrismo
+
+	* examples/cmdline/: Project1.dpr, Project1Test.dpr,
+	ProjectGroup1.bpg (tags: pre_abstract_test_refactoring,
+	build_5_0_2, build_5_0_1, build_5_0_0, build_4_1_3), Unit1.pas
+	(tags: pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3), Unit1Test.pas (tags: build_5_0_0,
+	build_4_1_3), Unit2.pas (tags: pre_abstract_test_refactoring,
+	build_5_0_2, build_5_0_1, build_5_0_0, build_4_1_3), Unit2Test.pas
+	(tags: build_5_0_0, build_4_1_3), runtest.bat (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3) (utags: cd, build_4_1_1, build_3_2_8_0,
+	build_3_2_7_1, build_4_1_0, build_3_2_6_2, build_3_3_6_0,
+	build_3_3_6_1, standalone, build_3_2_8_1): Added cmdline example
+
+2001-01-24 07:10  majohnson
+
+	* Contrib/XPGen/XPGEN.DPK (tags: build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1, build_3_2_6_2,
+	build_3_3_6_1, build_3_3_6_0, cd): package file for building the
+	XPGEN IDE wizard
+
+2001-01-24 07:09  majohnson
+
+	* Contrib/XPGen/WIZARDXPGEN.PAS (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1, build_3_2_6_2,
+	build_3_3_6_1, build_3_3_6_0, cd): Delphi IDE code wizard module
+
+2001-01-24 07:00  majohnson
+
+	* Contrib/XPGen/xpCodeGen.pas (tags: pre_abstract_test_refactoring,
+	build_5_0_2, build_5_0_1, build_5_0_0, build_4_1_3, build_4_1_1,
+	build_4_1_0, standalone, build_3_2_8_1, build_3_2_8_0,
+	build_3_2_7_1, build_3_2_6_2, build_3_3_6_1, build_3_3_6_0, cd):
+	added DriverSrcOutputText class which returns the generated code as
+	a single long string instead of as a tstringlist collection
+
+2001-01-17 20:49  juanco
+
+	* src/: GUITestRunner.dfm, GUITestRunner.pas, GUITestRunner.txt:
+	Tweaks to make the UI be updated as testing progresses.
+	
+	Added a Show Tested Node option to the menu.
+
+2001-01-17 20:47  juanco
+
+	* src/GUITesting.pas: BUG: Hide methods ill defined
+
+2001-01-14 03:26  juanco
+
+	* src/GUITesting.pas: Experimental changes to make GUI testing work
+	with forms that launch other forms.
+
+2001-01-04 20:29  juanco
+
+	* src/TestFramework.pas, tests/UnitTestFramework.pas: Added
+	ElapsedTestTime method to TTestCase.
+
+2001-01-02 22:35  juanco
+
+	* src/GUITesting.pas: By default destroy the GUI on TearDown and on
+	Destroy.
+
+2000-12-20 21:32  juanco
+
+	* ChangeLog, Contrib/XPGen/ChangeLog, doc/ChangeLog,
+	doc/images/ChangeLog, etc/ChangeLog, examples/ChangeLog,
+	examples/TListTest/ChangeLog, examples/collection/ChangeLog,
+	examples/embeddable/ChangeLog, examples/registration/ChangeLog,
+	examples/registry/ChangeLog, examples/registry/Step1/ChangeLog,
+	examples/registry/Step2/ChangeLog,
+	examples/registry/Step3/ChangeLog, examples/structure/ChangeLog,
+	examples/structure/diffunit/ChangeLog,
+	examples/structure/sameunit/ChangeLog,
+	examples/testexception/ChangeLog, helpsrc/ChangeLog, src/ChangeLog,
+	tools/ChangeLog (utags: cd, build_3_3_6_0, build_3_2_5_1): updated
+	changelogs prior to release
+
+2000-12-20 21:28  juanco
+
+	* tests/: ChangeLog, dunit.ini (tags: build_3_2_7_1, build_3_2_6_2,
+	build_3_3_6_1) (utags: cd, build_3_3_6_0, build_3_2_5_1): Default
+	.ini file to include in distribution.
+
+2000-12-20 21:24  juanco
+
+	* Makefile (tags: build_3_2_5_1): Include .ini files in
+	distribution.
+
+2000-12-20 21:15  juanco
+
+	* doc/TODO.html (tags: build_3_3_6_0, cd, build_3_2_5_1): First
+	attempt at a TODO list maintained with the web-site.
+
+2000-12-20 21:14  juanco
+
+	* src/TextTestRunner.pas (tags: build_3_2_5_1): [ Bug #126522 ]
+	TextTestRunner.RunRegisteredTests doesn't Halt. Fixed.
+
+2000-12-20 21:10  juanco
+
+	* tests/UnitTestGUITesting.pas (tags: build_3_2_5_1): BUG: The
+	success check had to be for 0 failures and 0 errors.
+
+2000-12-20 21:09  juanco
+
+	* Makefile: [ Bug #124713 ] Some example directories are empty in
+	the distribution. Fixed.
+
+2000-12-20 21:07  juanco
+
+	* tests/UnitTests.dof: Removed UnitTests.dof to avoid checking in
+	local versions.
+
+2000-12-20 20:49  juanco
+
+	* src/GUITestRunner.pas (tags: build_3_2_5_1),
+	tests/UnitTestGUITesting.pas: [ Bug #124769 ] Latest GUITestRunner
+	doesn't show Run Count. Fixed.	Added regresion test.
+
+2000-12-20 20:45  juanco
+
+	* admin/cvswrappers: Updated list of binary files
+
+2000-12-20 20:41  juanco
+
+	* examples/embeddable/ChangeLog: routine
+
+2000-12-20 20:24  juanco
+
+	* src/TestFramework.pas (tags: build_3_2_5_1): Refactored
+	TTestResult.Run() to make the code clearer.
+
+2000-12-09 01:01  juanco
+
+	* src/GUITestRunner.dfm (tags: build_3_2_5_1),
+	src/GUITestRunner.pas, src/TestFramework.pas,
+	tests/UnitTestFramework.pas (tags: build_3_2_5_1): Always run a
+	test case's TearDown, even if SetUp crashed.
+
+2000-12-08 03:16  juanco
+
+	* doc/API.zip (tags: pre_abstract_test_refactoring, build_5_0_2,
+	build_5_0_1, build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0,
+	standalone, build_3_2_8_1, build_3_2_8_0, build_3_2_7_1,
+	build_3_2_6_2, build_3_3_6_1, build_3_3_6_0, cd, build_3_2_5_1):
+	BUG: Failed to set the -kb (binary) option of CVS for API.zip.
+	Fixed.
+
+2000-12-08 02:59  juanco
+
+	* doc/API.zip: Zipped the Time2Help API to make it more easily
+	available to developers
+
+2000-12-08 02:56  juanco
+
+	* doc/README.html (tags: build_3_2_5_1): Fixed minor typo
+
+2000-12-08 02:41  juanco
+
+	* doc/README.html: Added link to ../examples/embeddable/readme.html
+
+2000-12-08 02:31  juanco
+
+	* doc/index.html (tags: build_3_2_5_1): BUG: The size of the
+	SourceForge logo was wrong.
+
+2000-12-07 03:23  chrismo
+
+	* Makefile: Edited main Makefile to include *.png, not *.pnp, which
+	I assume is a typo
+
+2000-12-07 02:28  chrismo
+
+	* doc/README.html, examples/registry/readme.html (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1, build_3_2_6_2,
+	build_3_3_6_1, build_3_3_6_0, cd, build_3_2_5_1),
+	examples/registry/readme.txt, examples/structure/readme.html (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1, build_3_2_6_2,
+	build_3_3_6_1, build_3_3_6_0, cd, build_3_2_5_1),
+	examples/structure/readme.txt: Updated readme.txt in structure and
+	registry to readme.html - updated links in main doc\readme.html
+
+2000-12-06 15:08  peoopus
+
+	* examples/embeddable/: readme.html (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1, build_3_2_6_2,
+	build_3_3_6_1, build_3_3_6_0, cd, build_3_2_5_1), readme.txt:
+	Changed readme.txt to readme.html
+
+2000-12-06 13:34  chrismo
+
+	* tests/dunit.ini: Removed dunit.ini from \tests ... don't see the
+	need and by default CVS puts it on my disk as read-only which
+	causes the tests not to run
+
+2000-12-06 13:31  chrismo
+
+	* tests/UnitTests.dof: Added dunit\tests\UnitTests.dof which
+	contains search path of ..\src so UnitTests.dpr can be run w/o
+	having to add ..\src to the environment path
+
+2000-12-06 13:28  chrismo
+
+	* doc/README.html: Fixed minor typo in doc\readme.html
+
+2000-12-05 20:43  juanco
+
+	* ChangeLog, Makefile, Contrib/XPGen/ChangeLog, doc/ChangeLog,
+	doc/DUNIT.HLP (tags: pre_abstract_test_refactoring, build_5_0_2,
+	build_5_0_1, build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0,
+	standalone, build_3_2_8_1, build_3_2_8_0, build_3_2_7_1,
+	build_3_2_6_2, build_3_3_6_1, build_3_3_6_0, cd, build_3_2_5_1),
+	doc/images/ChangeLog, etc/ChangeLog, examples/ChangeLog,
+	examples/TListTest/ChangeLog, examples/collection/ChangeLog,
+	examples/registration/ChangeLog, examples/registry/ChangeLog,
+	examples/registry/Step1/ChangeLog,
+	examples/registry/Step2/ChangeLog,
+	examples/registry/Step3/ChangeLog, examples/structure/ChangeLog,
+	examples/structure/diffunit/ChangeLog,
+	examples/structure/sameunit/ChangeLog,
+	examples/testexception/ChangeLog, helpsrc/ChangeLog, src/ChangeLog,
+	tests/ChangeLog, tools/ChangeLog (utags: build_3_2_5_0): Ready for
+	3.2.5.0 release.
+
+2000-12-05 02:15  juanco
+
+	* tests/: UnitTestExtensions.pas (tags: build_3_2_7_1,
+	build_3_2_6_2, build_3_3_6_1, build_3_3_6_0, cd, build_3_2_5_1),
+	UnitTestFramework.pas, UnitTestGUITesting.pas (utags:
+	build_3_2_5_0): Worked around memory leaks.
+
+2000-12-05 02:13  juanco
+
+	* src/TestFramework.pas (tags: build_3_2_5_0): Added call to
+	inherited destructor in TTestResult.
+
+2000-12-05 02:12  juanco
+
+	* src/TestExtensions.pas (tags: build_3_2_6_2, build_3_3_6_1,
+	build_3_3_6_0, cd, build_3_2_5_1, build_3_2_5_0): [ Bug #123765 ]
+	Memory leak, using class TAbstractTestCase. Fixed.
+
+2000-12-05 01:15  juanco
+
+	* src/GUITesting.pas (tags: build_3_2_5_1, build_3_2_5_0): Focusing
+	logic will now work if the tested control is not visible if it's a
+	TCustomForm.
+
+2000-12-05 01:13  juanco
+
+	* src/TestFramework.pas: Reverted to previous TTestResult.Stop.
+	Throwing an exeption broke code that should work.
+
+2000-12-05 00:56  juanco
+
+	* src/: GUITestRunner.dfm, GUITestRunner.pas (utags:
+	build_3_2_5_0): [ Bug #123797 ] If any test failures, don't move
+	focus to Close button. Fixed.
+
+2000-12-05 00:55  juanco
+
+	* src/TestFramework.pas: Exposed TTestFramework.CallerAddr so
+	specialized test case classes can use it.
+	
+	Improved TTestResult.Stop logic.
+	
+	Improved compliance with coding standard.
+
+2000-12-05 00:00  juanco
+
+	* src/TestExtensions.pas: [ Bug #123829 ] Deselecting TRepeatedTest
+	node doesn't decrement count. Fixed.
+
+2000-12-01 23:50  juanco
+
+	* Makefile, Rules.mak (tags: build_3_2_5_1, build_3_2_5_0),
+	readme.html (tags: pre_abstract_test_refactoring, build_5_0_2,
+	build_5_0_1, build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0,
+	standalone, build_3_2_8_1, build_3_2_8_0, build_3_2_7_1,
+	build_3_2_6_2, build_3_3_6_1, build_3_3_6_0, cd, build_3_2_5_1,
+	build_3_2_5_0), doc/.cvsignore (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1, build_3_2_6_2,
+	build_3_3_6_1, build_3_3_6_0, cd, build_3_2_5_1, build_3_2_5_0),
+	doc/DUNIT.HLP, doc/README.html (tags: build_3_2_5_0),
+	doc/index.html (tags: build_3_2_5_0), helpsrc/Makefile (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1, build_3_2_6_2,
+	build_3_3_6_1, build_3_3_6_0, cd, build_3_2_5_1, build_3_2_5_0),
+	helpsrc/TestFramework.HPJ (tags: pre_abstract_test_refactoring,
+	build_5_0_2, build_5_0_1, build_5_0_0, build_4_1_3, build_4_1_1,
+	build_4_1_0, standalone, build_3_2_8_1, build_3_2_8_0,
+	build_3_2_7_1, build_3_2_6_2, build_3_3_6_1, build_3_3_6_0, cd,
+	build_3_2_5_1, build_3_2_5_0), helpsrc/TestFramework.LibHPJ (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1, build_3_2_6_2,
+	build_3_3_6_1, build_3_3_6_0, cd, build_3_2_5_1, build_3_2_5_0),
+	src/TestExtensions.pas, src/TestFramework.pas,
+	src/TextTestRunner.pas (tags: build_3_2_5_0): Updated Time2Help
+	documentation.
+	
+	Updated DUNIT.HLP.
+	
+	Created API documentation in HTML format, placed it in the
+	./doc/API directory, and made it an integral part of the current
+	README.html.
+	
+	Moved README.html into the ./doc directory, and replaced
+	./readmen.html with a file that will redirect to the new location.
+	This allows for better integration of the main page, the README,
+	the HTML API, in the web site.
+	
+	Made a few refactorings on the methods that create test suites. Now
+	TTestSuite gets most of the responsibility.
+
+2000-12-01 20:53  juanco
+
+	* tests/: UnitTestGUITestRunner.pas (tags: build_3_2_5_1,
+	build_3_2_5_0), UnitTestGUITesting.pas: TDUnitDialog was renamed to
+	TGUITestRunner.
+
+2000-12-01 20:50  juanco
+
+	* src/: GUITestRunner.dfm, GUITestRunner.pas, TestExtensions.pas,
+	TestFramework.pas: Renamed TDUnitDialog to TGUITestRunner for
+	consistency with TTextTestRunner, and to ease documentation.
+	
+	Improved compliance with coding standards.
+	
+	Fixed/Added Time2Help style comments.
+
+2000-12-01 20:48  juanco
+
+	* examples/embeddable/: EmbeddableGUITestRunner.dfm,
+	EmbeddableGUITestRunner.pas, EmbeddableGUITestRunner.txt (utags:
+	build_4_1_1, build_4_1_0, build_5_0_2, build_3_2_5_0, build_4_1_3,
+	build_3_3_6_1, build_3_2_5_1, pre_abstract_test_refactoring, cd,
+	build_3_2_7_1, build_3_2_8_0, build_5_0_1, build_3_3_6_0,
+	build_3_2_6_2, build_5_0_0, standalone, build_3_2_8_1): Converted
+	the form to binary for compatibility with Delphi 4.
+	
+	Checked in text version of the form with .txt extension.
+	
+	Changed reference to TDUnitDialog to TGUITestRunner.
+
+2000-12-01 09:46  peoopus
+
+	* examples/embeddable/: EmbeddableGUITestRunner.dfm,
+	EmbeddableGUITestRunner.pas, readme.txt (tags: build_3_2_5_0):
+	Initial revision of GUI test runner that is embeddable into another
+	form.
+
+2000-12-01 04:02  juanco
+
+	* tests/UnitTestGUITesting.pas: Displace tested GUITestRunner right
+	and down to not obscure the actual runner.
+
+2000-12-01 03:54  juanco
+
+	* src/TestFramework.pas: BUG: Failures reported with
+	EBreakingTestFailure were not being tallied. Fixed.
+
+2000-12-01 03:49  juanco
+
+	* src/: GUITestRunner.dfm, GUITestRunner.pas, TestFramework.pas:
+	Failure addresses now reported at address which called
+	TTestCase.Check.
+	
+	Having the debugger break on test failures is now optional and
+	settalbe through the GUI.
+
+2000-12-01 02:43  juanco
+
+	* readme.html, doc/images/environment_options.jpg (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1, build_3_2_6_2,
+	build_3_3_6_1, build_3_3_6_0, cd, build_3_2_5_1, build_3_2_5_0),
+	doc/images/project_options.jpg (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1, build_3_2_6_2,
+	build_3_3_6_1, build_3_3_6_0, cd, build_3_2_5_1, build_3_2_5_0):
+	Brough readme.html up to date, gave it better formatting, and
+	removed some bugs from it
+
+2000-12-01 02:42  juanco
+
+	* tests/: UnitTestExtensions.pas, UnitTestFramework.pas,
+	UnitTestGUITestRunner.pas, UnitTestGUITesting.pas: Replaced
+	references to SuiteOf(TTestCaseClass) to calls to TTestCase.Suite
+
+2000-12-01 02:30  juanco
+
+	* examples/: TListTest/ListTest.dpr (tags: build_4_1_1,
+	build_4_1_0, standalone, build_3_2_8_1, build_3_2_8_0,
+	build_3_2_7_1, build_3_2_6_2), registration/UnitReg.dpr (tags:
+	build_4_1_1, build_4_1_0, standalone, build_3_2_8_1, build_3_2_8_0,
+	build_3_2_7_1, build_3_2_6_2), registry/Step1/RegistryTest.dpr,
+	registry/Step2/RegistryTest.dpr,
+	registry/Step2/RegistryUnitTest.pas (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1, build_3_2_6_2),
+	registry/Step3/RegistryTest.dpr,
+	structure/sameunit/Project1Test.dof (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1, build_3_2_6_2),
+	structure/sameunit/Project1Test.dpr (tags: build_4_1_1,
+	build_4_1_0, standalone, build_3_2_8_1, build_3_2_8_0,
+	build_3_2_7_1, build_3_2_6_2), testexception/Unit1Test.pas (tags:
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1, build_3_2_6_2) (utags:
+	build_3_2_5_0, build_3_3_6_1, build_3_2_5_1, cd, build_3_3_6_0):
+	Removed explicit references to framework's source directory to
+	allow compilation against DCUs or DCPs.
+	
+	Changed examples to use TTestCase.Suite instead of
+	SuiteOf(TTestCase).
+
+2000-12-01 02:20  juanco
+
+	* src/TestFramework.pas: Re-added TTestCase.Suite:ITestSuite, and
+	added RegisterTest(ITest), as those provide the easiest route to
+	explain the framework to beginners.
+
+2000-12-01 02:16  juanco
+
+	* src/GUITestRunner.pas: The GUITestRunner will now run when given
+	a nil (empty) test suite.
+
+2000-11-30 20:27  juanco
+
+	* .cvsignore (tags: build_3_2_5_1, build_3_2_5_0), ChangeLog,
+	Makefile, Contrib/XPGen/ChangeLog, doc/ChangeLog,
+	doc/images/ChangeLog, etc/ChangeLog, examples/ChangeLog,
+	examples/TListTest/ChangeLog, examples/collection/ChangeLog,
+	examples/registration/ChangeLog, examples/registry/ChangeLog,
+	examples/registry/Step1/ChangeLog,
+	examples/registry/Step2/ChangeLog,
+	examples/registry/Step3/ChangeLog, examples/structure/ChangeLog,
+	examples/structure/diffunit/ChangeLog,
+	examples/structure/sameunit/ChangeLog,
+	examples/testexception/ChangeLog, helpsrc/ChangeLog, src/ChangeLog,
+	tests/ChangeLog, tools/ChangeLog: Updated Makefile so it will
+	create the framework directory.
+	
+	Updated ChangeLogs.
+
+2000-11-30 20:06  juanco
+
+	* src/: DUnit.dpk, DUnit.res (utags: build_3_2_5_0, build_3_3_6_1,
+	build_3_2_5_1, cd, build_3_2_8_0, build_3_2_7_1, build_3_2_6_2,
+	build_3_3_6_0, build_3_2_8_1): Created a Delphi package for the
+	framework
+
+2000-11-30 20:03  juanco
+
+	* src/GUITestRunner.txt (tags: build_3_2_5_1, build_3_2_5_0): Added
+	a text version of the GUITestRunner form to enable some version
+	control over it.
+
+2000-11-30 19:53  juanco
+
+	* Makefile, Rules.mak, Contrib/XPGen/Makefile (tags: build_3_2_5_1,
+	build_3_2_5_0), examples/collection/CollectionsTests.pas (tags:
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1, build_3_2_6_2,
+	build_3_3_6_1, build_3_3_6_0, cd, build_3_2_5_1, build_3_2_5_0),
+	examples/collection/Makefile (tags: build_3_3_6_1, build_3_3_6_0,
+	cd, build_3_2_5_1, build_3_2_5_0),
+	examples/collection/TestDUNIT.dpr (tags: build_4_1_1, build_4_1_0,
+	standalone, build_3_2_8_1, build_3_2_8_0, build_3_2_7_1,
+	build_3_2_6_2, build_3_3_6_1, build_3_3_6_0, cd, build_3_2_5_1,
+	build_3_2_5_0), examples/collection/TestDUnitGUI.dpr (tags:
+	build_4_1_1, build_4_1_0, standalone, build_3_2_8_1, build_3_2_8_0,
+	build_3_2_7_1, build_3_2_6_2, build_3_3_6_1, build_3_3_6_0, cd,
+	build_3_2_5_1, build_3_2_5_0), src/GUITestRunner.dfm,
+	src/GUITestRunner.pas, src/Makefile (tags: build_3_2_6_2,
+	build_3_3_6_1, build_3_3_6_0, cd, build_3_2_5_1, build_3_2_5_0),
+	src/TestFramework.pas, tests/Makefile (tags: build_3_2_5_1,
+	build_3_2_5_0), tests/UnitTests.dpr (tags: build_3_2_5_1,
+	build_3_2_5_0): The framework can now be compiled to a package.
+	
+	The unit tests and the examples now use the framework as a package.
+	
+	Included the precompiled framework and UnitTests.exe in the
+	distribution.
+	
+	Several refactorings applied to Makefiles.
+
+2000-11-30 18:36  juanco
+
+	* .cvsignore, Makefile, Rules.mak, src/Makefile,
+	src/UnitTestDUnit.pas, src/UnitTestExtensions.pas,
+	src/UnitTestFramework.pas, src/UnitTestGUITestRunner.pas,
+	src/UnitTestGUITesting.pas, src/UnitTests.dpr, src/UnitTests.res,
+	tests/.cvsignore (tags: build_3_2_5_1, build_3_2_5_0),
+	tests/Makefile, tests/UnitTestDUnit.pas (tags: build_3_2_8_1,
+	build_3_2_8_0, build_3_2_7_1, build_3_2_6_2, build_3_3_6_1,
+	build_3_3_6_0, cd, build_3_2_5_1, build_3_2_5_0),
+	tests/UnitTestExtensions.pas, tests/UnitTestFramework.pas,
+	tests/UnitTestGUITestRunner.pas, tests/UnitTestGUITesting.pas,
+	tests/UnitTests.dpr, tests/UnitTests.res (tags: build_3_2_5_1,
+	build_3_2_5_0), tests/dunit.ini (tags: build_3_2_5_0): Moved unit
+	tests for the framework into their own ./tests directory, and
+	changed build system accordingly.
+
+2000-11-29 04:56  majohnson
+
+	* Contrib/XPGen/xpCodeGen.pas (tags: build_3_2_5_1, build_3_2_5_0):
+	fixes bug that caused the generated code to include the target test
+	unit in the implementation paragraph instead of in the interface
+	paragraph where it should be
+
+2000-11-29 04:45  majohnson
+
+	* Contrib/XPGen/xpmain.pas (tags: pre_abstract_test_refactoring,
+	build_5_0_2, build_5_0_1, build_5_0_0, build_4_1_3, build_4_1_1,
+	build_4_1_0, standalone, build_3_2_8_1, build_3_2_8_0,
+	build_3_2_7_1, build_3_2_6_2, build_3_3_6_1, build_3_3_6_0, cd,
+	build_3_2_5_1, build_3_2_5_0): removed the uneeded unit attribute,
+	which is not part of the distribution and prevents out of the box
+	compilation
+
+2000-11-18 21:42  juanco
+
+	* Makefile, Contrib/XPGen/Makefile, Contrib/XPGen/testXpgen.cfg
+	(tags: build_3_2_5_1, build_3_2_5_0), Contrib/XPGen/testXpgen.dof
+	(tags: build_3_2_5_1, build_3_2_5_0), Contrib/XPGen/testXpgen.dpr
+	(tags: build_3_2_5_1, build_3_2_5_0), Contrib/XPGen/test_xpLex.pas
+	(tags: build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0,
+	standalone, build_3_2_8_1, build_3_2_8_0, build_3_2_7_1,
+	build_3_2_6_2, build_3_3_6_1, build_3_3_6_0, cd, build_3_2_5_1,
+	build_3_2_5_0), Contrib/XPGen/test_xpParse.pas (tags:
+	build_3_2_5_1, build_3_2_5_0): Added console testing support to
+	Contrib/XPGen.
+	
+	Removed references to specific disks and directory pats from
+	Contrib/XPGen.
+	
+	Removed warnings about unuser variables and values from
+	Contrib/XPGen.
+	
+	Added a Makefile to Contrib/XPGen, and incorporated it into the
+	main Makefile.
+
+2000-11-18 21:14  juanco
+
+	* src/: GUITesting.pas, UnitTestGUITesting.pas, UnitTests.dpr
+	(utags: pre_tests_dir): Added the GUITesting unit defining
+	TGUITestCase, a TTestCase descendant that supports testing of
+	Delphi forms and controls.
+	
+	Added UnitTestGUITesting (bad name) which tests the GUITestRunner
+	interface.
+
+2000-11-18 21:11  juanco
+
+	* src/TestFramework.pas (tags: pre_tests_dir): Made
+	TTestCase.Create virtual once more. It's the only way descendants
+	can effectively override it.
+
+2000-11-18 21:09  juanco
+
+	* src/: GUITestRunner.dfm, GUITestRunner.pas (tags: pre_tests_dir):
+	Buttons in the GUITestRunner were enabled by defaul, which is an
+	ilegal state when there's no test suite to run. Fixed.
+	
+	Added a TAction for the Run button in the GUITestRunner, as to make
+	it more consistent with other commands that are manipulated in the
+	code.
+
+2000-11-18 16:27  juanco
+
+	* src/: TextTestRunner.pas (tags: pre_tests_dir),
+	UnitTestExtensions.pas (tags: pre_tests_dir), UnitTestFramework.pas
+	(tags: pre_tests_dir), UnitTestGUITestRunner.pas (tags:
+	pre_tests_dir), UnitTests.dpr: Refactored console-mode exit
+	behavior into TextTestRunner. Now the user can choose among: normal
+	behavior, pause with a ReadLn before returning, or halt setting the
+	program's exit code to the number of failures and errors.
+	
+	Made all tests use the test registration system (RegisterTest and
+	friends), which is the method we're promoting as more scaleable.
+
+2000-11-17 20:18  juanco
+
+	* Makefile: Changed name of changelog target to fullchangelog to
+	better reflect its purpose.
+	
+	Made fullchangelog store information to the file FullChangeLog,
+	avoiding collisions with per directory ChangeLogs.
+	
+	Made fullchangelog show file names. The comments were confusing
+	without a context.
+	
+	Stopped using the --usermap feature. Login names are breafer and
+	just as good.
+
+2000-11-17 19:48  juanco
+
+	* ChangeLog, Makefile, Contrib/XPGen/ChangeLog, doc/ChangeLog,
+	doc/images/ChangeLog, etc/ChangeLog, etc/usermap (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1, build_3_2_6_2,
+	build_3_3_6_1, build_3_3_6_0, cd, build_3_2_5_1, build_3_2_5_0),
+	examples/ChangeLog, examples/TListTest/ChangeLog,
+	examples/collection/ChangeLog, examples/registration/ChangeLog,
+	examples/registry/ChangeLog, examples/registry/Step1/ChangeLog,
+	examples/registry/Step2/ChangeLog,
+	examples/registry/Step3/ChangeLog, examples/structure/ChangeLog,
+	examples/structure/diffunit/ChangeLog,
+	examples/structure/sameunit/ChangeLog,
+	examples/testexception/ChangeLog, helpsrc/ChangeLog (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1, build_3_2_6_2,
+	build_3_3_6_1, build_3_3_6_0, cd, build_3_2_5_1, build_3_2_5_0),
+	src/ChangeLog, tools/ChangeLog (utags: build_3_2_4_4): Added
+	per-directory ChangeLog files
+
+2000-11-17 19:16  juanco
+
+	* Makefile, etc/usermap: Added automatic generation of ChangeLog
+	file
+
+2000-11-17 17:42  juanco
+
+	* tools/: cvs2cl.pl, rcs2log.sh (utags: build_4_1_1, build_3_2_4_4,
+	build_4_1_0, build_5_0_2, build_3_2_4_2, build_3_2_5_0,
+	build_4_1_3, build_3_3_6_1, build_3_2_5_1,
+	pre_abstract_test_refactoring, cd, build_3_2_8_0, build_3_2_7_1,
+	build_5_0_1, build_5_0_0, build_3_2_6_2, build_3_3_6_0, standalone,
+	build_3_2_8_1): Tools to build ChangeLog files from CVS
+	reporsitories
+
+2000-11-15 16:52  juanco
+
+	* Makefile (tags: build_3_2_4_2): ready for next release
+
+2000-11-15 16:48  juanco
+
+	* examples/structure/: Makefile (tags: build_3_3_6_1,
+	build_3_3_6_0, cd, build_3_2_5_1, build_3_2_5_0),
+	sameunit/Project1Test.dof (utags: build_3_2_4_4, build_3_2_4_2):
+	Make sure unit tests are fully compiled by makefile
+
+2000-11-15 16:45  juanco
+
+	* examples/structure/: diffunit/Project1.res,
+	diffunit/Project1Test.res, sameunit/Project1.res,
+	sameunit/Project1Test.res (utags: build_4_1_1, build_3_2_4_4,
+	build_4_1_0, build_5_0_2, build_3_2_4_2, build_3_2_5_0,
+	build_4_1_3, build_3_3_6_1, build_3_2_5_1,
+	pre_abstract_test_refactoring, cd, build_3_2_8_0, build_3_2_7_1,
+	build_5_0_1, build_5_0_0, build_3_2_6_2, build_3_3_6_0, standalone,
+	build_3_2_8_1): BUG: .res files must be checked in as binary
+
+2000-11-15 16:36  juanco
+
+	* src/: Makefile, UnitTests.dpr (utags: build_3_2_4_4,
+	build_3_2_4_2): Simpyfied handling of console mode runs.
+
+2000-11-15 16:35  juanco
+
+	* admin/cvswrappers: Added .res to the list of files that should be
+	considered binary.
+
+2000-11-12 23:19  juanco
+
+	* examples/collection/: TestDUNIT.dpr, TestDUnitGUI.dpr (utags:
+	build_3_2_4_4, build_3_2_4_2): Changed to use test registry
+
+2000-11-12 23:08  juanco
+
+	* src/TestFramework.pas (tags: build_3_2_4_4, build_3_2_4_2):
+	Cleaned up TMethodEnumerator. Avoid repeating overridden (or
+	overloaded) methods
+
+2000-11-12 23:01  juanco
+
+	* examples/collection/Collections.pas (tags: build_3_3_6_1,
+	build_3_3_6_0, cd, build_3_2_5_1, build_3_2_5_0, build_3_2_4_4,
+	build_3_2_4_2): Changes to make THeap customizeable by descendant
+	classes.  Minor bug fixes.
+
+2000-11-12 22:07  juanco
+
+	* examples/collection/CollectionsTests.pas (tags: build_3_2_4_4,
+	build_3_2_4_2): Changed to use test registration system
+
+2000-11-12 22:03  juanco
+
+	* src/TestFramework.pas: RegisterTestSuites because Delphi couldn't
+	decide which overloaded version of RegisterTests to call.
+
+2000-11-12 22:01  juanco
+
+	* src/DUnit.pas (tags: build_3_2_8_1, build_3_2_8_0, build_3_2_7_1,
+	build_3_2_6_2, build_3_3_6_1, build_3_3_6_0, cd, build_3_2_5_1,
+	build_3_2_5_0, pre_tests_dir, build_3_2_4_4, build_3_2_4_2):
+	Finished merging checkXXX, fail, etc. methods into TestFramework. 
+	Renamed the version of RegisterTests thad dealt with TestCase
+	classes to RegisterTestSuites because Delphi couldn't decide which
+	overloaded version of RegisterTests to call.
+
+2000-11-12 21:56  juanco
+
+	* src/DUnitGUI.pas: completely deprecated.
+
+2000-11-09 17:13  chrismo
+
+	* src/: DUnit.pas, TestFramework.pas: Pushed all Check* and Fail*
+	methods into TestFramework, leaving wrapper calls in DUnit
+
+2000-11-09 17:12  chrismo
+
+	* src/: GUITestRunner.dfm, GUITestRunner.pas (utags: build_3_2_4_4,
+	build_3_2_4_2): - Changed accelerator character on Select Failed
+	from F to L, since F is accelerator for the File menu.	- Fixed
+	bug: LoadConfiguration was not reloading the test enablings, so
+	calling from the menu didn't work.  - Fixed bug: LoadConfiguration
+	was being called after InitTree in SetSuite, so, on running, the
+	tree always displayed all tests enabled regardless of the loaded
+	configuration.
+
+2000-11-09 14:00  chrismo
+
+	* examples/structure/: sameunit/Project1.res,
+	sameunit/Project1Test.dpr (tags: build_3_2_4_4, build_3_2_4_2),
+	sameunit/Unit1.pas (tags: build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1, build_3_2_6_2,
+	build_3_3_6_1, build_3_3_6_0, cd, build_3_2_5_1, build_3_2_5_0,
+	build_3_2_4_4, build_3_2_4_2), sameunit/Unit2.pas (tags:
+	standalone, build_3_2_8_1, build_3_2_8_0, build_3_2_7_1,
+	build_3_2_6_2, build_3_3_6_1, build_3_3_6_0, cd, build_3_2_5_1,
+	build_3_2_5_0, build_3_2_4_4, build_3_2_4_2),
+	diffunit/Project1.res, diffunit/Project1Test.dpr (tags:
+	build_4_1_1, build_4_1_0, standalone, build_3_2_8_1, build_3_2_8_0,
+	build_3_2_7_1, build_3_2_6_2, build_3_3_6_1, build_3_3_6_0, cd,
+	build_3_2_5_1, build_3_2_5_0, build_3_2_4_4, build_3_2_4_2),
+	diffunit/Project1Test.res, diffunit/Unit1Test.pas (tags:
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1, build_3_2_6_2,
+	build_3_3_6_1, build_3_3_6_0, cd, build_3_2_5_1, build_3_2_5_0,
+	build_3_2_4_4, build_3_2_4_2), diffunit/Unit2Test.pas (tags:
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1, build_3_2_6_2,
+	build_3_3_6_1, build_3_3_6_0, cd, build_3_2_5_1, build_3_2_5_0,
+	build_3_2_4_4, build_3_2_4_2), diffunit/UnitStructure.png (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1, build_3_2_6_2,
+	build_3_3_6_1, build_3_3_6_0, cd, build_3_2_5_1, build_3_2_5_0,
+	build_3_2_4_4, build_3_2_4_2): Changed format to use RegisterTest
+	functionality
+
+2000-11-06 23:26  juanco
+
+	* examples/collection/: Collections.pas, CollectionsTests.pas:
+	Added tests for THeap (partially ordered set)
+
+2000-11-06 20:05  juanco
+
+	* src/: TestExtensions.pas (tags: pre_tests_dir),
+	UnitTestExtensions.pas (utags: build_3_2_4_4, build_3_2_4_2):
+	Changed TestDecoratedEnabling to reflect new TTestDecorator
+	semantics.  Fixed bug in repeated counting test.
+
+2000-11-06 19:58  juanco
+
+	* src/GUITestRunner.pas: Allways expand nodes for tests that
+	failed.
+
+2000-11-04 19:21  juanco
+
+	* src/: GUITestRunner.pas, TestExtensions.pas, TestFramework.pas,
+	UnitTestExtensions.pas, UnitTestFramework.pas (tags: build_3_2_4_4,
+	build_3_2_4_2), UnitTestGUITestRunner.pas (tags: build_3_2_4_4,
+	build_3_2_4_2): Refactored stuff re-implemented by TTestCase,
+	TTestSuite, and TTestDecorator into a TAbstractTest class.  Made
+	sure that TTestListener TestingStarted and TestingEnded are called
+	when they should.  Mad TTestDecorator always expose the decorated
+	tests so the GUI can find them when they're run.
+
+2000-11-03 17:20  juanco
+
+	* src/: GUITestRunner.dfm, GUITestRunner.pas: BUG: Last test
+	configuration was not being reloaded after setting the suite.
+
+2000-11-03 17:17  juanco
+
+	* examples/collection/CollectionsTests.pas: Added tests for
+	boundary conditions on lists.
+
+2000-11-03 17:06  juanco
+
+	* examples/collection/Collections.pas: Provided an implementation
+	for THeap (partially ordered set).  Reimplemented TArrayList using
+	dynamic arrays.  Several bug fixes.
+
+2000-11-01 14:11  chrismo
+
+	* src/: GUITestRunner.dfm, GUITestRunner.pas: - added the Hide Test
+	Nodes functionality as well as an option to have this be the
+	default on open - added an Expand All option - shortened the tree
+	view hint. I felt it was too long.  - the fix for the accelerater
+	key for the Select Failed button should have been done on the
+	Action so it went through to the menu item as well.  - added a
+	pop-up menu to the test tree that mirrors the Test Tree main menu -
+	added a label to the test tree for keyboard selection of tree
+
+2000-11-01 14:10  chrismo
+
+	* src/UnitTestExtensions.pas: count to 5 test was not rerunnable
+	because FCounter was not being initialized. (Passed 1st x, failed
+	all other times).
+
+2000-10-30 22:56  juanco
+
+	* src/UnitTestFramework.pas: Removed declaration for unused
+	variable.
+
+2000-10-30 22:55  juanco
+
+	* src/TestFramework.pas: Changed path parameter of RegisterTest to
+	SuitePath to clarify meaning.
+
+2000-10-30 14:48  chrismo
+
+	* src/UnitTestFramework.pas: Added TestRegisterTest, but it's
+	'turned off' right now. Needs some more work.
+
+2000-10-30 14:47  chrismo
+
+	* src/TestFramework.pas: formatting changes
+
+2000-10-30 13:52  chrismo
+
+	* src/GUITestRunner.dfm: Changed HideSelection on TreeView to false
+	so selected node is still highlighted for [De]Select actions when
+	tree doesn't have the focus
+
+2000-10-29 13:22  juanco
+
+	* src/GUITestRunner.pas: [ Bug #114531 ] testToNode fails to find
+	test if test class redeclares ITest.
+
+2000-10-29 12:59  juanco
+
+	* src/: GUITestRunner.dfm, GUITestRunner.pas, TestFramework.pas: [
+	Bug #119479 ] Deselect and Select Failed have same accelerator key.
+	 [ Bug #119544 ] Select All doesn't select parent nodes.
+
+2000-10-27 18:09  juanco
+
+	* src/GUITestRunner.pas: Improved compliance with coding standard. 
+	Improved handling of automatic saving of configuration.
+
+2000-10-27 18:01  juanco
+
+	* src/TestExtensions.pas: Made TRepeatedTest.Name reflect run count
+
+2000-10-26 18:19  juanco
+
+	* src/UnitTestGUITestRunner.pas: Refactored out the GUI tree
+	manager
+
+2000-10-26 18:17  juanco
+
+	* src/: GUITestRunner.dfm, GUITestRunner.pas: Refactored out the
+	tree manager.  Replaced the obsolite score gauge with a
+	TProgressBar.
+
+2000-10-26 15:18  juanco
+
+	* doc/: index.html, images/screenshot.gif (tags: build_3_2_5_1,
+	build_3_2_5_0) (utags: build_3_2_4_4, build_3_2_4_2): new
+	screenshot
+
+2000-10-26 15:00  juanco
+
+	* src/: GUITestRunner.dfm, GUITestRunner.pas (utags:
+	build_3_2_4_1): One more tweak to pane resizing and redrawing.
+
+2000-10-26 04:12  juanco
+
+	* src/TextTestRunner.pas (tags: build_3_2_4_4, build_3_2_4_2,
+	build_3_2_4_1): Improvded formatting of RunTime
+
+2000-10-26 02:31  juanco
+
+	* src/GUITestRunner.dfm: Gave better names to FailureList columns
+
+2000-10-26 02:30  juanco
+
+	* src/TestFramework.pas (tags: build_3_2_4_1): Simplified exception
+	handling in TTestResul.runTest.
+
+2000-10-25 20:57  juanco
+
+	* Makefile, Rules.mak (tags: build_3_2_4_4, build_3_2_4_2),
+	examples/registry/Makefile (tags: build_3_3_6_1, build_3_3_6_0, cd,
+	build_3_2_5_1, build_3_2_5_0, build_3_2_4_4, build_3_2_4_2),
+	examples/structure/Makefile (utags: build_3_2_4_1): Changed some of
+	the makefiles to make them work with older versions of Borland
+	Make.  Ready for 3.2.4.1 release.
+
+2000-10-25 20:37  juanco
+
+	* examples/testexception/Unit1Test.pas (tags: build_3_2_4_4,
+	build_3_2_4_2, build_3_2_4_1): Removed further references to
+	TTestCase.RunBare
+
+2000-10-25 20:28  juanco
+
+	* examples/testexception/: Unit1Test.pas, Unit2.pas (tags:
+	build_4_1_1, build_4_1_0, standalone, build_3_2_8_1, build_3_2_8_0,
+	build_3_2_7_1, build_3_2_6_2, build_3_3_6_1, build_3_3_6_0, cd,
+	build_3_2_5_1, build_3_2_5_0, build_3_2_4_4, build_3_2_4_2,
+	build_3_2_4_1): RunBare has been removed. Implement exception
+	checking by overriding RunTest.
+
+2000-10-25 20:10  juanco
+
+	* src/UnitTestExtensions.pas (tags: build_3_2_4_1): Gave a better
+	name to counting test.
+
+2000-10-25 20:09  juanco
+
+	* src/: GUITestRunner.dfm, GUITestRunner.pas: Made auto-focus
+	behavior optional.
+
+2000-10-25 19:59  juanco
+
+	* src/TestFramework.pas: Delphi does not handle exceptions thrown
+	from within exception handlers.  Removed TTestCase runBare to let
+	TTestResult handle exceptions during test setup or teardown.
+
+2000-10-25 19:58  juanco
+
+	* src/UnitTestFramework.pas (tags: build_3_2_4_1): Removed lots of
+	memory leaks
+
+2000-10-25 16:48  juanco
+
+	* src/TestExtensions.pas (tags: build_3_2_4_1): BUG: TRepeatedTest
+	did not report correct number of enabled tests
+
+2000-10-25 16:46  juanco
+
+	* src/: GUITestRunner.dfm, GUITestRunner.pas: BUG: Results listview
+	was not visible
+
+2000-10-24 19:54  juanco
+
+	* doc/: images/screenshot.gif, index.html (utags: build_3_2_4_1):
+	Updated screenshot
+
+2000-10-24 18:30  juanco
+
+	* examples/collection/: TestDUNIT.dpr, TestDUNIT.dpr (tags:
+	build_3_2_4_1): BUG: Name of unit with test cases changed.
+
+2000-10-24 18:26  juanco
+
+	* Makefile: Ready for next release.
+
+2000-10-24 18:20  juanco
+
+	* src/: GUITestRunner.dfm, GUITestRunner.pas: Made space bar
+	select/deselect test cases.  Refactored code for updating state of
+	test tree, and removed bugs.  Added panels and constraints to keep
+	the form well formatted.  Added patches to cope with Delphi4
+	autosizing quirks.  Added actions and menu bar.  Gave each button a
+	unique icon.
+
+2000-10-23 23:11  juanco
+
+	* src/UnitTestExtensions.pas: Added an actual decorator to the
+	suite of tests.
+
+2000-10-23 23:01  juanco
+
+	* src/GUITestRunner.pas: Initializae the color shown for test
+	suites in the tree view to green.
+
+2000-10-23 22:56  juanco
+
+	* src/TestExtensions.pas: BUG: Removed additional references to
+	FEnabled (the compiler should have caught this!).
+
+2000-10-23 22:37  juanco
+
+	* src/TestExtensions.pas: Removed FEnabled field to make
+	enabling/disabling of decorators work from GUI.
+
+2000-10-23 22:31  juanco
+
+	* src/: GUITestRunner.dfm, GUITestRunner.pas: Disable buttons while
+	running tests.	Added support for stopping the test run.  Removed
+	redundant first column from failure list.  Converted the failure
+	memo to an RTF control and added formatting.
+
+2000-10-23 22:29  juanco
+
+	* src/TestFramework.pas: Added support for stopping testing from
+	the GUI and from a test case.
+
+2000-10-21 02:28  juanco
+
+	* src/: GUITestRunner.dfm, GUITestRunner.pas: Save and restore
+	failure list column widths using .ini file
+
+2000-10-20 13:09  chrismo
+
+	* src/GUITestRunner.dfm: Removed garbage text from memMessage
+
+2000-10-20 13:04  chrismo
+
+	* src/: GUITestRunner.dfm, GUITestRunner.pas: Merged version 1.19
+	back into GUITestRunner.pas.  Added memo to display selected
+	failure item test info.  Added splitter positions to persistent
+	storage.
+
+2000-10-20 01:22  juanco
+
+	* Makefile, examples/testexception/.cvsignore,
+	examples/testexception/.cvsignore (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1, build_3_2_6_2,
+	build_3_3_6_1, build_3_3_6_0, cd, build_3_2_5_1, build_3_2_5_0,
+	build_3_2_4_4, build_3_2_4_2, build_3_2_4_1): routine
+
+2000-10-19 21:26  juanco
+
+	* src/: DUnit.pas (tags: build_3_2_4_1), GUITestRunner.dfm,
+	GUITestRunner.pas: Incorporated changes by Kenneth Semeijn
+	<dunit@designtime.demon.nl>, namely: - Change focus of GUI buttons
+	depending on last operations.  - Add checks for TObject types to
+	DUnit.
+
+2000-10-19 20:58  juanco
+
+	* examples/collection/: Collections.pas (tags: build_3_2_4_1),
+	CollectionsTests.pas (tags: build_3_2_4_1), DUnitTests.pas,
+	TestDUnitGUI.dpr (tags: build_3_2_4_1): BUG: Several nasty bugs in
+	TTreeSet. Added test cases to check against them.  Removed
+	not-well-defined methods from several interfaces.  Changed the test
+	case unit to better reflect its purpose.
+
+2000-10-16 16:38  chrismo
+
+	* src/UnitTestExtensions.pas: Added test for enabling decorated
+	test in a decorator. Used to illustrate and fix bug in
+	TTestDecorator [Bug 116984]
+
+2000-10-16 16:36  chrismo
+
+	* src/UnitTestGUITestRunner.pas (tags: build_3_2_4_1): Added test
+	for node display of decorator tests.
+
+2000-10-16 16:36  chrismo
+
+	* src/UnitTests.dpr (tags: build_3_2_4_1): Added
+	UnitTestGUITestRunner.pas and its Suite
+
+2000-10-16 16:35  chrismo
+
+	* src/TestFramework.pas: Code formatting changes.
+
+2000-10-16 16:34  chrismo
+
+	* src/TestExtensions.pas: Fixed bug: TTestDecorator.SetEnabled was
+	not passing the setting onto the decorated test. TTestDecorator
+	passes on the tests of the decorated test, not the test itself in
+	the Tests method, so GUITestRunner won't display the decorated test
+	as its own node.
+
+2000-10-16 16:32  chrismo
+
+	* src/GUITestRunner.pas: Refactored out FillTestTree into utility
+	class TTreeViewMgr for easier unit testing
+
+2000-10-08 23:43  juanco
+
+	* src/: DUnit.pas, TestFramework.pas: Renamed protected variables
+	with too comonly-used names to avoid conflicts with user test cases
+
+2000-10-06 13:04  chrismo
+
+	* examples/testexception/: Project1.dpr (tags: build_4_1_3,
+	build_4_1_1, build_4_1_0, standalone, build_3_2_8_1, build_3_2_8_0,
+	build_3_2_7_1, build_3_2_6_2, build_3_3_6_1, build_3_3_6_0, cd,
+	build_3_2_5_1, build_3_2_5_0, build_3_2_4_4, build_3_2_4_2,
+	build_3_2_4_1), Project1Test.dpr (tags: build_4_1_1, build_4_1_0,
+	standalone, build_3_2_8_1, build_3_2_8_0, build_3_2_7_1,
+	build_3_2_6_2, build_3_3_6_1, build_3_3_6_0, cd, build_3_2_5_1,
+	build_3_2_5_0, build_3_2_4_4, build_3_2_4_2, build_3_2_4_1),
+	ProjectGroup1.bpg (tags: pre_abstract_test_refactoring,
+	build_5_0_2, build_5_0_1, build_5_0_0, build_4_1_3, build_4_1_1,
+	build_4_1_0, standalone, build_3_2_8_1, build_3_2_8_0,
+	build_3_2_7_1, build_3_2_6_2, build_3_3_6_1, build_3_3_6_0, cd,
+	build_3_2_5_1, build_3_2_5_0, build_3_2_4_4, build_3_2_4_2,
+	build_3_2_4_1), Unit1.pas (tags: pre_abstract_test_refactoring,
+	build_5_0_2, build_5_0_1, build_5_0_0, build_4_1_3, build_4_1_1,
+	build_4_1_0, standalone, build_3_2_8_1, build_3_2_8_0,
+	build_3_2_7_1, build_3_2_6_2, build_3_3_6_1, build_3_3_6_0, cd,
+	build_3_2_5_1, build_3_2_5_0, build_3_2_4_4, build_3_2_4_2,
+	build_3_2_4_1), Unit1Test.pas, Unit2.pas, Unit2Test.pas (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1, build_3_2_6_2,
+	build_3_3_6_1, build_3_3_6_0, cd, build_3_2_5_1, build_3_2_5_0,
+	build_3_2_4_4, build_3_2_4_2, build_3_2_4_1): Initial check-in of
+	testexception example
+
+2000-10-05 07:12  majohnson
+
+	* src/DUnit.pas: fixes bug in testSuiteOf where the results of
+	calling the testSuiteOf function in the testframework did not
+	assign the results so that the function returned nil or some other
+	random value.
+
+2000-09-28 06:50  majohnson
+
+	* Contrib/XPGen/xpgen.dpr (tags: pre_abstract_test_refactoring,
+	build_5_0_2, build_5_0_1, build_5_0_0, build_4_1_3, build_4_1_1,
+	build_4_1_0, standalone, build_3_2_8_1, build_3_2_8_0,
+	build_3_2_7_1, build_3_2_6_2, build_3_3_6_1, build_3_3_6_0, cd,
+	build_3_2_5_1, build_3_2_5_0, build_3_2_4_4, build_3_2_4_2,
+	build_3_2_4_1): removes needless dependency between the xpGen code
+	generation form and the xpParse test unit.
+
+2000-09-28 06:49  majohnson
+
+	* Contrib/XPGen/xpmain.pas (tags: build_3_2_4_4, build_3_2_4_2,
+	build_3_2_4_1): fixes small typography issue 'NAmeOfSTring' becomes
+	'NameOfString'
+
+2000-09-28 06:19  majohnson
+
+	* Contrib/XPGen/suite_xpgen.pas (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1, build_3_2_6_2,
+	build_3_3_6_1, build_3_3_6_0, cd, build_3_2_5_1, build_3_2_5_0,
+	build_3_2_4_4, build_3_2_4_2, build_3_2_4_1): Builds the super
+	suite of tests for XPGen using the addSuite to add the entire
+	suites from each of the unit test modules.  This is mainly to
+	clarify what is going on to build the super suite of tests.
+
+2000-09-28 06:07  majohnson
+
+	* src/TestFramework.pas: adds a new method addSuite to the Itest
+	interface to allow for the concatenation of whole test suites into
+	a unit test or test suite.  The purpose is to advertise to end
+	users that they can combine whole suites from different modules
+	together to create super test suites.  Previously it was not
+	intuitively obvious that one could combine suites by passing a
+	TTestSuite to addTest.
+
+2000-09-28 05:47  majohnson
+
+	* Contrib/XPGen/: testXpgen.cfg, testXpgen.dof, testXpgen.dpr
+	(utags: build_3_2_4_4, build_3_2_4_2, build_3_2_4_1): stub project
+	for running the XPGen unit tests
+
+2000-09-28 05:46  majohnson
+
+	* Contrib/XPGen/xpgen.dpr: adds MPL license header
+
+2000-09-28 05:35  majohnson
+
+	* Contrib/XPGen/: listsupport.pas (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1, build_3_2_6_2,
+	build_3_3_6_1, build_3_3_6_0, cd, build_3_2_5_1, build_3_2_5_0,
+	build_3_2_4_4, build_3_2_4_2, build_3_2_4_1), parsedef.pas (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1, build_3_2_6_2,
+	build_3_3_6_1, build_3_3_6_0, cd, build_3_2_5_1, build_3_2_5_0,
+	build_3_2_4_4, build_3_2_4_2, build_3_2_4_1), suite_xpgen.pas,
+	testunit.pas (tags: pre_abstract_test_refactoring, build_5_0_2,
+	build_5_0_1, build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0,
+	standalone, build_3_2_8_1, build_3_2_8_0, build_3_2_7_1,
+	build_3_2_6_2, build_3_3_6_1, build_3_3_6_0, cd, build_3_2_5_1,
+	build_3_2_5_0, build_3_2_4_4, build_3_2_4_2, build_3_2_4_1),
+	test_xpLex.pas (tags: build_3_2_4_4, build_3_2_4_2, build_3_2_4_1),
+	test_xpParse.pas (tags: build_3_2_4_4, build_3_2_4_2,
+	build_3_2_4_1), xpCodeGen.pas (tags: build_3_2_4_4, build_3_2_4_2,
+	build_3_2_4_1), xpLex.pas (tags: build_3_2_5_1, build_3_2_5_0,
+	build_3_2_4_4, build_3_2_4_2, build_3_2_4_1), xpmain.pas,
+	xpParse.pas (tags: build_3_2_5_1, build_3_2_5_0, build_3_2_4_4,
+	build_3_2_4_2, build_3_2_4_1): adds MPL license and update for
+	using check function instead of assert
+
+2000-09-27 03:07  chrismo
+
+	* examples/structure/diffunit/Project1Test.dpr (tags:
+	build_3_2_4_1): Removed path from TestFramework, GUITestRunner
+	references
+
+2000-09-27 01:52  chrismo
+
+	* examples/collection/TestDUNIT.res (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1, build_3_2_6_2,
+	build_3_3_6_1, build_3_3_6_0, cd, build_3_2_5_1, build_3_2_5_0,
+	build_3_2_4_4, build_3_2_4_2, build_3_2_4_1): Added TestDUNIT.res
+	to get Make to work properly
+
+2000-09-27 01:40  juanco
+
+	* Readme.txt, readme.html (tags: build_3_2_4_4, build_3_2_4_2,
+	build_3_2_4_1): Replaced Reademe.txt by a corrected and updated
+	readme.html.
+
+2000-09-26 13:10  chrismo
+
+	* examples/structure/diffunit/UnitStructure.png (tags:
+	build_3_2_4_1): Added UnitStructure.png graphic showing the layout
+	of the units
+
+2000-09-26 12:47  chrismo
+
+	* src/TestFramework.pas: Renamed parameter on TTestCase.create from
+	name to MethodName to more accurately reflect what the parameter
+	should be
+
+2000-09-25 20:18  juanco
+
+	* Readme.txt, examples/TListTest/TListTestCase.pas (tags:
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1, build_3_2_6_2,
+	build_3_3_6_1, build_3_3_6_0, cd, build_3_2_5_1, build_3_2_5_0,
+	build_3_2_4_4, build_3_2_4_2, build_3_2_4_1),
+	examples/collection/DUnitTests.pas,
+	examples/collection/TestDUNIT.dpr,
+	examples/collection/TestDUnitGUI.dpr,
+	examples/registration/TestUnit1.pas (tags: build_4_1_1,
+	build_4_1_0, standalone, build_3_2_8_1, build_3_2_8_0,
+	build_3_2_7_1, build_3_2_6_2, build_3_3_6_1, build_3_3_6_0, cd,
+	build_3_2_5_1, build_3_2_5_0, build_3_2_4_4, build_3_2_4_2,
+	build_3_2_4_1), examples/registration/TestUnit3.pas (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1, build_3_2_6_2,
+	build_3_3_6_1, build_3_3_6_0, cd, build_3_2_5_1, build_3_2_5_0,
+	build_3_2_4_4, build_3_2_4_2, build_3_2_4_1),
+	examples/registry/Step1/RegistryUnitTest.pas (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1, build_3_2_6_2,
+	build_3_3_6_1, build_3_3_6_0, cd, build_3_2_5_1, build_3_2_5_0,
+	build_3_2_4_4, build_3_2_4_2, build_3_2_4_1),
+	examples/registry/Step2/RegistryUnitTest.pas (tags: build_3_2_4_4,
+	build_3_2_4_2, build_3_2_4_1),
+	examples/registry/Step3/RegistryTest.dpr (tags: build_3_2_4_4,
+	build_3_2_4_2, build_3_2_4_1),
+	examples/registry/Step3/RegistryUnitTest.pas (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1, build_3_2_6_2,
+	build_3_3_6_1, build_3_3_6_0, cd, build_3_2_5_1, build_3_2_5_0,
+	build_3_2_4_4, build_3_2_4_2, build_3_2_4_1),
+	examples/structure/diffunit/Project1Test.dpr,
+	examples/structure/diffunit/Project1Test.res (tags: build_3_2_4_1),
+	examples/structure/diffunit/Unit1Test.pas (tags: build_3_2_4_1),
+	examples/structure/diffunit/Unit2Test.pas (tags: build_3_2_4_1),
+	examples/structure/sameunit/Project1Test.dpr (tags: build_3_2_4_1),
+	examples/structure/sameunit/Project1Test.res (tags: build_3_2_4_1),
+	examples/structure/sameunit/Unit1.pas (tags: build_3_2_4_1),
+	examples/structure/sameunit/Unit2.pas (tags: build_3_2_4_1),
+	src/DUnit.pas, src/TestFramework.pas, src/TextTestRunner.pas,
+	src/UnitTestExtensions.pas, src/UnitTestFramework.pas (utags:
+	post_check_instead_of_assert): Changed TTestCase.assertXXX to
+	TTestCase.checkXXX. Changed examples and docs accordingly.  Steped
+	version number to 3.2.4beta1.
+
+2000-09-25 20:12  juanco
+
+	* Makefile (tags: post_check_instead_of_assert): Changed
+	TTestCase.assertXXX to TTestCase.checkXXX. Changed examples and
+	docs accordingly.  Steped version number to 3.2.4beta1.
+
+2000-09-25 19:00  juanco
+
+	* src/GUITestRunner.pas (tags: post_check_instead_of_assert,
+	pre_check_instead_of_assert): BUG: Applied patch by davidj: Fix AV
+	when clicking empty area in GUI Failure List.
+
+2000-09-25 13:04  juanco
+
+	* Contrib/XPGen/readme.html (tags: post_check_instead_of_assert,
+	pre_check_instead_of_assert, post_check_instead_of_assert,
+	pre_check_instead_of_assert, pre_abstract_test_refactoring,
+	build_5_0_2, build_5_0_1, build_5_0_0, build_4_1_3, build_4_1_1,
+	build_4_1_0, standalone, build_3_2_8_1, build_3_2_8_0,
+	build_3_2_7_1, build_3_2_6_2, build_3_3_6_1, build_3_3_6_0, cd,
+	build_3_2_5_1, build_3_2_5_0, build_3_2_4_4, build_3_2_4_2,
+	build_3_2_4_1, post_check_instead_of_assert,
+	pre_check_instead_of_assert): Readme with text taken from
+	majohnston's message on the dunit-interest list.
+
+2000-09-25 03:53  majohnson
+
+	* Contrib/XPGen/: testNextToken.txt, test_Get_Token.txt,
+	TEST_Parse_const_Paragraph.txt, TEST_Parse_derived.txt,
+	TEST_Parse_tobject_derived.txt, TEST_Parse_typedef.txt,
+	TEST_Parse_type_Paragraph.txt, TEST_Parse_Unit_Heading.txt,
+	TEST_Parse_uses_clause.txt, TEST_Parse_var_paragraph.txt,
+	TEST_SyncToken.txt (utags: build_4_1_1, build_3_2_4_4, build_4_1_0,
+	build_5_0_2, build_3_2_4_2, build_3_2_5_0,
+	post_check_instead_of_assert, build_4_1_3, build_3_3_6_1,
+	build_3_2_5_1, pre_abstract_test_refactoring, cd, build_3_2_8_0,
+	build_3_2_7_1, pre_check_instead_of_assert, build_5_0_1,
+	build_5_0_0, build_3_2_6_2, build_3_3_6_0, build_3_2_4_1,
+	standalone, build_3_2_8_1): Unit test input file
+
+2000-09-21 13:05  chrismo
+
+	* examples/readme.txt (tags: pre_abstract_test_refactoring,
+	build_5_0_2, build_5_0_1, build_5_0_0, build_4_1_3, build_4_1_1,
+	build_4_1_0, standalone, build_3_2_8_1, build_3_2_8_0,
+	build_3_2_7_1, build_3_2_6_2, build_3_3_6_1, build_3_3_6_0, cd,
+	build_3_2_5_1, build_3_2_5_0, build_3_2_4_4, build_3_2_4_2,
+	build_3_2_4_1, post_check_instead_of_assert,
+	pre_check_instead_of_assert): Updated examples readme.txt ...
+
+2000-09-21 13:03  juanco
+
+	* doc/index.html (tags: post_check_instead_of_assert,
+	pre_check_instead_of_assert): Added Source Forge logo, as required
+	by the SF conditions.
+
+2000-09-19 22:12  juanco
+
+	* src/: DUnit.pas (tags: pre_check_instead_of_assert),
+	GUITestRunner.dfm (tags: post_check_instead_of_assert,
+	pre_check_instead_of_assert), GUITestRunner.pas, TestExtensions.pas
+	(tags: post_check_instead_of_assert, pre_check_instead_of_assert),
+	TestFramework.pas (tags: pre_check_instead_of_assert),
+	TextTestRunner.pas (tags: pre_check_instead_of_assert),
+	UnitTestExtensions.pas (tags: pre_check_instead_of_assert),
+	UnitTestFramework.pas (tags: pre_check_instead_of_assert) (utags:
+	Build_3_2_3_13): Moved functionality around to eliminate
+	dependencies between DUnit.pas and TextTestRunner.pas.
+
+2000-09-19 22:10  juanco
+
+	* src/.cvsignore (tags: build_3_2_5_1, build_3_2_5_0,
+	build_3_2_4_4, build_3_2_4_2, build_3_2_4_1,
+	post_check_instead_of_assert), src/Makefile (tags: build_3_2_4_1,
+	post_check_instead_of_assert), src/UnitTests.dpr (tags:
+	post_check_instead_of_assert), Makefile, Rules.mak (tags:
+	post_check_instead_of_assert), examples/TListTest/.cvsignore (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1, build_3_2_6_2,
+	build_3_3_6_1, build_3_3_6_0, cd, build_3_2_5_1, build_3_2_5_0,
+	build_3_2_4_4, build_3_2_4_2, build_3_2_4_1,
+	post_check_instead_of_assert), examples/TListTest/ListTest.dpr
+	(tags: build_3_2_4_4, build_3_2_4_2, build_3_2_4_1,
+	post_check_instead_of_assert), examples/TListTest/ListTest.res
+	(tags: pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1, build_3_2_6_2,
+	build_3_3_6_1, build_3_3_6_0, cd, build_3_2_5_1, build_3_2_5_0,
+	build_3_2_4_4, build_3_2_4_2, build_3_2_4_1,
+	post_check_instead_of_assert), examples/TListTest/Makefile (tags:
+	build_3_3_6_1, build_3_3_6_0, cd, build_3_2_5_1, build_3_2_5_0,
+	build_3_2_4_4, build_3_2_4_2, build_3_2_4_1,
+	post_check_instead_of_assert), examples/collection/.cvsignore
+	(tags: pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1, build_3_2_6_2,
+	build_3_3_6_1, build_3_3_6_0, cd, build_3_2_5_1, build_3_2_5_0,
+	build_3_2_4_4, build_3_2_4_2, build_3_2_4_1,
+	post_check_instead_of_assert), examples/collection/Makefile (tags:
+	build_3_2_4_4, build_3_2_4_2, build_3_2_4_1,
+	post_check_instead_of_assert), examples/collection/TestDUNIT.dpr,
+	examples/collection/TestDUnitGUI.dpr,
+	examples/registration/.cvsignore (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1, build_3_2_6_2,
+	build_3_3_6_1, build_3_3_6_0, cd, build_3_2_5_1, build_3_2_5_0,
+	build_3_2_4_4, build_3_2_4_2, build_3_2_4_1,
+	post_check_instead_of_assert), examples/registration/Makefile
+	(tags: build_3_3_6_1, build_3_3_6_0, cd, build_3_2_5_1,
+	build_3_2_5_0, build_3_2_4_4, build_3_2_4_2, build_3_2_4_1,
+	post_check_instead_of_assert), examples/registration/UnitReg.dpr
+	(tags: build_3_2_4_4, build_3_2_4_2, build_3_2_4_1,
+	post_check_instead_of_assert), examples/registration/UnitReg.res
+	(tags: pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1, build_3_2_6_2,
+	build_3_3_6_1, build_3_3_6_0, cd, build_3_2_5_1, build_3_2_5_0,
+	build_3_2_4_4, build_3_2_4_2, build_3_2_4_1,
+	post_check_instead_of_assert), examples/registry/Makefile (tags:
+	post_check_instead_of_assert), examples/registry/Step1/.cvsignore
+	(tags: pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1, build_3_2_6_2,
+	build_3_3_6_1, build_3_3_6_0, cd, build_3_2_5_1, build_3_2_5_0,
+	build_3_2_4_4, build_3_2_4_2, build_3_2_4_1,
+	post_check_instead_of_assert),
+	examples/registry/Step1/RegistryTest.dpr (tags: build_3_2_4_4,
+	build_3_2_4_2, build_3_2_4_1, post_check_instead_of_assert),
+	examples/registry/Step1/RegistryTest.res (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1, build_3_2_6_2,
+	build_3_3_6_1, build_3_3_6_0, cd, build_3_2_5_1, build_3_2_5_0,
+	build_3_2_4_4, build_3_2_4_2, build_3_2_4_1,
+	post_check_instead_of_assert), examples/registry/Step2/.cvsignore
+	(tags: pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1, build_3_2_6_2,
+	build_3_3_6_1, build_3_3_6_0, cd, build_3_2_5_1, build_3_2_5_0,
+	build_3_2_4_4, build_3_2_4_2, build_3_2_4_1,
+	post_check_instead_of_assert),
+	examples/registry/Step2/RegistryTest.dpr (tags: build_3_2_4_4,
+	build_3_2_4_2, build_3_2_4_1, post_check_instead_of_assert),
+	examples/registry/Step2/RegistryTest.res (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1, build_3_2_6_2,
+	build_3_3_6_1, build_3_3_6_0, cd, build_3_2_5_1, build_3_2_5_0,
+	build_3_2_4_4, build_3_2_4_2, build_3_2_4_1,
+	post_check_instead_of_assert),
+	examples/registry/Step2/RegistryUnitTest.pas,
+	examples/registry/Step3/.cvsignore (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1, build_3_2_6_2,
+	build_3_3_6_1, build_3_3_6_0, cd, build_3_2_5_1, build_3_2_5_0,
+	build_3_2_4_4, build_3_2_4_2, build_3_2_4_1,
+	post_check_instead_of_assert),
+	examples/registry/Step3/RegistryTest.res (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1, build_3_2_6_2,
+	build_3_3_6_1, build_3_3_6_0, cd, build_3_2_5_1, build_3_2_5_0,
+	build_3_2_4_4, build_3_2_4_2, build_3_2_4_1,
+	post_check_instead_of_assert), examples/structure/Makefile (tags:
+	post_check_instead_of_assert),
+	examples/structure/diffunit/.cvsignore (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1, build_3_2_6_2,
+	build_3_3_6_1, build_3_3_6_0, cd, build_3_2_5_1, build_3_2_5_0,
+	build_3_2_4_4, build_3_2_4_2, build_3_2_4_1,
+	post_check_instead_of_assert),
+	examples/structure/diffunit/Project1.res (tags: build_3_2_4_1,
+	post_check_instead_of_assert),
+	examples/structure/sameunit/.cvsignore (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1, build_3_2_6_2,
+	build_3_3_6_1, build_3_3_6_0, cd, build_3_2_5_1, build_3_2_5_0,
+	build_3_2_4_4, build_3_2_4_2, build_3_2_4_1,
+	post_check_instead_of_assert),
+	examples/structure/sameunit/Project1.res (tags: build_3_2_4_1,
+	post_check_instead_of_assert) (utags: pre_check_instead_of_assert,
+	Build_3_2_3_13): Allow automated compilation and run from within a
+	makefile
+
+2000-09-17 21:09  chrismo
+
+	* examples/registry/: readme.txt (tags: build_3_2_5_0,
+	build_3_2_4_4, build_3_2_4_2, build_3_2_4_1,
+	post_check_instead_of_assert, pre_check_instead_of_assert,
+	Build_3_2_3_13), Step1/RegistryTest.dpr, Step1/RegistryUnit.pas
+	(tags: pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1, build_3_2_6_2,
+	build_3_3_6_1, build_3_3_6_0, cd, build_3_2_5_1, build_3_2_5_0,
+	build_3_2_4_4, build_3_2_4_2, build_3_2_4_1,
+	post_check_instead_of_assert, pre_check_instead_of_assert,
+	Build_3_2_3_13), Step1/RegistryUnitTest.pas (tags:
+	pre_check_instead_of_assert, Build_3_2_3_13),
+	Step2/RegistryTest.dpr, Step2/RegistryUnit.pas (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1, build_3_2_6_2,
+	build_3_3_6_1, build_3_3_6_0, cd, build_3_2_5_1, build_3_2_5_0,
+	build_3_2_4_4, build_3_2_4_2, build_3_2_4_1,
+	post_check_instead_of_assert, pre_check_instead_of_assert,
+	Build_3_2_3_13), Step2/RegistryUnitTest.pas, Step3/RegistryTest.dpr
+	(tags: pre_check_instead_of_assert, Build_3_2_3_13),
+	Step3/RegistryUnit.pas (tags: pre_abstract_test_refactoring,
+	build_5_0_2, build_5_0_1, build_5_0_0, build_4_1_3, build_4_1_1,
+	build_4_1_0, standalone, build_3_2_8_1, build_3_2_8_0,
+	build_3_2_7_1, build_3_2_6_2, build_3_3_6_1, build_3_3_6_0, cd,
+	build_3_2_5_1, build_3_2_5_0, build_3_2_4_4, build_3_2_4_2,
+	build_3_2_4_1, post_check_instead_of_assert,
+	pre_check_instead_of_assert, Build_3_2_3_13),
+	Step3/RegistryUnitTest.pas (tags: pre_check_instead_of_assert,
+	Build_3_2_3_13): Initial check-in of registry example.
+
+2000-09-12 19:32  juanco
+
+	* examples/collection/: Collections.pas (tags:
+	post_check_instead_of_assert, pre_check_instead_of_assert,
+	Build_3_2_3_13), TestDUnitGUI.dpr, TestDUnitGUI.res (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1, build_3_2_6_2,
+	build_3_3_6_1, build_3_3_6_0, cd, build_3_2_5_1, build_3_2_5_0,
+	build_3_2_4_4, build_3_2_4_2, build_3_2_4_1,
+	post_check_instead_of_assert, pre_check_instead_of_assert,
+	Build_3_2_3_13) (utags: Build_3_2_3_12): routine
+
+2000-09-11 23:14  chrismo
+
+	* Readme.txt (tags: pre_check_instead_of_assert, Build_3_2_3_13):
+	Added readme.txt
+
+2000-09-07 18:03  chrismo
+
+	* src/: TestFramework.pas, UnitTestFramework.pas: Removed
+	limitation in TMethodEnumerator on method names. Now *all*
+	published names are enumerated
+
+2000-09-06 23:33  juanco
+
+	* Makefile (tags: Build_3_2_3_12): Ready for 3.2.3.12 release.
+
+2000-09-06 22:52  juanco
+
+	* doc/index.html (tags: Build_3_2_3_13, Build_3_2_3_12): Fixed Bug
+	#109552: Dowloads should be at the SF Project Page Fixed Bug
+	#109550: Typing errors in text of current Web site
+
+2000-09-06 22:48  juanco
+
+	* examples/collection/.cvsignore (tags: Build_3_2_3_12): Ignore
+	Delphi generated configuration and backup files
+
+2000-09-06 22:36  juanco
+
+	* src/: GUITestRunner.dfm, GUITestRunner.pas (utags:
+	Build_3_2_3_12): Fixed Bug #109522: OnSelectItem is the wrong
+	event. Now clicking on either the test tree or the failure list
+	does what's expected.
+
+2000-09-06 22:25  juanco
+
+	* src/UnitTests.dpr (tags: Build_3_2_3_12): Re added framework
+	units to the project file so they get listed on the Delphi project
+	browser.
+
+2000-09-06 22:03  juanco
+
+	* src/UnitTestFramework.pas (tags: Build_3_2_3_12): Added own
+	exception class so users can disable the IDE stopping on it.
+
+2000-09-06 21:53  juanco
+
+	* src/TestFramework.pas (tags: Build_3_2_3_12): Added own exception
+	class for reporting errors so users can prevent the IDE from
+	stopping on them.
+
+2000-09-06 21:49  juanco
+
+	* src/DUnit.pas (tags: Build_3_2_3_12): Fixed BUG#111424: Stack
+	overflow in assertNotEquals.
+
+2000-09-06 19:07  juanco
+
+	* src/: .cvsignore, UnitTests.res (tags: pre_tests_dir,
+	build_3_2_4_4, build_3_2_4_2, build_3_2_4_1,
+	post_check_instead_of_assert, pre_check_instead_of_assert,
+	Build_3_2_3_13) (utags: Build_3_2_3_12): Added project .res file to
+	avoid warnings given by Delphi 5.
+
+2000-09-06 12:54  chrismo
+
+	* examples/: readme.txt (tags: Build_3_2_3_12),
+	structure/readme.txt (tags: build_3_2_5_0, build_3_2_4_4,
+	build_3_2_4_2, build_3_2_4_1, post_check_instead_of_assert,
+	pre_check_instead_of_assert, Build_3_2_3_12),
+	structure/diffunit/Project1.dpr (tags: build_4_1_1, build_4_1_0,
+	standalone, build_3_2_8_1, build_3_2_8_0, build_3_2_7_1,
+	build_3_2_6_2, build_3_3_6_1, build_3_3_6_0, cd, build_3_2_5_1,
+	build_3_2_5_0, build_3_2_4_4, build_3_2_4_2, build_3_2_4_1,
+	post_check_instead_of_assert, pre_check_instead_of_assert,
+	Build_3_2_3_12), structure/diffunit/Project1Test.dpr (tags:
+	pre_check_instead_of_assert, Build_3_2_3_12),
+	structure/diffunit/ProjectGroup1.bpg (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1, build_3_2_6_2,
+	build_3_3_6_1, build_3_3_6_0, cd, build_3_2_5_1, build_3_2_5_0,
+	build_3_2_4_4, build_3_2_4_2, build_3_2_4_1,
+	post_check_instead_of_assert, pre_check_instead_of_assert,
+	Build_3_2_3_12), structure/diffunit/Unit1.pas (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1, build_3_2_6_2,
+	build_3_3_6_1, build_3_3_6_0, cd, build_3_2_5_1, build_3_2_5_0,
+	build_3_2_4_4, build_3_2_4_2, build_3_2_4_1,
+	post_check_instead_of_assert, pre_check_instead_of_assert,
+	Build_3_2_3_12), structure/diffunit/Unit1Test.pas (tags:
+	pre_check_instead_of_assert, Build_3_2_3_12),
+	structure/diffunit/Unit2.pas (tags: build_3_2_6_2, build_3_3_6_1,
+	build_3_3_6_0, cd, build_3_2_5_1, build_3_2_5_0, build_3_2_4_4,
+	build_3_2_4_2, build_3_2_4_1, post_check_instead_of_assert,
+	pre_check_instead_of_assert, Build_3_2_3_12),
+	structure/diffunit/Unit2Test.pas (tags:
+	pre_check_instead_of_assert, Build_3_2_3_12),
+	structure/sameunit/Project1.dpr (tags: build_4_1_1, build_4_1_0,
+	standalone, build_3_2_8_1, build_3_2_8_0, build_3_2_7_1,
+	build_3_2_6_2, build_3_3_6_1, build_3_3_6_0, cd, build_3_2_5_1,
+	build_3_2_5_0, build_3_2_4_4, build_3_2_4_2, build_3_2_4_1,
+	post_check_instead_of_assert, pre_check_instead_of_assert,
+	Build_3_2_3_12), structure/sameunit/Project1Test.dof (tags:
+	build_3_2_4_1, post_check_instead_of_assert,
+	pre_check_instead_of_assert), structure/sameunit/Project1Test.dpr
+	(tags: pre_check_instead_of_assert, Build_3_2_3_12),
+	structure/sameunit/ProjectGroup1.bpg (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1, build_3_2_6_2,
+	build_3_3_6_1, build_3_3_6_0, cd, build_3_2_5_1, build_3_2_5_0,
+	build_3_2_4_4, build_3_2_4_2, build_3_2_4_1,
+	post_check_instead_of_assert, pre_check_instead_of_assert,
+	Build_3_2_3_12), structure/sameunit/Unit1.pas (tags:
+	pre_check_instead_of_assert, Build_3_2_3_12),
+	structure/sameunit/Unit2.pas (tags: pre_check_instead_of_assert,
+	Build_3_2_3_12) (utags: Build_3_2_3_13): no message
+
+2000-09-04 14:23  chrismo
+
+	* src/: UnitTestFramework.pas, UnitTests.dpr: Re-enabled
+	UnitTestFramework in UnitTests.dpr and fixed two tests that were
+	failing
+
+2000-09-03 02:16  chrismo
+
+	* examples/registration/: TestUnit1.pas (tags:
+	pre_check_instead_of_assert, Build_3_2_3_13), TestUnit2.pas (tags:
+	build_4_1_1, build_4_1_0, standalone, build_3_2_8_1, build_3_2_8_0,
+	build_3_2_7_1, build_3_2_6_2, build_3_3_6_1, build_3_3_6_0, cd,
+	build_3_2_5_1, build_3_2_5_0, build_3_2_4_4, build_3_2_4_2,
+	build_3_2_4_1, post_check_instead_of_assert,
+	pre_check_instead_of_assert, Build_3_2_3_13), TestUnit3.pas (tags:
+	pre_check_instead_of_assert, Build_3_2_3_13), UnitReg.dpr (utags:
+	Build_3_2_3_12): Fixed {$Id to be { $Id so units will compile
+
+2000-08-28 19:23  juanco
+
+	* src/TestExtensions.pas (tags: Build_3_2_3_12): BUG:
+	load/saveConfiguration missdiclared.
+
+2000-08-23 19:39  juanco
+
+	* src/: GUITestRunner.dfm, GUITestRunner.pas, TestExtensions.pas,
+	TestFramework.pas: Added ability to save/load test configuration to
+	an INI file.
+
+2000-08-23 17:34  juanco
+
+	* src/UnitTests.dpr: Removed references to outdated framework
+	modules, and re-added the current, up-to-date modules.
+
+2000-08-23 17:31  juanco
+
+	* src/.cvsignore: Ignore files automatically generated by Delphi.
+
+2000-08-15 13:17  chrismo
+
+	* src/: GUITestRunner.dfm, GUITestRunner.pas: Added select failed
+	tests button
+
+2000-08-07 20:12  chrismo
+
+	* src/GUITestRunner.pas: Refactored duplicate code to select all
+	parent nodes when selecting a node to SelectParentNodes
+
+2000-08-07 02:51  chrismo
+
+	* src/UnitTests.dpr: Forgot to remark out
+	Result.addTest(UnitTestFramework.Suite);
+
+2000-08-07 02:49  chrismo
+
+	* src/: UnitTestDUnit.pas (tags: pre_tests_dir, build_3_2_4_4,
+	build_3_2_4_2, build_3_2_4_1, post_check_instead_of_assert,
+	pre_check_instead_of_assert, Build_3_2_3_13, Build_3_2_3_12),
+	UnitTestFramework.pas, UnitTests.dpr: Initial check-in of port of
+	test framework tests from JUnit
+
+2000-08-07 02:47  chrismo
+
+	* src/TestFramework.pas: Changed TTestResult.startTest and endTest
+	parameter from ITest to TTestCase to fix ref. count bug when called
+	from .run. Changed TTestCase.runBare - except blocks for Setup and
+	TearDown raise exceptions now instead of assertions to fit with
+	test cases ported from JUnit.
+
+2000-08-05 03:05  juanco
+
+	* examples/collection/: DUnitTests.pas (tags:
+	pre_check_instead_of_assert, Build_3_2_3_13, Build_3_2_3_12),
+	TestDUNIT.dpr (tags: Build_3_2_3_12), TestDUnitGUI.dpr: BUG: CVS Id
+	was being taken for a compiler directive, and the files did not
+	compile.
+
+2000-08-04 21:15  chrismo
+
+	* doc/index.html: Added links in download section to stable (3.2.2)
+	and dev/beta (3.2.3.11). Added log entry pointing to SF file list.
+
+2000-08-04 20:09  chrismo
+
+	* Makefile (tags: Build_3_2_3_11): Latest make file - 3.2.3.11
+
+2000-08-04 19:46  chrismo
+
+	* src/UnitTests.dpr (tags: Build_3_2_3_11): Added units without
+	tests to uses clause so they're at least compiled.
+
+2000-08-03 18:02  choughte
+
+	* src/GUITestRunner.dfm (tags: Build_3_2_3_11): fixed resizing
+	bug...	FailureListView.align should have been alClient
+
+2000-08-03 04:19  juanco
+
+	* admin/loginfo: BUG: Turned off commit log because developers were
+	getting access permission errors on it.
+
+2000-08-02 19:54  chrismo
+
+	* src/TestExtensions.pas (tags: Build_3_2_3_11):
+	TTestDecorator.CountEnabledTestCases was returning
+	FTest.CountTestCases, not FTest.CountEnabledTestCases. Fixed.
+
+2000-08-02 18:51  chrismo
+
+	* src/TestFramework.pas (tags: Build_3_2_3_11): Refactored
+	addTests(testClass: TTestCaseClass) out of the TTestSuite
+	constructor to allow TestCase enumerated adds to an existing suite.
+
+2000-08-02 18:48  chrismo
+
+	* src/: TestExtensions.pas, UnitTestExtensions.pas (tags:
+	Build_3_2_3_12, Build_3_2_3_11), UnitTests.dpr: Added
+	ITestDecorator, TTestDecorator, TTestSetup, TRepeatedTest and unit
+	tests for these classes
+
+2000-08-02 18:47  chrismo
+
+	* src/GUITestRunner.pas (tags: Build_3_2_3_11): Added support for
+	ITestDecorator objects to be displayed in the tree view.
+
+2000-08-02 01:46  chrismo
+
+	* src/DUnitGUI.pas (tags: build_3_2_4_1,
+	post_check_instead_of_assert, pre_check_instead_of_assert,
+	Build_3_2_3_13, Build_3_2_3_12, Build_3_2_3_11): Change {$Id to {
+	$Id to fix compiler error...
+
+2000-08-01 19:54  chrismo
+
+	* src/: DUnit.pas (tags: Build_3_2_3_11), GUITestRunner.pas,
+	TestFramework.pas: Changed {$Id in header to { $Id to fix compiler
+	problem.
+
+2000-08-01 17:21  juanco
+
+	* examples/TListTest/ListTest.dpr (tags: Build_3_2_3_12,
+	Build_3_2_3_11), examples/TListTest/TListTestCase.pas (tags:
+	pre_check_instead_of_assert, Build_3_2_3_13, Build_3_2_3_12,
+	Build_3_2_3_11), examples/collection/Algorithms.pas (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1, build_3_2_6_2,
+	build_3_3_6_1, build_3_3_6_0, cd, build_3_2_5_1, build_3_2_5_0,
+	build_3_2_4_4, build_3_2_4_2, build_3_2_4_1,
+	post_check_instead_of_assert, pre_check_instead_of_assert,
+	Build_3_2_3_13, Build_3_2_3_12, Build_3_2_3_11),
+	examples/collection/Collections.pas (tags: Build_3_2_3_11),
+	examples/collection/DUnitTests.pas (tags: Build_3_2_3_11),
+	examples/collection/TestDUNIT.dpr (tags: Build_3_2_3_11),
+	examples/collection/TestDUnitGUI.dpr (tags: Build_3_2_3_11),
+	examples/registration/TestUnit1.pas (tags: Build_3_2_3_11),
+	examples/registration/TestUnit2.pas (tags: Build_3_2_3_11),
+	examples/registration/TestUnit3.pas (tags: Build_3_2_3_11),
+	examples/registration/UnitReg.dpr (tags: Build_3_2_3_11),
+	src/DUnit.pas, src/DUnitGUI.pas, src/GUITestRunner.pas,
+	src/TestFramework.pas, src/TextTestRunner.pas (tags:
+	Build_3_2_3_12, Build_3_2_3_11): BUG: Small bug fixes in licensing
+	boilerplate:  * Removed @(#) (should have been #(@)) which was for
+	SCSS compatibility.   * Changed Release to Revision, which is the
+	correct CVS keyword.  Added boilerplate to files that didn't have
+	it.
+
+2000-08-01 16:16  chrismo
+
+	* src/GUITestRunner.pas: - Refactored tree initialization out of
+	setSuite to a separate, virtual method.  - Moved private methods to
+	protected.
+
+2000-07-31 20:23  choughte
+
+	* src/GUITestRunner.pas: in procedure
+	TDUnitDialog.TestTreeClick(Sender: TObject); and procedure
+	TDUnitDialog.applyToTests(root :TTreeNode; const func :TTestFunc);
+	
+	added code to automatically select parent nodes when you select a
+	node and same for selectall
+
+2000-07-31 20:14  choughte
+
+	* src/GUITestRunner.pas: in procedure runTest(test: ITest);
+	
+	changed the form creation to :
+	
+	  Application.CreateForm(TDUnitDialog, MyForm);
+	
+	so it acts like a normal windows application in respects to things
+	like minimizing it. Without a main form, the app acts unexpectedly.
+
+2000-07-31 19:39  choughte
+
+	* src/: GUITestRunner.dfm, GUITestRunner.pas: in
+	TDUnitDialog.setup;
+	
+	changed the following so progress bar has correct max value
+	
+	  if fSuite <> nil then
+	  begin
+	    ProgressBar.Max := fSuite.countEnabledTestCases;
+	  end
+
+2000-07-25 15:41  jeffmoore
+
+	* examples/readme.txt (tags: Build_3_2_3_11): Describes the DUnit
+	examples
+
+2000-07-25 15:35  jeffmoore
+
+	* src/TestFramework.pas: Re-introduced TMethodEnumerator
+
+2000-07-25 14:53  jeffmoore
+
+	* examples/collection/: DUnitTests.pas, TestDUNIT.dpr,
+	TestDUnitGUI.dpr: Fixed to work again by using DUnit compatability
+	unit.
+
+2000-07-25 14:52  jeffmoore
+
+	* src/: DUnit.pas, DUnitGUI.pas: Improved compatability with older
+	versions of DUnit.  Improved working with collection example.
+
+2000-07-25 14:51  jeffmoore
+
+	* src/TextTestRunner.pas: Fixed an unresolved reference to
+	testSuiteOf
+
+2000-07-25 13:55  jeffmoore
+
+	* src/GUITestRunner.pas: Fixed semicolor error.  Two lessons to
+	learn from this: 1. Compile and run to test even the smallest
+	change.  2. Even though semi-colons are optional in the last line
+	of a block, always put one in anyway.
+
+2000-07-25 13:43  jeffmoore
+
+	* src/: TestFramework.pas, TextTestRunner.pas, GUITestRunner.dfm,
+	GUITestRunner.pas: Updated with last of JM changes.
+
+2000-07-25 13:39  jeffmoore
+
+	* src/: DUnit.pas, DUnitGUI.pas: Brought back for compatability
+
+2000-07-25 13:38  jeffmoore
+
+	* src/: Algorithms.pas, Collections.pas, DUnitTests.pas,
+	TestDUNIT.dpr, TestDUnitGUI.dpr: Moved to examples directory
+
+2000-07-25 05:14  majohnson
+
+	* src/GUITestRunner.pas: progress bar updating now happens after
+	test is executed
+
+2000-07-21 20:39  jeffmoore
+
+	* examples/collection/: Algorithms.pas, Collections.pas,
+	DUnitTests.pas, TestDUNIT.dpr, TestDUnitGUI.dpr: Moved here from
+	src directory
+
+2000-07-21 20:35  jeffmoore
+
+	* examples/TListTest/: ListTest.dpr, TListTestCase.pas: Ported from
+	DelphiUnit
+
+2000-07-21 20:30  jeffmoore
+
+	* examples/registration/: UnitReg.dpr, TestUnit1.pas,
+	TestUnit2.pas, TestUnit3.pas: Updated to use TestFramework.pas
+	instead of DUnit.pas
+
+2000-07-21 19:33  jeffmoore
+
+	* helpsrc/test.hlp_sgml (tags: pre_abstract_test_refactoring,
+	build_5_0_2, build_5_0_1, build_5_0_0, build_4_1_3, build_4_1_1,
+	build_4_1_0, standalone, build_3_2_8_1, build_3_2_8_0,
+	build_3_2_7_1, build_3_2_6_2, build_3_3_6_1, build_3_3_6_0, cd,
+	build_3_2_5_1, build_3_2_5_0, build_3_2_4_4, build_3_2_4_2,
+	build_3_2_4_1, post_check_instead_of_assert,
+	pre_check_instead_of_assert, Build_3_2_3_13, Build_3_2_3_12,
+	Build_3_2_3_11), helpsrc/TestFramework.HPJ (tags: build_3_2_4_4,
+	build_3_2_4_2, build_3_2_4_1, post_check_instead_of_assert,
+	pre_check_instead_of_assert, Build_3_2_3_13, Build_3_2_3_12,
+	Build_3_2_3_11), helpsrc/TestFramework.LibHPJ (tags: build_3_2_4_4,
+	build_3_2_4_2, build_3_2_4_1, post_check_instead_of_assert,
+	pre_check_instead_of_assert, Build_3_2_3_13, Build_3_2_3_12,
+	Build_3_2_3_11), doc/DUNIT.CNT (tags:
+	pre_abstract_test_refactoring, build_5_0_2, build_5_0_1,
+	build_5_0_0, build_4_1_3, build_4_1_1, build_4_1_0, standalone,
+	build_3_2_8_1, build_3_2_8_0, build_3_2_7_1, build_3_2_6_2,
+	build_3_3_6_1, build_3_3_6_0, cd, build_3_2_5_1, build_3_2_5_0,
+	build_3_2_4_4, build_3_2_4_2, build_3_2_4_1,
+	post_check_instead_of_assert, pre_check_instead_of_assert,
+	Build_3_2_3_13, Build_3_2_3_12, Build_3_2_3_11), doc/DUNIT.HLP
+	(tags: build_3_2_4_4, build_3_2_4_2, build_3_2_4_1,
+	post_check_instead_of_assert, pre_check_instead_of_assert,
+	Build_3_2_3_13, Build_3_2_3_12, Build_3_2_3_11),
+	doc/TestFramework.hlp: no message
+
+2000-07-20 06:56  majohnson
+
+	* src/GUITestRunner.pas: small fix the progress/score bar should
+	count the enabled tests instead of ALL tests
+
+2000-07-20 03:45  juanco
+
+	* Makefile (tags: post_moore): Oops! The version number was already
+	bumped. The new version no is 3.2.3
+
+2000-07-20 03:42  juanco
+
+	* Makefile: Bumped version to 3.2.4 to make things ready for next
+	release.
+
+2000-07-20 03:42  juanco
+
+	* admin/notify (tags: post_moore): BUG: It seems that mail expects
+	the to-addr as last parameter.
+
+2000-07-20 03:27  juanco
+
+	* doc/: DUNIT.HLP, TestFramework.hlp (tags: post_moore): Replaced
+	DUNIT.HLP by TestFramework.hlp which is a little bit more current.
+
+2000-07-20 03:24  juanco
+
+	* doc/LICENSE.html (tags: pre_abstract_test_refactoring,
+	build_5_0_2, build_5_0_1, build_5_0_0, build_4_1_3, build_4_1_1,
+	build_4_1_0, standalone, build_3_2_8_1, build_3_2_8_0,
+	build_3_2_7_1, build_3_2_6_2, build_3_3_6_1, build_3_3_6_0, cd,
+	build_3_2_5_1, build_3_2_5_0, build_3_2_4_4, build_3_2_4_2,
+	build_3_2_4_1, post_check_instead_of_assert,
+	pre_check_instead_of_assert, Build_3_2_3_13, Build_3_2_3_12,
+	Build_3_2_3_11, post_moore): Changed to the Mozilla Public License.
+
+2000-07-20 03:18  juanco
+
+	* src/: Algorithms.pas (tags: post_moore), Collections.pas (tags:
+	post_moore), DUnit.pas, DUnitGUI.dfm, DUnitGUI.pas, DUnitTests.pas
+	(tags: post_moore), GUITestRunner.dfm (tags: post_moore),
+	GUITestRunner.pas (tags: post_moore), TestDUNIT.dpr (tags:
+	post_moore), TestDUnitGUI.dpr (tags: post_moore), TestFramework.pas
+	(tags: post_moore), TextTestRunner.pas (tags: post_moore): Lincense
+	boilerplate updated to Mozilla Public License.	DUnit.pas replaced
+	by TestFramework.pas for consistency with JUnit.  DUnitGUI.pas
+	replaced by GUITestRunner.pas for consistency with JUnit.  Moved
+	Text UI stuff to TextTestRunner.pas.  Removed dependecies on the
+	Collections library from the framework.  Made assertion mechanism
+	selectable by a $DEFINE.  Fixed bug in assertNotEquals, which was
+	using the same message as assertEquals.  Some code formatting.
+
+2000-07-18 01:49  majohnson
+
+	* src/DUnitTests.pas (tags: pre_moore): tests the TmethodEnumerator
+	class to make sure it can properly enumerate the test methods in a
+	class
+
+2000-07-18 01:30  majohnson
+
+	* src/DUnit.pas (tags: pre_moore): adds TMethodEnumerator which
+	abstracts the code to automagically get test methods from the
+	published section
+
+2000-07-16 17:12  chrismo
+
+	* src/DUnit.pas: Changed longint types to integer - same data type,
+	but integer type is more common.
+
+2000-07-15 04:35  majohnson
+
+	* src/: DUnitGUI.dfm, DUnitGUI.pas (utags: pre_moore): adds a test
+	progress bar to indicate overall progress of tests executed
+
+2000-07-14 05:08  majohnson
+
+	* src/DUnitGUI.pas: modified progress bar update so that only
+	percentage of tests that passed is displayed
+
+2000-07-12 06:53  majohnson
+
+	* src/DUnit.pas: reconciles TTestCase.assertEquals to test for
+	longints instead of integers
+
+2000-07-10 16:39  juanco
+
+	* src/DUnitGUI.dfm: Hopefully, a binary, non-corrupted version of
+	the form.
+
+2000-07-10 04:49  majohnson
+
+	* src/Collections.pas (tags: pre_moore): fixed the implementation
+	declaration of tmapview.clear to match the header definition
+
+2000-07-10 02:44  majohnson
+
+	* src/DUnit.pas: completed the implementation for assertEquals that
+	works with integers
+
+2000-07-06 03:17  juanco
+
+	* .cvsignore (tags: build_3_2_4_4, build_3_2_4_2, build_3_2_4_1,
+	post_check_instead_of_assert, pre_check_instead_of_assert,
+	Build_3_2_3_13, Build_3_2_3_12, Build_3_2_3_11, post_moore,
+	pre_moore): Added an admin directory to the list of ignored files
+	so local copies of administrative files are ignored while
+	performing CVS commands over a project.
+
+2000-07-06 03:15  juanco
+
+	* admin/notify (tags: pre_moore): Uncommented the line that enables
+	e-mail notification for watchers of files.
+
+2000-07-06 03:14  juanco
+
+	* admin/loginfo (tags: post_moore, pre_moore): Uncomented the line
+	that will enable the creation of a log of all commits in the file
+	CVSROOT/commitinfo.
+
+2000-07-06 03:12  juanco
+
+	* admin/cvswrappers (tags: post_moore, pre_moore): Added the
+	extensions for several commonly used binary files (including .dfm!)
+
+2000-07-03 17:27  juanco
+
+	* doc/index.html (tags: Build_3_2_3_11, post_moore, pre_moore):
+	Updated copyright notice
+
+2000-07-03 17:13  juanco
+
+	* .cvsignore, Makefile (tags: pre_moore): BUG#108815:
+	Screenshot.gif not included in distribution zip file.  Changed the
+	makefile so only the zip file is generated with make dist.  Added
+	.cvsignore file to ignore dist and scratch directories.
+
+2000-07-03 16:56  juanco
+
+	* doc/index.html: BUG#108748: Link to mailing list broken. Fixed. 
+	BUG#108816: Instructions for contributing are outdated. Fixed the
+	worse of it.  Updated the log to reflect the move to SourceForge. 
+	Updated the list of contributors to mention the DUnit Group.
+
+2000-07-03 16:03  juanco
+
+	* doc/images/screenshot.gif (tags: post_check_instead_of_assert,
+	pre_check_instead_of_assert, Build_3_2_3_13, Build_3_2_3_12,
+	Build_3_2_3_11, post_moore, pre_moore, start): Original doc images.
+
+2000-07-01 21:29  juanco
+
+	* doc/index.html: Unjuacoized home page. A copy of the latest
+	version of this page should always be at
+	http://dunit.sourceforge.net.
+
+2000-07-01 20:24  juanco
+
+	* Makefile, src/Algorithms.pas (tags: pre_moore),
+	src/Collections.pas, src/DUnit.pas,
+	examples/registration/TestUnit1.pas (tags: post_moore, pre_moore),
+	examples/registration/TestUnit2.pas (tags: post_moore, pre_moore),
+	examples/registration/TestUnit3.pas (tags: post_moore, pre_moore),
+	examples/registration/UnitReg.dpr (tags: post_moore, pre_moore),
+	src/DUnitGUI.dfm, src/DUnitGUI.pas, src/DUnitTests.pas,
+	src/TestDUNIT.dpr (tags: pre_moore), src/TestDUnitGUI.dpr (tags:
+	pre_moore), doc/DUNIT.HLP (tags: pre_moore), doc/LICENSE.html
+	(tags: pre_moore), doc/index.html (utags: start): Initial
+	SourceForge release, equivalent to DUnit version 3.2.2
+
+2000-07-01 20:24  juanco
+
+	* Makefile, src/Algorithms.pas, src/Collections.pas, src/DUnit.pas,
+	examples/registration/TestUnit1.pas,
+	examples/registration/TestUnit2.pas,
+	examples/registration/TestUnit3.pas,
+	examples/registration/UnitReg.dpr, src/DUnitGUI.dfm,
+	src/DUnitGUI.pas, src/DUnitTests.pas, src/TestDUNIT.dpr,
+	src/TestDUnitGUI.dpr, doc/DUNIT.HLP, doc/LICENSE.html,
+	doc/index.html, doc/images/screenshot.gif: Initial revision
+
+2000-06-30 20:23  root
+
+	* admin/: checkoutlist (tags: post_moore, pre_moore), commitinfo
+	(tags: post_moore, pre_moore), config (tags: post_moore,
+	pre_moore), cvswrappers, editinfo (tags: post_moore, pre_moore),
+	loginfo, modules (tags: post_moore, pre_moore), notify, rcsinfo
+	(tags: post_moore, pre_moore), taginfo (tags: post_moore,
+	pre_moore), verifymsg (tags: post_moore, pre_moore): initial
+	checkin
+
