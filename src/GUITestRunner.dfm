@@ -90,7 +90,7 @@ object GUITestRunner: TGUITestRunner
           Height = 19
           Align = alTop
           AutoSize = False
-          Caption = '`'
+          Caption = 'Test Hi&erarchy:'
           FocusControl = TestTree
           Layout = tlCenter
         end
