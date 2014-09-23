@@ -373,7 +373,7 @@ type
     procedure InitTree; virtual;
 
     function  IniFileName :string;
-    function GetIniFile(const FileName : string): tCustomIniFile; virtual;
+    function GetIniFile(const FileName : string): TCustomIniFile; virtual;
 
     procedure LoadRegistryAction(IniFile: TCustomIniFile);
     procedure SaveRegistryAction(IniFile: TCustomIniFile);
@@ -1695,7 +1695,7 @@ begin
     Checked := not Checked;
 end;
 
-function TGUITestRunner.GetIniFile(const FileName : string): tCustomIniFile;
+function TGUITestRunner.GetIniFile(const FileName : string): TCustomIniFile;
 begin
   if UseRegistryAction.Checked then
     Result := tRegistryIniFile.Create( GetDUnitRegistryKey + FileName )
