@@ -373,18 +373,18 @@ type
     procedure InitTree; virtual;
 
     function  IniFileName :string;
-    function  GetIniFile( const FileName : string ) : tCustomIniFile;
+    function GetIniFile(const FileName : string): TCustomIniFile; virtual;
 
-    procedure LoadRegistryAction;
-    procedure SaveRegistryAction;
+    procedure LoadRegistryAction(IniFile: TCustomIniFile);
+    procedure SaveRegistryAction(IniFile: TCustomIniFile);
 
-    procedure LoadFormPlacement;
-    procedure SaveFormPlacement;
+    procedure LoadFormPlacement(IniFile: TCustomIniFile);
+    procedure SaveFormPlacement(IniFile: TCustomIniFile);
 
     procedure SaveConfiguration;
     procedure LoadConfiguration;
 
-    procedure LoadSuiteConfiguration;
+    procedure LoadSuiteConfiguration(IniFile: TCustomIniFile);
     procedure AutoSaveConfiguration;
 
     function NodeIsGrandparent(ANode: TDCTreeNode): boolean;
@@ -669,27 +669,25 @@ begin
     result := ExtractFilePath(Application.ExeName) + TEST_INI_FILE
 end;
 
-procedure TGUITestRunner.LoadFormPlacement;
+procedure TGUITestRunner.LoadFormPlacement(IniFile: TCustomIniFile);
 begin
-  with GetIniFile( IniFileName ) do
-  try
-    Self.SetBounds(
-                   ReadInteger(cnConfigIniSection, 'Left',   Left),
-                   ReadInteger(cnConfigIniSection, 'Top',    Top),
-                   ReadInteger(cnConfigIniSection, 'Width',  Width),
-                   ReadInteger(cnConfigIniSection, 'Height', Height)
-                   );
-    if ReadBool(cnConfigIniSection, 'Maximized', False ) then
-      WindowState := wsMaximized;
-  finally
-    Free;
-  end;
+  with IniFile do
+    begin
+      Self.SetBounds(
+                     ReadInteger(cnConfigIniSection, 'Left',   Left),
+                     ReadInteger(cnConfigIniSection, 'Top',    Top),
+                     ReadInteger(cnConfigIniSection, 'Width',  Width),
+                     ReadInteger(cnConfigIniSection, 'Height', Height)
+                     );
+      if ReadBool(cnConfigIniSection, 'Maximized', False ) then
+        WindowState := wsMaximized;
+    end;
 end;
 
-procedure TGUITestRunner.SaveFormPlacement;
+procedure TGUITestRunner.SaveFormPlacement(IniFile: TCustomIniFile);
 begin
-  with GetIniFile(IniFileName) do
-    try
+  with IniFile do
+    begin
       WriteBool(cnConfigIniSection, 'AutoSave', AutoSaveAction.Checked);
 
       if WindowState <> wsMaximized then
@@ -701,68 +699,70 @@ begin
       end;
 
       WriteBool(cnConfigIniSection, 'Maximized', WindowState = wsMaximized );
-    finally
-      Free
     end;
 end;
 
 procedure TGUITestRunner.LoadConfiguration;
 var
   i :Integer;
+  IniFile : TCustomIniFile;
 begin
-  LoadRegistryAction;
-  LoadFormPlacement;
-  LoadSuiteConfiguration;
-  with GetIniFile(IniFileName) do
+  IniFile := GetIniFile(IniFileName);
   try
-    with AutoSaveAction do
-      Checked := ReadBool(cnConfigIniSection, 'AutoSave', Checked);
-
-    { center splitter location }
-    with ResultsPanel do
-      Height := ReadInteger(cnConfigIniSection, 'ResultsPanel.Height', Height);
-
-    { error splitter location }
-    with ErrorBoxPanel do
-      Height := ReadInteger(cnConfigIniSection, 'ErrorMessage.Height', Height);
-    with ErrorBoxVisibleAction do
-      Checked := ReadBool(cnConfigIniSection, 'ErrorMessage.Visible', Checked);
-
-    ErrorBoxSplitter.Visible := ErrorBoxVisibleAction.Checked;
-    ErrorBoxPanel.Visible    := ErrorBoxVisibleAction.Checked;
-
-    { failure list configuration }
-    with FailureListView do begin
-      for i := 0 to Columns.Count-1 do
+    LoadRegistryAction(IniFile);
+    LoadFormPlacement(IniFile);
+    LoadSuiteConfiguration(IniFile);
+    with IniFile do
       begin
-        Columns[i].Width := Max(4, ReadInteger(cnConfigIniSection,
-                                        Format('FailureList.ColumnWidth[%d]', [i]),
-                                        Columns[i].Width)
-                                        );
-      end;
-    end;
+        with AutoSaveAction do
+          Checked := ReadBool(cnConfigIniSection, 'AutoSave', Checked);
 
-    { other options }
-    HideTestNodesOnOpenAction.Checked := ReadBool(cnConfigIniSection,
-      'HideTestNodesOnOpen', HideTestNodesOnOpenAction.Checked);
-    BreakOnFailuresAction.Checked := ReadBool(cnConfigIniSection,
-      'BreakOnFailures', BreakOnFailuresAction.Checked);
-    FailIfNoChecksExecutedAction.Checked := ReadBool(cnConfigIniSection,
-      'FailOnNoChecksExecuted', FailIfNoChecksExecutedAction.Checked);
-    FailTestCaseIfMemoryLeakedAction.Checked := ReadBool(cnConfigIniSection,
-      'FailOnMemoryLeaked', FailTestCaseIfMemoryLeakedAction.Checked);
-    IgnoreMemoryLeakInSetUpTearDownAction.Checked := ReadBool(cnConfigIniSection,
-      'IgnoreSetUpTearDownLeaks', IgnoreMemoryLeakInSetUpTearDownAction.Checked);
-    ReportMemoryLeakTypeOnShutdownAction.Checked := ReadBool(cnConfigIniSection,
-      'ReportMemoryLeakTypes', ReportMemoryLeakTypeOnShutdownAction.Checked);
-    WarnOnFailTestOverrideAction.Checked := ReadBool(cnConfigIniSection,
-      'WarnOnFailTestOverride', WarnOnFailTestOverrideAction.Checked);
-    ShowTestedNodeAction.Checked := ReadBool(cnConfigIniSection,
-      'SelectTestedNode', ShowTestedNodeAction.Checked);
-    FPopupX := ReadInteger(cnConfigIniSection,'PopupX', 350);
-    FPopupY := ReadInteger(cnConfigIniSection,'PopupY', 30);
+        { center splitter location }
+        with ResultsPanel do
+          Height := ReadInteger(cnConfigIniSection, 'ResultsPanel.Height', Height);
+
+        { error splitter location }
+        with ErrorBoxPanel do
+          Height := ReadInteger(cnConfigIniSection, 'ErrorMessage.Height', Height);
+        with ErrorBoxVisibleAction do
+          Checked := ReadBool(cnConfigIniSection, 'ErrorMessage.Visible', Checked);
+
+        ErrorBoxSplitter.Visible := ErrorBoxVisibleAction.Checked;
+        ErrorBoxPanel.Visible    := ErrorBoxVisibleAction.Checked;
+
+        { failure list configuration }
+        with FailureListView do begin
+          for i := 0 to Columns.Count-1 do
+          begin
+            Columns[i].Width := Max(4, ReadInteger(cnConfigIniSection,
+                                            Format('FailureList.ColumnWidth[%d]', [i]),
+                                            Columns[i].Width)
+                                            );
+          end;
+        end;
+
+        { other options }
+        HideTestNodesOnOpenAction.Checked := ReadBool(cnConfigIniSection,
+          'HideTestNodesOnOpen', HideTestNodesOnOpenAction.Checked);
+        BreakOnFailuresAction.Checked := ReadBool(cnConfigIniSection,
+          'BreakOnFailures', BreakOnFailuresAction.Checked);
+        FailIfNoChecksExecutedAction.Checked := ReadBool(cnConfigIniSection,
+          'FailOnNoChecksExecuted', FailIfNoChecksExecutedAction.Checked);
+        FailTestCaseIfMemoryLeakedAction.Checked := ReadBool(cnConfigIniSection,
+          'FailOnMemoryLeaked', FailTestCaseIfMemoryLeakedAction.Checked);
+        IgnoreMemoryLeakInSetUpTearDownAction.Checked := ReadBool(cnConfigIniSection,
+          'IgnoreSetUpTearDownLeaks', IgnoreMemoryLeakInSetUpTearDownAction.Checked);
+        ReportMemoryLeakTypeOnShutdownAction.Checked := ReadBool(cnConfigIniSection,
+          'ReportMemoryLeakTypes', ReportMemoryLeakTypeOnShutdownAction.Checked);
+        WarnOnFailTestOverrideAction.Checked := ReadBool(cnConfigIniSection,
+          'WarnOnFailTestOverride', WarnOnFailTestOverrideAction.Checked);
+        ShowTestedNodeAction.Checked := ReadBool(cnConfigIniSection,
+          'SelectTestedNode', ShowTestedNodeAction.Checked);
+        FPopupX := ReadInteger(cnConfigIniSection,'PopupX', 350);
+        FPopupY := ReadInteger(cnConfigIniSection,'PopupY', 30);
+      end;
   finally
-    Free;
+    IniFile.Free;
   end;
 
   if Suite <> nil then
@@ -778,49 +778,52 @@ end;
 procedure TGUITestRunner.SaveConfiguration;
 var
   i :Integer;
+  IniFile : TCustomIniFile;
 begin
-  if Suite <> nil then
-    Suite.SaveConfiguration(IniFileName, UseRegistryAction.Checked, True);
-
-  SaveFormPlacement;
-  SaveRegistryAction;
-
-  with GetIniFile(IniFileName) do
+  IniFile := GetIniFile(IniFileName);
   try
-    { center splitter location }
-    WriteInteger(cnConfigIniSection, 'ResultsPanel.Height',
-      ResultsPanel.Height);
+    if Suite <> nil then
+      Suite.SaveConfiguration(IniFile, 'Tests');
 
-    { error box }
-    WriteInteger(cnConfigIniSection, 'ErrorMessage.Height',
-      ErrorBoxPanel.Height);
-    WriteBool(cnConfigIniSection, 'ErrorMessage.Visible',
-      ErrorBoxVisibleAction.Checked);
+    SaveFormPlacement(IniFile);
+    SaveRegistryAction(IniFile);
 
-    { failure list configuration }
-    with FailureListView do begin
-      for i := 0 to Columns.Count-1 do
+    with IniFile do
       begin
-       WriteInteger( cnConfigIniSection,
-                     Format('FailureList.ColumnWidth[%d]', [i]),
-                     Columns[i].Width);
+        { center splitter location }
+        WriteInteger(cnConfigIniSection, 'ResultsPanel.Height',
+          ResultsPanel.Height);
+
+        { error box }
+        WriteInteger(cnConfigIniSection, 'ErrorMessage.Height',
+          ErrorBoxPanel.Height);
+        WriteBool(cnConfigIniSection, 'ErrorMessage.Visible',
+          ErrorBoxVisibleAction.Checked);
+
+        { failure list configuration }
+        with FailureListView do begin
+          for i := 0 to Columns.Count-1 do
+          begin
+           WriteInteger( cnConfigIniSection,
+                         Format('FailureList.ColumnWidth[%d]', [i]),
+                         Columns[i].Width);
+          end;
+        end;
+
+        { other options }
+        WriteBool(cnConfigIniSection, 'HideTestNodesOnOpen',      HideTestNodesOnOpenAction.Checked);
+        WriteBool(cnConfigIniSection, 'BreakOnFailures',          BreakOnFailuresAction.Checked);
+        WriteBool(cnConfigIniSection, 'FailOnNoChecksExecuted',   FailIfNoChecksExecutedAction.Checked);
+        WriteBool(cnConfigIniSection, 'FailOnMemoryLeaked',       FailTestCaseIfMemoryLeakedAction.Checked);
+        WriteBool(cnConfigIniSection, 'IgnoreSetUpTearDownLeaks', IgnoreMemoryLeakInSetUpTearDownAction.Checked);
+        WriteBool(cnConfigIniSection, 'ReportMemoryLeakTypes',    ReportMemoryLeakTypeOnShutdownAction.Checked);
+        WriteBool(cnConfigIniSection, 'SelectTestedNode',         ShowTestedNodeAction.Checked);
+        WriteBool(cnConfigIniSection, 'WarnOnFailTestOverride',   WarnOnFailTestOverrideAction.Checked);
+        WriteInteger(cnConfigIniSection, 'PopupX',                FPopupX);
+        WriteInteger(cnConfigIniSection, 'PopupY',                FPopupY);
       end;
-    end;
-
-    { other options }
-    WriteBool(cnConfigIniSection, 'HideTestNodesOnOpen',      HideTestNodesOnOpenAction.Checked);
-    WriteBool(cnConfigIniSection, 'BreakOnFailures',          BreakOnFailuresAction.Checked);
-    WriteBool(cnConfigIniSection, 'FailOnNoChecksExecuted',   FailIfNoChecksExecutedAction.Checked);
-    WriteBool(cnConfigIniSection, 'FailOnMemoryLeaked',       FailTestCaseIfMemoryLeakedAction.Checked);
-    WriteBool(cnConfigIniSection, 'IgnoreSetUpTearDownLeaks', IgnoreMemoryLeakInSetUpTearDownAction.Checked);
-    WriteBool(cnConfigIniSection, 'ReportMemoryLeakTypes',    ReportMemoryLeakTypeOnShutdownAction.Checked);
-    WriteBool(cnConfigIniSection, 'SelectTestedNode',         ShowTestedNodeAction.Checked);
-    WriteBool(cnConfigIniSection, 'WarnOnFailTestOverride',   WarnOnFailTestOverrideAction.Checked);
-    WriteInteger(cnConfigIniSection, 'PopupX',                FPopupX);
-    WriteInteger(cnConfigIniSection, 'PopupY',                FPopupY);
-
   finally
-    Free;
+    IniFile.Free;
   end;
 end;
 
@@ -1087,11 +1090,18 @@ begin
 end;
 
 procedure TGUITestRunner.SetSuite(value: ITest);
+var
+  IniFile : TCustomIniFile;
 begin
   FSuite := value;
   if FSuite <> nil then
   begin
-    LoadSuiteConfiguration;
+    IniFile := GetIniFile(IniFileName);
+    try
+      LoadSuiteConfiguration(IniFile);
+    finally
+      IniFile.Free;
+    end;
     EnableUI(True);
     InitTree;
   end
@@ -1623,10 +1633,10 @@ begin
     FailureListView.Images := RunImages;
 end;
 
-procedure TGUITestRunner.LoadSuiteConfiguration;
+procedure TGUITestRunner.LoadSuiteConfiguration(IniFile: TCustomIniFile);
 begin
   if Suite <> nil then
-    Suite.LoadConfiguration(IniFileName, UseRegistryAction.Checked, True);
+    Suite.LoadConfiguration(IniFile, 'Tests');
 end;
 
 procedure TGUITestRunner.MakeNodeVisible(node: TDCTreeNode);
@@ -1685,7 +1695,7 @@ begin
     Checked := not Checked;
 end;
 
-function TGUITestRunner.GetIniFile(const FileName: string) : tCustomIniFile;
+function TGUITestRunner.GetIniFile(const FileName : string): TCustomIniFile;
 begin
   if UseRegistryAction.Checked then
     Result := tRegistryIniFile.Create( GetDUnitRegistryKey + FileName )
@@ -1693,28 +1703,22 @@ begin
     Result := tIniFile.Create( FileName );
 end;
 
-procedure TGUITestRunner.LoadRegistryAction;
+procedure TGUITestRunner.LoadRegistryAction(IniFile: TCustomIniFile);
 begin
-  with TIniFile.Create(IniFileName) do
-  try
-    UseRegistryAction.Checked := ReadBool(cnConfigIniSection,
-      'UseRegistry', UseRegistryAction.Checked);
-  finally
-    Free;
-  end;
+  with IniFile do
+    begin
+      UseRegistryAction.Checked := ReadBool(cnConfigIniSection,
+        'UseRegistry', UseRegistryAction.Checked);
+    end;
 end;
 
-procedure TGUITestRunner.SaveRegistryAction;
+procedure TGUITestRunner.SaveRegistryAction(IniFile: TCustomIniFile);
 begin
   if UseRegistryAction.Checked then
     DeleteFile( IniFileName );
 
-  with TIniFile.Create(IniFileName) do
-  try
+  with IniFile do
     WriteBool(cnConfigIniSection, 'UseRegistry', UseRegistryAction.Checked);
-  finally
-    Free;
-  end;
 end;
 
 procedure TGUITestRunner.RunActionUpdate(Sender: TObject);

@@ -68,8 +68,6 @@ type
 {$ENDIF}
   TTestProc    = procedure;
 
-  TTestCaseClass  = class of TTestCase;
-
   ITestListener   = interface;
   IStatusListener = interface;
 
@@ -80,6 +78,7 @@ type
   TTestFailure  = class;
 
   ExceptionClass = class of Exception;
+  TTestCaseClass  = class of TTestCase;
 
   ETestFailure = class({$IFDef Enterprise} Exception {$Else} EAbort {$EndIf})
      constructor Create;               overload;

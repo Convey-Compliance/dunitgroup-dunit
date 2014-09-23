@@ -1,6 +1,6 @@
 object GUITestRunner: TGUITestRunner
-  Left = 389
-  Top = 154
+  Left = 410
+  Top = 158
   Width = 639
   Height = 605
   Caption = 'DUnit: An Xtreme testing framework'
