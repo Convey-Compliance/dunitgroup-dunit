@@ -343,7 +343,7 @@ type
     procedure ClearFailureMessage;
 
     function AddFailureItem(failure: TTestFailure): TDCTreeGridNode;
-    procedure UpdateStatus(const fullUpdate:Boolean);
+    procedure UpdateStatus(const fullUpdate:Boolean); virtual;
 
     procedure FillTestTree(RootNode: TDCTreeNode; ATest: ITest); overload;
     procedure FillTestTree(ATest: ITest);                      overload;
