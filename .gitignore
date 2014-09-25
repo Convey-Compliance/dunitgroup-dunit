@@ -1,0 +1,15 @@
+*.dproj.local
+*.identcache
+*.~*
+*.sfb
+*.dsk
+*.groupproj.local
+/__history/
+/Intermediate/
+/Bin/
+*.dcu
+/*.tvsconfig
+/.sonar/
+*.cbk
+dunit.ini
+dunit*.xml
