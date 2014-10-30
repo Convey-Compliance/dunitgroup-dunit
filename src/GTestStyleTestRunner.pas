@@ -11,10 +11,11 @@ type
     FConsoleHandle: THandle;
     FOldColorAttributes: Word;
     procedure CaptureConsoleAttributes;
+    procedure FlushOutput;
     function GetTestFullName(ATest: ITest): string;
     procedure PrintError(error: TTestFailure);
     procedure PrintFailure(failure: TTestFailure);
-    procedure PrintFailureDetails(failure: TTestFailure);
+    procedure PrintFailureOrErrorDetails(failure: TTestFailure);
     procedure ResetConsoleColor;
     procedure RestoreOldConsoleColor;
     procedure SetConsoleColor(AColor: Word);
@@ -92,17 +93,18 @@ begin
     ResetConsoleColor;
   end;
   writeln(Format(STR_TEST_TIME, [test.GetName, test.ElapsedTestTime]));
+  FlushOutput;
 end;
 
 procedure TGTestStyleTestListener.AddError(error: TTestFailure);
 begin
-  PrintFailureDetails(error);
+  PrintFailureOrErrorDetails(error);
   PrintError(error);
 end;
 
 procedure TGTestStyleTestListener.AddFailure(failure: TTestFailure);
 begin
-  PrintFailureDetails(failure);
+  PrintFailureOrErrorDetails(failure);
   PrintFailure(failure);
 end;
 
@@ -125,6 +127,7 @@ begin
   end;
   writeln(Format(STR_TestsListedBelow, [r.errorCount]));
   PrintErrorItems(r);
+  FlushOutput;
 end;
 
 procedure TGTestStyleTestListener.PrintFailureItems(r :TTestResult);
@@ -132,16 +135,18 @@ var
   i: Integer;
   failure: TTestFailure;
 begin
-  for i := 0 to r.FailureCount - 1 do begin
-    failure := r.Failures[i];
-    SetConsoleRed;
-    try
-      write(STR_FAILED);
-    finally
-      ResetConsoleColor;
+  for i := 0 to r.FailureCount - 1 do
+    begin
+      failure := r.Failures[i];
+      SetConsoleRed;
+      try
+        write(STR_FAILED);
+      finally
+        ResetConsoleColor;
+      end;
+      writeln(' ', GetTestFullName(failure.failedTest));
     end;
-    writeln(' ', GetTestFullName(failure.failedTest));
-  end;
+  FlushOutput;
 end;
 
 procedure TGTestStyleTestListener.PrintErrorItems(r :TTestResult);
@@ -149,16 +154,18 @@ var
   i: Integer;
   error: TTestFailure;
 begin
-  for i := 0 to r.ErrorCount - 1 do begin
-    error := r.Errors[i];
-    SetConsoleRed;
-    try
-      write(STR_ERROR);
-    finally
-      ResetConsoleColor;
+  for i := 0 to r.ErrorCount - 1 do
+    begin
+      error := r.Errors[i];
+      SetConsoleRed;
+      try
+        write(STR_ERROR);
+      finally
+        ResetConsoleColor;
+      end;
+      writeln(' ', GetTestFullName(error.failedTest));
     end;
-    writeln(' ', GetTestFullName(error.failedTest));
-  end;
+  FlushOutput;
 end;
 
 procedure TGTestStyleTestListener.PrintFailures(r: TTestResult);
@@ -173,6 +180,7 @@ begin
   end;
   writeln(Format(STR_TestsListedBelow, [r.failureCount]));
   PrintFailureItems(r);
+  FlushOutput;
 end;
 
 procedure TGTestStyleTestListener.PrintHeader(r: TTestResult);
@@ -184,6 +192,7 @@ begin
     ResetConsoleColor;
   end;
   writeln(Format(STR_Tests, [r.RunCount - r.ErrorCount - r.FailureCount]));
+  FlushOutput;
 end;
 
 procedure TGTestStyleTestListener.StartTest(test: ITest);
@@ -197,6 +206,7 @@ begin
     ResetConsoleColor;
   end;
   writeln(' ', test.Name);
+  FlushOutput;
 end;
 
 procedure TGTestStyleTestListener.TestingStarts;
@@ -210,6 +220,7 @@ begin
     ResetConsoleColor;
   end;
   writeln(STR_DUnitTestingStarts);
+  FlushOutput;
 end;
 
 procedure TGTestStyleTestListener.TestingEnds(testResult: TTestResult);
@@ -226,6 +237,7 @@ begin
   finally
     RestoreOldConsoleColor;
   end;
+  FlushOutput;
 end;
 
 class function TGTestStyleTestListener.RunTest(suite: ITest): TTestResult;
@@ -267,11 +279,13 @@ end;
 procedure TGTestStyleTestListener.Status(test: ITest; const Msg: string);
 begin
   writeln(Format(STR_, [test.Name, Msg]));
+  FlushOutput;
 end;
 
 procedure TGTestStyleTestListener.Warning(test: ITest; const Msg: string);
 begin
   writeln(Format(STR_WARNING, [test.Name, Msg]));
+  FlushOutput;
 end;
 
 function TGTestStyleTestListener.ShouldRunTest(test: ITest): boolean;
@@ -288,10 +302,16 @@ begin
     ResetConsoleColor;
   end;
   writeln(Format(STR_TestsFromMsTotal, [suite.CountEnabledTestCases, suite.Name, suite.ElapsedTestTime]));
+  FlushOutput;
 end;
 
 procedure TGTestStyleTestListener.EndTest(test: ITest);
 begin
+end;
+
+procedure TGTestStyleTestListener.FlushOutput;
+begin
+  Flush(Output);
 end;
 
 procedure TGTestStyleTestListener.PrintError(error: TTestFailure);
@@ -303,6 +323,7 @@ begin
     ResetConsoleColor;
   end;
   writeln(Format(STR_TEST_TIME, [error.FailedTest.GetName, error.FailedTest.ElapsedTestTime]));
+  FlushOutput;
 end;
 
 procedure TGTestStyleTestListener.PrintFailure(failure: TTestFailure);
@@ -314,15 +335,18 @@ begin
     ResetConsoleColor;
   end;
   writeln(Format(STR_TEST_TIME, [failure.FailedTest.GetName, failure.FailedTest.ElapsedTestTime]));
+  FlushOutput;
 end;
 
-procedure TGTestStyleTestListener.PrintFailureDetails(failure: TTestFailure);
+procedure TGTestStyleTestListener.PrintFailureOrErrorDetails(failure:
+    TTestFailure);
 begin
   writeln(STR_Exception, failure.ThrownExceptionName);
   writeln(failure.ThrownExceptionMessage);
   writeln(STR_AtAddress, failure.AddressInfo);
   writeln(failure.LocationInfo);
   writeln(failure.StackTrace);
+  FlushOutput;
 end;
 
 procedure TGTestStyleTestListener.ResetConsoleColor;
@@ -360,6 +384,7 @@ begin
     ResetConsoleColor;
   end;
   writeln(Format(STR_RunningTestsFromSuite, [suite.CountEnabledTestCases, suite.Name]));
+  FlushOutput;
 end;
 
 end.
