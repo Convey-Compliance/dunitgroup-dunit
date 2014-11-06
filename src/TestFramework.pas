@@ -213,14 +213,10 @@ type
 
     function  GetAllowedLeak: Integer;
     function  GetAllowedLeaksIterator: TListIterator;
-    {$IfDef Enterprise}
     function GetParent : ITest;
     procedure SetParent (AParent : ITest);
-    {$EndIf}
     property  AllowedLeaksIterator: TListIterator read GetAllowedLeaksIterator;
-    {$IfDef Enterprise}
     property Parent : ITest read GetParent write SetParent;
-    {$EndIf}
   end;
 
 
@@ -388,9 +384,7 @@ type
 
     // Object used by the GUI to map the test onto a GUI object such as a tree node
     FGUIObject: TObject;
-    {$IfDef Enterprise}
     FParent : ITest;
-    {$EndIF}
 
     procedure Invoke(AMethod: TTestMethod); virtual;
     procedure RunWithFixture(testResult: TTestResult); virtual;
@@ -430,10 +424,8 @@ type
     procedure SetAllowedLeakArray(AllowedList: array of Integer);
     function  GetAllowedLeak: Integer; // Is the iterator returned below
     function  GetAllowedLeaksIterator: TListIterator;
-    {$IfDef Enterprise}
     function GetParent: ITest;
     procedure SetParent(AParent : ITest);
-    {$EndIf}
   public
     constructor Create(AName: string);
     destructor Destroy; override;
@@ -2252,12 +2244,10 @@ begin
   Result := FMemoryLeakIgnoredInSetupTearDown;
 end;
 
-{$IfDef Enterprise}
 function TAbstractTest.GetParent: ITest;
 begin
   Result := FParent;
 end;
-{$EndIf}
 
 procedure TAbstractTest.SetMemoryLeakIgnoredInSetupTearDown(
   const Value: Boolean);
@@ -2265,12 +2255,10 @@ begin
   FMemoryLeakIgnoredInSetupTearDown := Value;
 end;
 
-{$IfDef Enterprise}
 procedure TAbstractTest.SetParent(AParent : ITest);
 begin
   FParent := AParent;
 end;
-{$EndIf}
 
 { TTestCase }
 
@@ -2504,9 +2492,7 @@ begin
   Assert(Assigned(ATest));
 
   FTests.Add(ATest);
-  {$IfDef Enterprise}
   ATest.Parent := Self;
-  {$EndIf}
 end;
 
 procedure TTestSuite.AddSuite(suite: ITestSuite);
