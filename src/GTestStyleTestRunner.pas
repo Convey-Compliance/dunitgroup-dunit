@@ -170,7 +170,7 @@ end;
 
 procedure TGTestStyleTestListener.PrintFailures(r: TTestResult);
 begin
-  if (r.errorCount = 0) then
+  if (r.FailureCount = 0) then
     exit;
   SetConsoleRed;
   try
