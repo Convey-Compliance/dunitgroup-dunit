@@ -271,9 +271,10 @@ end;
 
 function TGTestStyleTestListener.GetTestFullName(ATest: ITest): string;
 begin
+  {$IFNDEF STANDARD_DUNIT}
   if ATest.Parent <> nil then
     Result := GetTestFullName(ATest.Parent) + '.' + ATest.Name
-  else Result := ATest.Name;
+  else {$ENDIF} Result := ATest.Name;
 end;
 
 procedure TGTestStyleTestListener.Status(test: ITest; const Msg: string);
