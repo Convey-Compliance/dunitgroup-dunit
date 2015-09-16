@@ -22,19 +22,20 @@ var
   TestForm : TGUITestRunner;
   {$IFNDEF CONSOLE_TESTRUNNER}
   Cons : TStdConsole;
+  AIsConsole : Boolean;
   {$EndIf}
 begin
-  if (ParamCount >= 1) and (ParamStr(1) = '-console') then
-    IsConsole := True;
+  AIsConsole := (ParamCount >= 1) and (ParamStr(1) = '-console');
   Application.Initialize;
-  if IsConsole and (ParamCount >= 3) then
+  if AIsConsole and (ParamCount >= 3) then
     RegisteredTests.LoadConfiguration(ParamStr(3), False, False);
-  if IsConsole and (ParamCount >= 2) then
+  if AIsConsole and (ParamCount >= 2) then
     begin
       {$IFNDEF CONSOLE_TESTRUNNER}
       Cons := TStdConsole.Create(nil);
       try
         Cons.Open;
+        IsConsole := AIsConsole;
       {$ENDIF}
         TestFramework.RunTest(RegisteredTests, [
           TXMLTestListener.Create(ExpandFileName(ParamStr(2))) as ITestListener,
