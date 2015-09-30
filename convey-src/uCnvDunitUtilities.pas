@@ -22,8 +22,8 @@ var
   TestForm : TGUITestRunner;
   {$IFNDEF CONSOLE_TESTRUNNER}
   Cons : TStdConsole;
-  AIsConsole : Boolean;
   {$EndIf}
+  AIsConsole : Boolean;
 begin
   AIsConsole := (ParamCount >= 1) and (ParamStr(1) = '-console');
   Application.Initialize;
