@@ -63,13 +63,10 @@ unit FastMMMemLeakMonitor;
 
 interface
 uses
-{$IFDEF VER180}
   SysUtils,
-{$ELSE}
   {$IFDEF FASTMM}
     FastMM4,
   {$ENDIF}
-{$ENDIF}
   TestFrameWork;
 
 type
@@ -105,17 +102,13 @@ type
   end;
 
 implementation
-{$IFNDEF VER180}
-  uses
-  SysUtils;
-{$ENDIF}
 
 { TMemLeakMonitor }
 
 constructor TMemLeakMonitor.Create;
 begin
   inherited;
-  GetMemoryManagerState(FMS1);
+  {$IFDEF FASTMM}FastMM4.{$ENDIF}GetMemoryManagerState(FMS1);
 end;
 
 function TMemLeakMonitor.MemLeakDetected(out LeakSize: Integer): boolean;
