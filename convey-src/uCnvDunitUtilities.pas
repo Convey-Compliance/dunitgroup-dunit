@@ -20,10 +20,10 @@ uses
 procedure RunDunitApp;
 var
   TestForm : TGUITestRunner;
+  AIsConsole : Boolean;
   {$IFNDEF CONSOLE_TESTRUNNER}
   Cons : TStdConsole;
   {$EndIf}
-  AIsConsole : Boolean;
 begin
   AIsConsole := (ParamCount >= 1) and (ParamStr(1) = '-console');
   Application.Initialize;
