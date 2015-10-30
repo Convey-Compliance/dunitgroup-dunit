@@ -20,6 +20,7 @@ uses
 procedure RunDunitApp;
 var
   TestForm : TGUITestRunner;
+  AIsConsole : Boolean;
   {$IFNDEF CONSOLE_TESTRUNNER}
   Cons : TStdConsole;
   {$EndIf}
